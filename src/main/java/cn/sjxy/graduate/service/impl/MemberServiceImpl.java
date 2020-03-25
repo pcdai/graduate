@@ -3,7 +3,7 @@ package cn.sjxy.graduate.service.impl;
 
 import cn.sjxy.graduate.core.service.AbstractService;
 import cn.sjxy.graduate.dao.MemberDao;
-import cn.sjxy.graduate.beans.Member;
+import cn.sjxy.graduate.entity.Member;
 import cn.sjxy.graduate.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

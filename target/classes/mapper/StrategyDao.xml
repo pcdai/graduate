@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.sjxy.graduate.dao.StrategyDao">
 
-    <resultMap type="cn.sjxy.graduate.beans.Strategy" id="StrategyMap">
+    <resultMap type="cn.sjxy.graduate.entity.Strategy" id="StrategyMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="scenicId" column="scenic_id" jdbcType="INTEGER"/>
         <result property="introducer" column="introducer" jdbcType="VARCHAR"/>

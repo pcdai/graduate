@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.controller;
 
-import cn.sjxy.graduate.beans.Hotel;
+import cn.sjxy.graduate.entity.Hotel;
 import cn.sjxy.graduate.service.HotelService;
 import org.springframework.web.bind.annotation.*;
 

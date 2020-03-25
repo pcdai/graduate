@@ -1,9 +1,7 @@
 package cn.sjxy.graduate.dao;
 
-import cn.sjxy.graduate.beans.Hotel;
+import cn.sjxy.graduate.entity.Hotel;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import java.util.List;
 
 /**
  * (Hotel)表数据库访问层

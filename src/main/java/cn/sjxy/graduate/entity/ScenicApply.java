@@ -1,16 +1,14 @@
-package cn.sjxy.graduate.beans;
+package cn.sjxy.graduate.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.io.Serializable;
 
 /**
- * 攻略(Strategy)实体类
+ * 景点申请(ScenicApply)实体类
  *
  * @author dpc
  * @since 2020-03-22 10:12:47
@@ -19,7 +17,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Strategy {
+public class ScenicApply {
+
     @Id
     private Integer id;
     /**
@@ -27,13 +26,13 @@ public class Strategy {
     */
     private Integer scenicId;
     /**
-    * 攻略内容          
+    * 付款金额
     */
-    private String introducer;
+    private String pay;
     /**
-    * 攻略图片
+    * 用户id
     */
-    private String img;
+    private Integer memberId;
 
 
 

@@ -1,7 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30f4f159-7f0f-431c-885b-0214be6ff12f" name="Default Changelist" comment="" />
+    <list default="true" id="30f4f159-7f0f-431c-885b-0214be6ff12f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/CodeUtilController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/ConditionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/HotelApply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/HotelApply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Scenic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Scenic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/ScenicApply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/ScenicApply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Style.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/ScenicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/ScenicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/TypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/CardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/CardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelApplyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelApplyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/RestaurantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/RestaurantDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicApplyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicApplyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StrategyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StrategyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StyleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StyleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/TypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/TypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelApplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/RestaurantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicApplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StrategyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StyleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StyleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/TypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/CardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StrategyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StrategyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StyleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StyleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/TypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CardDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CardDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HotelApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HotelApplyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HotelDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HotelDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RestaurantDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RestaurantDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ScenicApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScenicApplyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ScenicDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScenicDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StrategyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StrategyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StyleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StyleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/504.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/thymeleaf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/graduate.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Hotel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/HotelApply.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Restaurant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Scenic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/ScenicApply.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Strategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Style.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/config/Myconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/config/Myconfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/HotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/ScenicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/ScenicController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/TypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/CardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/CardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelApplyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelApplyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/MemberDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/MemberDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/RestaurantDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/RestaurantDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicApplyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicApplyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StrategyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StrategyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StyleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StyleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/TypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/TypeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/CardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelApplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelApplyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/RestaurantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/RestaurantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicApplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicApplyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StrategyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StrategyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StyleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StyleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/TypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/TypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/CardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/CardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/MemberServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StrategyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StrategyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StyleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StyleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/TypeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CardDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CardDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HotelApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HotelApplyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HotelDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HotelDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MemberDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/MemberDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/RestaurantDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/RestaurantDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ScenicApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ScenicApplyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ScenicDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ScenicDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StrategyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StrategyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StyleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StyleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/4xx.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/504.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/5xx.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/thymeleaf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/upload.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/sjxy/graduate/GraduateApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/sjxy/graduate/GraduateApplicationTests.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,42 +173,46 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="guns: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="guns@212.64.52.80" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="guns: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="file: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="332">
+                    <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/TypeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-              <folding>
-                <element signature="e#578#579#0" expanded="true" />
-                <element signature="e#631#632#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -92,7 +233,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/File.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/FileDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/FileService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/FileServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/FileDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/file.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/CodeUtilController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/ConditionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java" />
       </list>
     </option>
   </component>
@@ -113,22 +270,167 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="151" />
-    <option name="y" value="618" />
-    <option name="width" value="1690" />
-    <option name="height" value="1035" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-103" />
+    <option name="y" value="122" />
+    <option name="width" value="1692" />
+    <option name="height" value="1012" />
   </component>
   <component name="ProjectId" id="1ZW8KVqgRxwsjcDsSQDwfe5BF1E" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -137,13 +439,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Git/bin/git.exe" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -191,10 +499,17 @@
     <configuration name="GraduateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="graduate" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.sjxy.graduate.GraduateApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.GraduateApplicationTests.test1" />
+      <item itemvalue="Spring Boot.GraduateApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GraduateApplicationTests.test1" />
@@ -216,95 +531,122 @@
       <workItem from="1584952269784" duration="8000" />
       <workItem from="1584952763205" duration="94000" />
       <workItem from="1584953155270" duration="1209000" />
+      <workItem from="1585099966362" duration="133000" />
+      <workItem from="1585100416444" duration="640000" />
+      <workItem from="1585101162850" duration="4223000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 15h 48m 50s.xml">
+    <history-entry file="GraduateApplicationTests_test1 - 2020.03.25 at 09h 56m 40s.xml">
       <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 15h 55m 00s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 15h 55m 28s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 15h 55m 50s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 16h 00m 31s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 16h 09m 05s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 16h 10m 06s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 16h 11m 59s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 16h 13m 00s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.23 at 16h 20m 41s.xml">
+    <history-entry file="GraduateApplicationTests_test1 - 2020.03.25 at 09h 57m 26s.xml">
       <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1609000" />
+    <option name="totallyTimeSpent" value="4223000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="121" y="495" width="1352" height="828" extended-state="1" />
+    <frame x="-82" y="98" width="1353" height="809" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.248056" />
+      <window_info id="JRebel" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="Designer" />
+      <window_info id="Web" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27816626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="JRebel" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="UI Designer" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Tail" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.38127092" />
+      <window_info anchor="bottom" id="MyBatis Log" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Executor" />
+      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932614" weight="0.363047" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24247491" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067383" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="MyBatis Log" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="JRebel Executor" order="15" />
-      <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="17" sideWeight="0.49932614" weight="0.3273906" />
-      <window_info anchor="bottom" id="Tail" order="18" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="RestServices" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Mybatis datasource" side_tool="true" />
+      <window_info anchor="right" id="Key Promoter X" />
+      <window_info anchor="right" id="Word Book" side_tool="true" />
+      <window_info anchor="right" id="Database" weight="0.32951483" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32951483" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Key Promoter X" order="6" />
-      <window_info anchor="right" id="Word Book" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32951483" />
-      <window_info anchor="right" id="Mybatis datasource" order="9" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
-      <window_info anchor="right" id="RestServices" order="12" />
-      <window_info anchor="right" id="Bean Validation" order="13" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="JRebel" order="1" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.27816626" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="JRebel Executor" order="7" />
+      <window_info anchor="bottom" id="JRebel Console" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.38127092" />
+      <window_info anchor="bottom" id="MyBatis Log" order="10" />
+      <window_info anchor="bottom" id="Tail" order="11" />
+      <window_info anchor="bottom" id="Message" order="12" />
+      <window_info anchor="bottom" id="Find" order="13" />
+      <window_info anchor="bottom" id="Run" order="14" visible="true" weight="0.24247491" />
+      <window_info anchor="bottom" id="Debug" order="15" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="18" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Key Promoter X" order="3" />
+      <window_info anchor="right" id="Word Book" order="4" side_tool="true" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32951483" />
+      <window_info anchor="right" id="Mybatis datasource" order="6" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="RestServices" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="11" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="12" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="13" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="579" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585101025153">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="579" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585101025153" />
     <state x="278" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584949003698">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -313,41 +655,207 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="735" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584949145846" />
-    <state width="1470" height="256" key="GridCell.Tab.0.bottom" timestamp="1584949374768">
+    <state x="498" y="116" key="FileChooserDialogImpl" timestamp="1585100496569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1470" height="256" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584949374768" />
-    <state width="1470" height="256" key="GridCell.Tab.0.center" timestamp="1584949374768">
+    <state x="498" y="116" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585100496569" />
+    <state width="1037" height="206" key="GridCell.Tab.0.bottom" timestamp="1585101056237">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1470" height="256" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584949374768" />
-    <state width="1470" height="256" key="GridCell.Tab.0.left" timestamp="1584949374768">
+    <state width="1037" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585101056237" />
+    <state width="1037" height="206" key="GridCell.Tab.0.center" timestamp="1585101056237">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1470" height="256" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584949374768" />
-    <state width="1470" height="256" key="GridCell.Tab.0.right" timestamp="1584949374768">
+    <state width="1037" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585101056237" />
+    <state width="1037" height="206" key="GridCell.Tab.0.left" timestamp="1585101056236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1470" height="256" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584949374768" />
+    <state width="1037" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585101056236" />
+    <state width="1037" height="206" key="GridCell.Tab.0.right" timestamp="1585101056237">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1037" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585101056237" />
+    <state x="198" y="0" key="SettingsEditor" timestamp="1585100501936">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="198" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585100501936" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="122">
+          <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/TypeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="152">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding>
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/FileDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/FileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/FileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/FileDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/component/InterceptorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/file.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/MemberDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#form#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/CodeUtilController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/ConditionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,13 +1,10 @@
 package cn.sjxy.graduate.service.impl;
 
-import cn.sjxy.graduate.beans.Scenic;
+import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.dao.ScenicDao;
 import cn.sjxy.graduate.service.ScenicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 景点(Scenic)表服务实现类

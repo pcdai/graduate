@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.controller;
 
-import cn.sjxy.graduate.beans.Type;
+import cn.sjxy.graduate.entity.Type;
 import cn.sjxy.graduate.service.TypeService;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package cn.sjxy.graduate.beans;
+package cn.sjxy.graduate.entity;
 
 import java.io.Serializable;
 

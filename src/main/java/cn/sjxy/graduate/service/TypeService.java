@@ -1,7 +1,6 @@
 package cn.sjxy.graduate.service;
 
-import cn.sjxy.graduate.beans.Type;
-import java.util.List;
+import cn.sjxy.graduate.entity.Type;
 
 /**
  * 景点分类表(Type)表服务接口

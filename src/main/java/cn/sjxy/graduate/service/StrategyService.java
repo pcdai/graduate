@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service;
 
 import cn.sjxy.graduate.core.service.Service;
-import cn.sjxy.graduate.beans.Strategy;
+import cn.sjxy.graduate.entity.Strategy;
 
 /**
  * 攻略(Strategy)表服务接口

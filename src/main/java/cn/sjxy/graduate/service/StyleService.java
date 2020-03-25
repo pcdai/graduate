@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service;
 
 import cn.sjxy.graduate.core.service.Service;
-import cn.sjxy.graduate.beans.Style;
+import cn.sjxy.graduate.entity.Style;
 
 /**
  * 风格表(Style)表服务接口

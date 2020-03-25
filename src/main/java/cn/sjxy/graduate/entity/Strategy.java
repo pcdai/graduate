@@ -1,16 +1,14 @@
-package cn.sjxy.graduate.beans;
+package cn.sjxy.graduate.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.io.Serializable;
 
 /**
- * 风格表(Style)实体类
+ * 攻略(Strategy)实体类
  *
  * @author dpc
  * @since 2020-03-22 10:12:47
@@ -19,14 +17,21 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Style {
+public class Strategy {
     @Id
     private Integer id;
     /**
-    * 特色  
+    * 景点id
     */
-    private String info;
-
+    private Integer scenicId;
+    /**
+    * 攻略内容          
+    */
+    private String introducer;
+    /**
+    * 攻略图片
+    */
+    private String img;
 
 
 

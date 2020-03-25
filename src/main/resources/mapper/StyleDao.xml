@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.sjxy.graduate.dao.StyleDao">
 
-    <resultMap type="cn.sjxy.graduate.beans.Style" id="StyleMap">
+    <resultMap type="cn.sjxy.graduate.entity.Style" id="StyleMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="info" column="info" jdbcType="VARCHAR"/>
     </resultMap>

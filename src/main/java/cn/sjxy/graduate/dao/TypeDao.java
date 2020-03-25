@@ -1,9 +1,7 @@
 package cn.sjxy.graduate.dao;
 
-import cn.sjxy.graduate.beans.Type;
+import cn.sjxy.graduate.entity.Type;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import java.util.List;
 
 /**
  * 景点分类表(Type)表数据库访问层

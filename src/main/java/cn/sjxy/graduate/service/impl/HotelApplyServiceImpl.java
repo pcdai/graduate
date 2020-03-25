@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service.impl;
 
 import cn.sjxy.graduate.core.service.AbstractService;
-import cn.sjxy.graduate.beans.HotelApply;
+import cn.sjxy.graduate.entity.HotelApply;
 import cn.sjxy.graduate.dao.HotelApplyDao;
 import cn.sjxy.graduate.service.HotelApplyService;
 import org.springframework.beans.factory.annotation.Autowired;

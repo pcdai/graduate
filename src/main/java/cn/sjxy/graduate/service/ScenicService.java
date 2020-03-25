@@ -1,7 +1,6 @@
 package cn.sjxy.graduate.service;
 
-import cn.sjxy.graduate.beans.Scenic;
-import java.util.List;
+import cn.sjxy.graduate.entity.Scenic;
 
 /**
  * 景点(Scenic)表服务接口

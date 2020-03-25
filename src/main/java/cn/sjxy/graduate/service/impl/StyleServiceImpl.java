@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service.impl;
 
 import cn.sjxy.graduate.core.service.AbstractService;
-import cn.sjxy.graduate.beans.Style;
+import cn.sjxy.graduate.entity.Style;
 import cn.sjxy.graduate.dao.StyleDao;
 import cn.sjxy.graduate.service.StyleService;
 import org.springframework.beans.factory.annotation.Autowired;

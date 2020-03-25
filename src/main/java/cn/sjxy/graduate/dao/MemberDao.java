@@ -1,9 +1,8 @@
 package cn.sjxy.graduate.dao;
 
 
-import cn.sjxy.graduate.beans.Member;
+import cn.sjxy.graduate.entity.Member;
 import cn.sjxy.graduate.core.mapper.Mapper;
-import org.springframework.stereotype.Repository;
 
 /**
  * 用户表(Member)表数据库访问层

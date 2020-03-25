@@ -1,8 +1,7 @@
 package cn.sjxy.graduate.service;
 
 import cn.sjxy.graduate.core.service.Service;
-import cn.sjxy.graduate.beans.Restaurant;
-import java.util.List;
+import cn.sjxy.graduate.entity.Restaurant;
 
 /**
  * 餐厅表(Restaurant)表服务接口

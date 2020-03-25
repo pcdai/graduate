@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.service.impl;
 
-import cn.sjxy.graduate.beans.Card;
+import cn.sjxy.graduate.entity.Card;
 import cn.sjxy.graduate.core.service.AbstractService;
 import cn.sjxy.graduate.dao.CardDao;
 import cn.sjxy.graduate.service.CardService;

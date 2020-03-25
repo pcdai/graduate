@@ -1,13 +1,11 @@
-package cn.sjxy.graduate.beans;
+package cn.sjxy.graduate.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.io.Serializable;
 /**
  * CREATE TABLE `home_stay` (
  * `id` INT ( 11 ) NOT NULL AUTO_INCREMENT,

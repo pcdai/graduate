@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service.impl;
 
 import cn.sjxy.graduate.core.service.AbstractService;
-import cn.sjxy.graduate.beans.Strategy;
+import cn.sjxy.graduate.entity.Strategy;
 import cn.sjxy.graduate.dao.StrategyDao;
 import cn.sjxy.graduate.service.StrategyService;
 import org.springframework.beans.factory.annotation.Autowired;

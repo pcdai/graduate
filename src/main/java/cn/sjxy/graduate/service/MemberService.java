@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service;
 
 import cn.sjxy.graduate.core.service.Service;
-import cn.sjxy.graduate.beans.Member;
+import cn.sjxy.graduate.entity.Member;
 
 
 /**

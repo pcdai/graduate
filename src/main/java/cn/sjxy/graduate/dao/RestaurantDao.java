@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.dao;
 
-import cn.sjxy.graduate.beans.Restaurant;
+import cn.sjxy.graduate.entity.Restaurant;
 import cn.sjxy.graduate.core.mapper.Mapper;
 
 

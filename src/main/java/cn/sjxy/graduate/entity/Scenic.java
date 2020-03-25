@@ -1,15 +1,15 @@
-package cn.sjxy.graduate.beans;
+package cn.sjxy.graduate.entity;
 
 import java.io.Serializable;
 
 /**
- * (Hotel)实体类
+ * 景点(Scenic)实体类
  *
  * @author dpc
  * @since 2020-03-23 16:03:09
  */
-public class Hotel implements Serializable {
-    private static final long serialVersionUID = 643585590610594628L;
+public class Scenic implements Serializable {
+    private static final long serialVersionUID = 493872214223193942L;
     
     private Integer id;
     /**
@@ -21,29 +21,33 @@ public class Hotel implements Serializable {
     */
     private String icon;
     /**
-    * 详情图
+    * 具体图片
     */
     private String img;
+    /**
+    * 地址
+    */
+    private String area;
+    /**
+    * 门票价格
+    */
+    private String ticket;
     /**
     * 详情
     */
     private String desc;
     /**
-    * 价格
+    * 分类
     */
-    private Double price;
+    private Integer typeId;
     /**
     * 评价
     */
     private String evaluate;
     /**
-    *  0:热门 1:不热门
+    * 热门 0:热门 1:不热门
     */
     private String hot;
-    /**
-    * 地址
-    */
-    private String area;
 
 
     public Integer getId() {
@@ -78,6 +82,22 @@ public class Hotel implements Serializable {
         this.img = img;
     }
 
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getTicket() {
+        return ticket;
+    }
+
+    public void setTicket(String ticket) {
+        this.ticket = ticket;
+    }
+
     public String getDesc() {
         return desc;
     }
@@ -86,12 +106,12 @@ public class Hotel implements Serializable {
         this.desc = desc;
     }
 
-    public Double getPrice() {
-        return price;
+    public Integer getTypeId() {
+        return typeId;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
     }
 
     public String getEvaluate() {
@@ -108,14 +128,6 @@ public class Hotel implements Serializable {
 
     public void setHot(String hot) {
         this.hot = hot;
-    }
-
-    public String getArea() {
-        return area;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
     }
 
 }

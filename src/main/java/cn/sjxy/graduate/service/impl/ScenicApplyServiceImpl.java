@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service.impl;
 
 import cn.sjxy.graduate.core.service.AbstractService;
-import cn.sjxy.graduate.beans.ScenicApply;
+import cn.sjxy.graduate.entity.ScenicApply;
 import cn.sjxy.graduate.dao.ScenicApplyDao;
 import cn.sjxy.graduate.service.ScenicApplyService;
 import org.springframework.beans.factory.annotation.Autowired;

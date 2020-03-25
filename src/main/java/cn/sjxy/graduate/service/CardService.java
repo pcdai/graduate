@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.service;
 
-import cn.sjxy.graduate.beans.Card;
+import cn.sjxy.graduate.entity.Card;
 import cn.sjxy.graduate.core.service.Service;
 
 /**

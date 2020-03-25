@@ -1,10 +1,7 @@
 package cn.sjxy.graduate.dao;
 
-import cn.sjxy.graduate.beans.ScenicApply;
+import cn.sjxy.graduate.entity.ScenicApply;
 import cn.sjxy.graduate.core.mapper.Mapper;
-
-import org.apache.ibatis.annotations.Param;
-import java.util.List;
 
 /**
  * 景点申请(ScenicApply)表数据库访问层

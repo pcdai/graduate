@@ -1,13 +1,10 @@
 package cn.sjxy.graduate.service.impl;
 
-import cn.sjxy.graduate.beans.Type;
+import cn.sjxy.graduate.entity.Type;
 import cn.sjxy.graduate.dao.TypeDao;
 import cn.sjxy.graduate.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 景点分类表(Type)表服务实现类

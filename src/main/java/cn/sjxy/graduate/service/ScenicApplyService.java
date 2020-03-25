@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service;
 
 import cn.sjxy.graduate.core.service.Service;
-import cn.sjxy.graduate.beans.ScenicApply;
+import cn.sjxy.graduate.entity.ScenicApply;
 
 /**
  * 景点申请(ScenicApply)表服务接口

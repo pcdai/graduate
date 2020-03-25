@@ -1,7 +1,7 @@
 package cn.sjxy.graduate.service;
 
 import cn.sjxy.graduate.core.service.Service;
-import cn.sjxy.graduate.beans.HotelApply;
+import cn.sjxy.graduate.entity.HotelApply;
 
 /**
  * 民宿申请(HotelApply)表服务接口

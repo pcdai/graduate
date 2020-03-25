@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.dao;
 
-import cn.sjxy.graduate.beans.Strategy;
+import cn.sjxy.graduate.entity.Strategy;
 import cn.sjxy.graduate.core.mapper.Mapper;
 
 

@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.controller;
 
-import cn.sjxy.graduate.beans.Scenic;
+import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.service.ScenicService;
 import org.springframework.web.bind.annotation.*;
 

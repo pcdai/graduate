@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.dao;
 
-import cn.sjxy.graduate.beans.Card;
+import cn.sjxy.graduate.entity.Card;
 import cn.sjxy.graduate.core.mapper.Mapper;
 
 /**

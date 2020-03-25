@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.sjxy.graduate.dao.MemberDao">
 
-    <resultMap type="cn.sjxy.graduate.beans.Member" id="MemberMap">
+    <resultMap type="cn.sjxy.graduate.entity.Member" id="MemberMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="account" column="account" jdbcType="VARCHAR"/>
         <result property="password" column="password" jdbcType="VARCHAR"/>
@@ -13,7 +13,9 @@
         <result property="scenicApplyId" column="scenic_apply_id" jdbcType="INTEGER"/>
         <result property="hotelApplyId" column="hotel_apply_id" jdbcType="INTEGER"/>
     </resultMap>
-
+<select id="doLogin" resultMap="MemberMap">
+    select * from member where account=#{account} and password=#{password}
+</select>
 
 
 </mapper>
