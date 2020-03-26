@@ -33,8 +33,8 @@ public class MemberController {
             session.setAttribute("errorMsg", "用户名或密码错误 ");
             return "login";
         }
-        session.setAttribute("member1", member);
-        return "index";
+        session.setAttribute("member", member1);
+        return "redirect:/index";
     }
 
     @PostMapping("/register")

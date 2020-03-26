@@ -5,6 +5,7 @@
     <resultMap type="cn.sjxy.graduate.entity.Type" id="TypeMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="desc" column="desc" jdbcType="VARCHAR"/>
+        <result property="scenicId" column="scenic_id" jdbcType="INTEGER"/>
     </resultMap>
 
 <select id="queryById" resultMap="TypeMap">

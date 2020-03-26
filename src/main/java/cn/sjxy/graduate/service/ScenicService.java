@@ -2,6 +2,8 @@ package cn.sjxy.graduate.service;
 
 import cn.sjxy.graduate.entity.Scenic;
 
+import java.util.List;
+
 /**
  * 景点(Scenic)表服务接口
  *
@@ -17,6 +19,14 @@ public interface ScenicService {
      * @return 实例对象
      */
     Scenic queryById(Integer id);
+
+    /**
+     * 查询热门景点前四位
+     * @param hot
+     * @return
+     */
+    List<Scenic> queryAllHotScenicLimitFour();
+    void save(Scenic scenic);
 
 
 

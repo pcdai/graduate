@@ -23,7 +23,7 @@ import javax.servlet.MultipartConfigElement;
 public class Myconfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/index").setViewName("login");
+        registry.addViewController("/").setViewName("login");
         registry.addViewController("/file").setViewName("file");
         registry.addViewController("/register.html").setViewName("register");
        // registry.addViewController("/index.html").setViewName("index");

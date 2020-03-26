@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-------------jquery库-------------->
+  	<script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
+    <!-------------Amazeui--------------->
+    <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/css/amazeui.css">
+    <!------------核心样式-------------->
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/css/style.css">
+</head>
+<body>
+<%layout("/include/top.html"){}%>
+<!------------------banner-------------------->
+<script src="${ctxPath}/js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+<div class="h_banner">
+	<ul class="h_b_list">
+		<%for(item in scenics!){%>
+		<li><a style="background:url(${item.icon}) no-repeat center;" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"></a></li>
+        <%}%>
+	</ul>
+	<a class="prev" href="javascript:void(0)"><==</a>
+	<a class="next" href="javascript:void(0)">==></a>
+</div>
+<script>
+/*鼠标移过，左右按钮显示*/
+$(".h_banner").hover(function(){
+	$(this).find(".prev,.next").fadeTo("show",0.5);
+},function(){
+	$(this).find(".prev,.next").hide();
+})
+/*鼠标移过某个按钮 高亮显示*/
+$(".prev,.next").hover(function(){
+	$(this).fadeTo("show",1);
+},function(){
+	$(this).fadeTo("show",0.7);
+})
+$(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold", autoPlay:true, delayTime:700 , autoPage:true });
+</script>
+
+<!------------------广告-------------------->
+<div class="h_gg">
+    <a title="" href="#"><img alt="" src="${ctxPath}/image/g1.jpg"/></a>
+    <a title="" href="#"><img alt="" src="${ctxPath}/image/g2.jpg"/></a>
+    <a title="" href="#"><img alt="" src="${ctxPath}/image/g3.jpg"/></a>
+    <a title="" href="#"><img alt="" src="${ctxPath}/image/g4.jpg"/></a>
+</div>
+
+<!------------------南京旅游-------------------->
+<div id="h_scenic">
+    <div class="cw1200">
+        <div class="title"><img alt="" src="${ctxPath}/image/h_title2.png"/></div>
+        <div class="con">
+            <div class="tag"><img alt="" src="${ctxPath}/image/h_title2_t.jpg"/></div>
+            <div class="box">
+                <ul>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/j1.jpg"/><span>龙马负图寺</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/y3.jpg"/><span>老君山风景区</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/10F118AC-FE28-4986-A6D0-B9E739F8CFDC.jpg"/><span>鸡冠洞</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/2c90cca2458c651b01458c95cc0b000c.jpg"/><span>千唐志斋</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/DD0E49BD-47F5-4B10-85DB-FE2390B91541.jpg"/><span>龙门石窟</span></a></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="more"><a href="scenic_list.html">热门景区<span>+</span></a></div>
+                
+            </div>
+            <div class="box">
+                <ul>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/uu1.jpg"/><span>郁金香庄园</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/uu2.jpg"/><span>小浪底度假村</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/uu3.jpg"/><span>银滩农业观光园</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/uu4.jpg"/><span>《琦梦红提园》采摘</span></a></li>
+                    <li><a title="" href="scenic.html"><img alt="" class="scale-effect" src="${ctxPath}/image/uu5.jpg"/><span>夜游丽景门</span></a></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="more"><a title="" href="scenic_list.html">休闲度假<span>+</span></a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!------------------南京美食-------------------->
+<div id="h_food">
+    <div class="cw1200">
+        <div class="title"><img src="${ctxPath}/image/h_title3.png"/></div>
+        <div class="con">
+            <div class="box fl">
+                <div class="big">
+                    <div class="pic"><a title="" href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/f0.jpg"/></a></div>
+                    <p>所谓“水席”，有二层含义：一是以汤水见长，二是吃一道换一道，一道道上菜，象流水一般，故名“水席”。洛阳水席最初只是在民间流行，唐代武则天时，将洛...</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <a title="" href="#">
+                                <div class="pic"><img alt="" class="scale-effect" src="${ctxPath}/image/f1.jpg"/></div>
+                                <p>宴天下大酒店老城店</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="" href="#">
+                                <div class="pic"><img alt="" class="scale-effect" src="${ctxPath}/image/f2.png"/></div>
+                                <p>宴天下大酒店老城店</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="" href="#">
+                                <div class="pic"><img alt="" class="scale-effect" src="${ctxPath}/image/f3.jpg"/></div>
+                                <p>宴天下大酒店老城店</p>
+                            </a>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="more"><a title="" href="#">查看更多</a></div>
+                </div>
+            </div>
+            <div class="box fr">
+                <div class="big">
+                    <div class="pic"><a href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/f00.jpg"/></a></div>
+                    <p>所谓“水席”，有二层含义：一是以汤水见长，二是吃一道换一道，一道道上菜，象流水一般，故名“水席”。洛阳水席最初只是在民间流行，唐代武则天时，将洛...</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <a title="" href="#">
+                                <div class="pic"><img alt="" class="scale-effect" src="${ctxPath}/image/f1.jpg"/></div>
+                                <p>宴天下大酒店老城店</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="" href="#">
+                                <div class="pic"><img alt="" class="scale-effect" src="${ctxPath}/image/f2.png"/></div>
+                                <p>宴天下大酒店老城店</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="" href="#">
+                                <div class="pic"><img alt="" class="scale-effect" src="${ctxPath}/image/f3.jpg"/></div>
+                                <p>宴天下大酒店老城店</p>
+                            </a>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="more"><a title="" href="#">查看更多</a></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!------------------南京特产-------------------->
+<div id="h_project">
+    <div class="cw1200">
+        <div class="title"><img alt="" src="${ctxPath}/image/h_title4.png"/></div>
+        <div class="con">
+            <ul>
+                <li>
+                    <a title="" href="#">
+                        <img alt="" class="scale-effect" src="${ctxPath}/image/t1.jpg"/>
+                        <p>新米 有机杂粮小米黄小米2000g 粮食五谷 农家包邮</p>
+                    </a>
+                </li>
+                <li>
+                    <a title="" href="#">
+                        <img class="scale-effect" src="${ctxPath}/image/t2.jpg"/>
+                        <p>《孟津贡梨主题公园》孟津酥梨</p>
+                    </a>
+                </li>
+                <li>
+                    <a title="" href="#">
+                        <img alt="" class="scale-effect" src="${ctxPath}/image/t3.jpg"/>
+                        <p>《幸福农场》孟津葡萄</p>
+                    </a>
+                </li>
+                <li>
+                    <a title="" href="#">
+                        <img alt="" class="scale-effect" src="${ctxPath}/image/t4.jpg"/>
+                        <p>有机药用黑豆</p>
+                    </a>
+                </li>
+                <li>
+                    <a title="" href="#">
+                        <img alt="" class="scale-effect" src="${ctxPath}/image/t5.jpg"/>
+                        <p>大麦茶</p>
+                    </a>
+                </li>       
+            </ul>
+        </div>
+    </div>
+</div>
+<!------------------民宿推荐乡村-------------------->
+<div id="h_note">
+    <div class="cw1200">
+        <div class="title"><img alt="" src="${ctxPath}/image/h_title5.png"/></div>
+        <div class="con">
+            <ul>
+                <li>
+                    <div class="box">
+                        <div class="pic">
+                            <a title="" href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/nt_1.jpg"/></a>
+                        </div>
+                        <div class="user">
+                            <div class="head"><img alt="" src="${ctxPath}/image/head1.jpg"/></div>
+                            <p>A monologue. 独白。</p>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                        </div>
+                        <div class="cont">
+                            <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
+                            <p>习惯并且爱上了走在路上的感觉不是想去探寻什么只是心中泛滥的小情怀在走</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="pic">
+                            <a title="" href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/nt_2.jpg"/></a>
+                        </div>
+                        <div class="user">
+                            <div class="head"><img alt="" src="${ctxPath}/image/hh2.jpg"/></div>
+                            <p>卖萌の小喵咪</p>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                        </div>
+                        <div class="cont">
+                            <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
+                            <p>习惯并且爱上了走在路上的感觉不是想去探寻什么只是心中泛滥的小情怀在走</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="pic">
+                            <a title="" href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/nt_3.jpg"/></a>
+                        </div>
+                        <div class="user">
+                            <div class="head"><img src="${ctxPath}/image/hh3.jpg"/></div>
+                            <p>独闯世界fell</p>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                        </div>
+                        <div class="cont">
+                            <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
+                            <p>习惯并且爱上了走在路上的感觉不是想去探寻什么只是心中泛滥的小情怀在走</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="pic">
+                            <a title="" href="#"><img class="scale-effect" src="${ctxPath}/image/nt0.jpg"/></a>
+                        </div>
+                        <div class="user">
+                            <div class="head"><img src="${ctxPath}/image/hh4.jpg"/></div>
+                            <p>大叔god说走就走</p>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                        </div>
+                        <div class="cont">
+                            <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
+                            <p>习惯并且爱上了走在路上的感觉不是想去探寻什么只是心中泛滥的小情怀在走</p>
+                        </div>
+                    </div>
+                </li>
+                
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+<!------------------首页新闻-------------------->
+<div id="h_news">
+    <div class="cw1200">
+        <div class="activity_news fl">
+            <div class="title"><img alt="" src="${ctxPath}/image/h_title6.png"/></div>
+            <div class="con">
+                <ul>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n1.jpg"/><p>春节逛吃哪里去？看洛阳庙会、灯展集锦</p></a></li>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n2.jpg"/><p>春节洛阳九县六区超嗨的节目单出炉</p></a></li>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n3.jpg"/><p>栾川各景区“冬游季”活动大比拼</p></a></li>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n4.jpg"/><p>美！滑雪看戏吃鱼宴，今年过年来嵩县！</p></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hot_news fr">
+            <div class="title"><img src="${ctxPath}/image/h_title7.png"/></div>
+            <div class="con">
+     
+                <div data-am-widget="slider" class="pic am-slider am-slider-c4" data-am-slider='{"controlNav":false}'>
+                    <ul class="am-slides">
+                        <li>
+                            <a href="article.html">
+								<img alt="" src="${ctxPath}/image/n5.jpg"/>
+								<div class="am-slider-desc">春节黄金周，洛阳旅游全线飘红</div>
+							</a>
+                        </li>
+                        <li>
+                            <a href="article.html">
+								<img alt="" src="${ctxPath}/image/n5.jpg"/>
+								<div class="am-slider-desc">春节黄金周，洛阳旅游全线飘红</div>
+							</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
+                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
+                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
+                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
+                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-----------------版底---------------->
+<div id="footer">
+    <div class="cw1200">
+        <div class="line"><img alt="" src="${ctxPath}/image/b_line.png"/></div>
+        <div class="b_logo"><img alt="" src="${ctxPath}/image/b_logo.png"/></div>
+        <div class="con">
+            <p>Zhiqi文化旅游发展有限公司 版权所有</p>
+            <p>地址：河南省洛阳市Zhiqi文化游客接待中心　邮编：000000　电话：0000-00000000　业务电话：0000-00000000</p>
+            <p>Copyright 2019 zhiqi All Rights Reserved | 豫ICP备00000000号　技术支持：zhiqi</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>

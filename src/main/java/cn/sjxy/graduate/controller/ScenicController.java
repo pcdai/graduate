@@ -27,8 +27,8 @@ public class ScenicController {
      * @param id 主键
      * @return 单条数据
      */
-    @GetMapping("selectOne")
-    public Scenic selectOne(Integer id) {
+    @GetMapping("scenicDetails")
+    public Scenic scenicDetails(Integer id) {
         return this.scenicService.queryById(id);
     }
 

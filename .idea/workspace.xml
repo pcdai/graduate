@@ -2,141 +2,500 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30f4f159-7f0f-431c-885b-0214be6ff12f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/CodeUtilController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/ConditionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/file.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/HotelApply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/HotelApply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Scenic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Scenic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/ScenicApply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/ScenicApply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Strategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Style.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/beans/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/ScenicExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/dto/RestaurantDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/dto/ScenicDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/TestUploadUtilController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/web/WebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScenicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/amazeui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/auth.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/base.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/css-Roboto300300italic400400ital.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/mikufont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/noscript.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/project.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/user.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51S7ACc-CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51S7ACc0CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51S7ACc1CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51S7ACc2CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51S7ACc3CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51S7ACc5CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51S7ACc6CsQ.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51TjASc-CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51TjASc0CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51TjASc1CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51TjASc2CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51TjASc3CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51TjASc5CsTKlA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOkCnqEu92Fr1Mu51xHIzIFKw.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOkCnqEu92Fr1Mu51xIIzI.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOkCnqEu92Fr1Mu51xMIzIFKw.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmEU9fBBc4.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmSU5fBBc4.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOmCnqEu92Fr1Mu4WxKOzY.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOmCnqEu92Fr1Mu4mxK.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOmCnqEu92Fr1Mu5mxKOzY.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOmCnqEu92Fr1Mu72xKOzY.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOmCnqEu92Fr1Mu7GxKOzY.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOmCnqEu92Fr1Mu7WxKOzY.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/KFOmCnqEu92Fr1Mu7mxKOzY.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont-4.7.0.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont-4.7.0.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont-4.7.0.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont-4.7.0.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont-4.7.0.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/source-sans-pro-300.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/source-sans-pro-300italic.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/source-sans-pro-300italic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/source-sans-pro-300italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/source-sans-pro-300italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/source-sans-pro-300italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/font/source-sans-pro-600.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/10F118AC-FE28-4986-A6D0-B9E739F8CFDC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/1458530382234p1aebir9i21s4q2hiiso1ip6msf29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/1470142217075p1ap5krur5imd15qq1ims12ojghn2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/2016122223895.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/2c90cca2458c651b01458c95cc0b000c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/64695-2679221.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/BuynBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/DD0E49BD-47F5-4B10-85DB-FE2390B91541.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/b_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/b_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/banner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/banner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/bjq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/brand.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/collection_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/collection_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/del_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/del_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/edit_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/express_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/eye_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_activity_enrolment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_activity_introduce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_article.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_comment2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_culture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_hot_project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_item_info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_life.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_mobile_platform.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_news_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_online_book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_other_activity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_other_project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_other_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_project_d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_scenic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_surrounding_hotel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/f_t_surrounding_specialty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/favour_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/favour_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/fenx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/footer_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/from_title_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/from_title_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/g_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_bg1_g.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_bg4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_bg4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title2_t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/h_title7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/head1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/hh2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/hh3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/hh4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/index_banner_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/integral_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/j1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/lamp_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/leisure_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/log_register.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/mp_pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/mp_tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/n1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/n2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/n3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/n4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/n5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/n6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nav_ico1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nav_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nav_ico3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nav_ico4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nav_ico5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nav_ico6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nav_ico7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nes-become-03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nt0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nt_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nt_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/nt_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/p1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/righbt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/rwm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/scenic_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/search_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/search_ico_hover.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/search_ico_hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/set_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/sign-m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/state_icon1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/state_icon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/t2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/t3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/t4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/t5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/t_logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/tel_ico.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_head_pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_ico9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user_number.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/uu1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/uu2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/uu3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/uu4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/uu5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/write_cover_zy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/y1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/y11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/y2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/y3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/zt1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/zt2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/zt3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/zt4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/zt5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/10F118AC-FE28-4986-A6D0-B9E739F8CFDC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/1458530382234p1aebir9i21s4q2hiiso1ip6msf29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/1470142217075p1ap5krur5imd15qq1ims12ojghn2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/2016122223895.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/2c90cca2458c651b01458c95cc0b000c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/64695-2679221.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/BuynBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/DD0E49BD-47F5-4B10-85DB-FE2390B91541.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/b_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/b_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/banner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/banner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/bjq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/collection_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/collection_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/del_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/del_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/edit_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/express_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/eye_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_activity_enrolment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_activity_introduce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_article.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_comment2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_culture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_hot_project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_item_info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_life.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_mobile_platform.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_news_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_online_book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_other_activity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_other_project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_other_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_project_d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_scenic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_surrounding_hotel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/f_t_surrounding_specialty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/favour_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/favour_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/fenx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/footer_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/from_title_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/from_title_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/g_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_bg1_g.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_bg4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_bg4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title2_t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/h_title7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/head1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/hh2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/hh3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/hh4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/index_banner_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/integral_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/j1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lamp_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/leisure_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/log_register.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mp_pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mp_tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/n1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/n2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/n3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/n4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/n5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/n6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nav_ico1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nav_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nav_ico3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nav_ico4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nav_ico5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nav_ico6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nav_ico7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nes-become-03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nt0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nt_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nt_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/nt_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/p1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/righbt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/rwm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/scenic_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/search_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/search_ico_hover.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/search_ico_hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/set_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/sign-m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/state_icon1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/state_icon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/t2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/t3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/t4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/t5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/t_logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/tel_ico.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_head_pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_ico9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user_number.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/uu1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/uu2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/uu3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/uu4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/uu5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/write_cover_zy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/y1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/y11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/y2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/y3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/zt1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/zt2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/zt3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/zt4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/zt5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/amazeui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/analytics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/base.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/canvas-nest.js@1.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.Spinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.superslide.2.1.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery@1.11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery@2.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/payfor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/project.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/qrcode.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/skel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/picture/authlogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/picture/email_nrcy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/activities_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/activities_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/collection_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/confirm_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/confirm_order2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/include/top.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mall_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my_contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my_head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my_note.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my_note2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/news_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/note.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/note_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/note_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/post_comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/project.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/project_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/project_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/scenic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/scenic_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/scenic_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/scenic_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/security.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop_car.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/submit_orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/write_note.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/ScenicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/ScenicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/TypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/CardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/CardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelApplyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelApplyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/MemberDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/RestaurantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/RestaurantDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicApplyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicApplyDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StrategyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StrategyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StyleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/StyleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/TypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/TypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelApplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/HotelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Scenic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Scenic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/RestaurantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicApplyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StrategyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StyleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/StyleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/TypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/MemberServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StrategyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StrategyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StyleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/StyleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/TypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CardDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CardDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HotelApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HotelApplyDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HotelDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HotelDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RestaurantDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RestaurantDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ScenicApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScenicApplyDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ScenicDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScenicDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StrategyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StrategyDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StyleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StyleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ScenicDao.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/504.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/file.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/file.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/thymeleaf.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/graduate.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Card.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Hotel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/HotelApply.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Member.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Restaurant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Scenic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/ScenicApply.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Strategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Style.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/beans/Type.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/config/Myconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/config/Myconfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/HotelController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/ScenicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/ScenicController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/controller/TypeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/CardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/CardDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelApplyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelApplyDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/HotelDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/MemberDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/MemberDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/RestaurantDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/RestaurantDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicApplyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicApplyDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/ScenicDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StrategyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StrategyDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StyleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/StyleDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/TypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/dao/TypeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/CardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelApplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelApplyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/HotelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/MemberService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/RestaurantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/RestaurantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicApplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicApplyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/ScenicService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StrategyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StrategyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StyleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/StyleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/TypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/TypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/CardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/CardServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelApplyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/HotelServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/MemberServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicApplyServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/ScenicServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StrategyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StrategyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StyleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/StyleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/sjxy/graduate/service/impl/TypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CardDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CardDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HotelApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HotelApplyDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HotelDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HotelDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MemberDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/MemberDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/RestaurantDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/RestaurantDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ScenicApplyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ScenicApplyDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ScenicDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ScenicDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StrategyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StrategyDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StyleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StyleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ScenicDao.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/TypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TypeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/4xx.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/504.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/5xx.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/thymeleaf.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/upload.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/cn/sjxy/graduate/GraduateApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/sjxy/graduate/GraduateApplicationTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -167,64 +526,87 @@
         <item name="guns@212.64.52.80" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="guns@212.64.52.80" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="guns: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="guns@212.64.52.80" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="guns: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="file: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="332">
-                    <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#706#707#0" expanded="true" />
+                <element signature="e#764#765#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-304">
+              <caret line="20" column="120" selection-start-line="20" selection-start-column="120" selection-end-line="20" selection-end-column="120" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/include/top.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>spring-data</find>
-      <find>.dao</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>cn.sjxy.graduate.dao</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -233,23 +615,39 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/File.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/FileDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/FileService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/FileServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/FileDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/file.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/CodeUtilController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/ConditionUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/ScenicController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/web/WebController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Scenic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Type.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/scenic_list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/FileDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/File.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/FileDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Restaurant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/RestaurantDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/RestaurantDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/RestaurantDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/RestaurantService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/dto/ScenicDto.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ScenicDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/ScenicExample.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/file.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/TestUploadUtilController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ScenicMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/include/top.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
       </list>
     </option>
   </component>
@@ -267,14 +665,31 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="graduate" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="graduate" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
+    <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-103" />
-    <option name="y" value="122" />
-    <option name="width" value="1692" />
-    <option name="height" value="1012" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="173" />
+    <option name="y" value="-32" />
+    <option name="width" value="1695" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectId" id="1ZW8KVqgRxwsjcDsSQDwfe5BF1E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -285,7 +700,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -348,7 +762,7 @@
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="sjxy" type="462c0819:PsiDirectoryNode" />
               <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
@@ -359,7 +773,30 @@
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="sjxy" type="462c0819:PsiDirectoryNode" />
               <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
@@ -377,6 +814,17 @@
               <item name="graduate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="sjxy" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,7 +833,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
@@ -431,6 +896,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -438,8 +904,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="MyBatisLogPluginindexNum" value="67" />
+    <property name="MyBatisLogPluginparameters" value="Parameters:" />
+    <property name="MyBatisLogPluginpreparing" value="Preparing:" />
+    <property name="MyBatisLogPluginrunning" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -448,7 +919,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -457,14 +928,16 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\17893\Downloads\version1.0-master\src\main\java\cn\sjxy\graduate\service\impl" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\17893\Desktop\graduate\src\main\resources\mapper" />
+      <recent name="C:\Users\17893\Desktop\graduate\src\main\java\cn\sjxy\graduate\entity" />
       <recent name="C:\Users\17893\Downloads\version1.0-master\src\main\java\cn\sjxy\graduate\service\impl" />
       <recent name="C:\Users\17893\Downloads\version1.0-master\src\main\java\cn\sjxy\graduate\service" />
       <recent name="C:\Users\17893\Downloads\version1.0-master\src\main\java\cn\sjxy\graduate\dao" />
-      <recent name="C:\Users\17893\Downloads\version1.0-master\src\main\java\cn\sjxy\graduate\beans" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\17893\Desktop\graduate\src\main\java\cn\sjxy\graduate\dao" />
+      <recent name="C:\Users\17893\Downloads\version1.0-master\src\main\java\cn\sjxy\graduate\service\impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -480,6 +953,22 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.GraduateApplication">
+    <configuration name="GraduateApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.sjxy.graduate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.sjxy.graduate" />
+      <option name="MAIN_CLASS_NAME" value="cn.sjxy.graduate.GraduateApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GraduateApplicationTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graduate" />
       <extension name="coverage">
@@ -491,6 +980,22 @@
       <option name="PACKAGE_NAME" value="cn.sjxy.graduate" />
       <option name="MAIN_CLASS_NAME" value="cn.sjxy.graduate.GraduateApplicationTests" />
       <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraduateApplicationTests.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.sjxy.graduate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.sjxy.graduate" />
+      <option name="MAIN_CLASS_NAME" value="cn.sjxy.graduate.GraduateApplicationTests" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -508,10 +1013,14 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.GraduateApplicationTests.test1" />
+      <item itemvalue="JUnit.GraduateApplicationTests.test2" />
       <item itemvalue="Spring Boot.GraduateApplication" />
+      <item itemvalue="JUnit.GraduateApplicationTests.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GraduateApplicationTests.test" />
+        <item itemvalue="JUnit.GraduateApplicationTests.test2" />
         <item itemvalue="JUnit.GraduateApplicationTests.test1" />
       </list>
     </recent_temporary>
@@ -534,75 +1043,70 @@
       <workItem from="1585099966362" duration="133000" />
       <workItem from="1585100416444" duration="640000" />
       <workItem from="1585101162850" duration="4223000" />
+      <workItem from="1585116290064" duration="62000" />
+      <workItem from="1585184424950" duration="60000" />
+      <workItem from="1585184535292" duration="748000" />
+      <workItem from="1585185320978" duration="20171000" />
+      <workItem from="1585206117327" duration="1895000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.25 at 09h 56m 40s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
+    <history-entry file="GraduateApplicationTests_test2 - 2020.03.26 at 11h 19m 51s.xml">
+      <configuration name="GraduateApplicationTests.test2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraduateApplicationTests_test1 - 2020.03.25 at 09h 57m 26s.xml">
-      <configuration name="GraduateApplicationTests.test1" configurationId="JUnit" />
+    <history-entry file="GraduateApplicationTests_test2 - 2020.03.26 at 11h 38m 21s.xml">
+      <configuration name="GraduateApplicationTests.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test2 - 2020.03.26 at 11h 39m 02s.xml">
+      <configuration name="GraduateApplicationTests.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test2 - 2020.03.26 at 11h 40m 48s.xml">
+      <configuration name="GraduateApplicationTests.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test2 - 2020.03.26 at 11h 42m 34s.xml">
+      <configuration name="GraduateApplicationTests.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test - 2020.03.26 at 15h 19m 23s.xml">
+      <configuration name="GraduateApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test - 2020.03.26 at 15h 22m 37s.xml">
+      <configuration name="GraduateApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test - 2020.03.26 at 15h 23m 28s.xml">
+      <configuration name="GraduateApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test - 2020.03.26 at 15h 24m 42s.xml">
+      <configuration name="GraduateApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GraduateApplicationTests_test - 2020.03.26 at 15h 25m 26s.xml">
+      <configuration name="GraduateApplicationTests.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4223000" />
+    <option name="totallyTimeSpent" value="22066000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-82" y="98" width="1353" height="809" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="JRebel" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27816626" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Tail" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.38127092" />
-      <window_info anchor="bottom" id="MyBatis Log" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="JRebel Executor" />
-      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24247491" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="RestServices" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Mybatis datasource" side_tool="true" />
-      <window_info anchor="right" id="Key Promoter X" />
-      <window_info anchor="right" id="Word Book" side_tool="true" />
-      <window_info anchor="right" id="Database" weight="0.32951483" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
       <window_info id="Designer" order="0" />
-      <window_info id="JRebel" order="1" side_tool="true" />
-      <window_info id="Image Layers" order="2" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.27816626" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.2971698" />
+      <window_info id="JRebel" order="7" side_tool="true" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -613,27 +1117,71 @@
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="JRebel Executor" order="7" />
       <window_info anchor="bottom" id="JRebel Console" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.38127092" />
-      <window_info anchor="bottom" id="MyBatis Log" order="10" />
-      <window_info anchor="bottom" id="Tail" order="11" />
-      <window_info anchor="bottom" id="Message" order="12" />
-      <window_info anchor="bottom" id="Find" order="13" />
-      <window_info anchor="bottom" id="Run" order="14" visible="true" weight="0.24247491" />
-      <window_info anchor="bottom" id="Debug" order="15" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="18" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Key Promoter X" order="3" />
-      <window_info anchor="right" id="Word Book" order="4" side_tool="true" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32951483" />
-      <window_info anchor="right" id="Mybatis datasource" order="6" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="RestServices" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3875598" />
+      <window_info anchor="bottom" id="MyBatis Log" order="10" weight="0.32854864" />
+      <window_info anchor="bottom" id="Message" order="11" />
+      <window_info anchor="bottom" id="Find" order="12" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.4274322" />
+      <window_info anchor="bottom" id="Debug" order="14" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="17" weight="0.3294509" />
+      <window_info anchor="bottom" id="Tail" order="18" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Key Promoter X" order="2" />
+      <window_info anchor="right" id="Word Book" order="3" side_tool="true" />
+      <window_info anchor="right" id="Database" order="4" weight="0.2857143" />
+      <window_info anchor="right" id="Mybatis datasource" order="5" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="RestServices" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.32951483" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="11" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="12" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="13" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2971698" />
+      <window_info id="JRebel" order="7" side_tool="true" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="JRebel Executor" order="7" />
+      <window_info anchor="bottom" id="JRebel Console" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3875598" />
+      <window_info anchor="bottom" id="MyBatis Log" order="10" weight="0.32854864" />
+      <window_info anchor="bottom" id="Message" order="11" />
+      <window_info anchor="bottom" id="Find" order="12" />
+      <window_info active="true" anchor="bottom" id="Run" order="13" visible="true" weight="0.4274322" />
+      <window_info anchor="bottom" id="Debug" order="14" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="17" weight="0.3294509" />
+      <window_info anchor="bottom" id="Tail" order="18" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Key Promoter X" order="2" />
+      <window_info anchor="right" id="Word Book" order="3" side_tool="true" />
+      <window_info anchor="right" id="Database" order="4" weight="0.2857143" />
+      <window_info anchor="right" id="Mybatis datasource" order="5" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="RestServices" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.32951483" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="11" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="12" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="13" weight="0.25" />
@@ -641,6 +1189,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="579" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585101025153">
@@ -659,203 +1210,369 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="116" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585100496569" />
-    <state width="1037" height="206" key="GridCell.Tab.0.bottom" timestamp="1585101056237">
+    <state width="1485" height="185" key="GridCell.Tab.0.bottom" timestamp="1585185283791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1037" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585101056237" />
-    <state width="1037" height="206" key="GridCell.Tab.0.center" timestamp="1585101056237">
+    <state width="1485" height="185" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
+    <state width="1485" height="185" key="GridCell.Tab.0.center" timestamp="1585185283791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1037" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585101056237" />
-    <state width="1037" height="206" key="GridCell.Tab.0.left" timestamp="1585101056236">
+    <state width="1485" height="185" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
+    <state width="1485" height="185" key="GridCell.Tab.0.left" timestamp="1585185283791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1037" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585101056236" />
-    <state width="1037" height="206" key="GridCell.Tab.0.right" timestamp="1585101056237">
+    <state width="1485" height="185" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
+    <state width="1485" height="185" key="GridCell.Tab.0.right" timestamp="1585185283791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1037" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585101056237" />
+    <state width="1485" height="185" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
+    <state width="1485" height="185" key="GridCell.Tab.1.bottom" timestamp="1585185283791">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="185" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
+    <state width="1485" height="185" key="GridCell.Tab.1.center" timestamp="1585185283791">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="185" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
+    <state width="1485" height="185" key="GridCell.Tab.1.left" timestamp="1585185283791">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="185" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
+    <state width="1485" height="185" key="GridCell.Tab.1.right" timestamp="1585185283791">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="185" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585185283791" />
     <state x="198" y="0" key="SettingsEditor" timestamp="1585100501936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="198" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585100501936" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/ScenicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/scenic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4902" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/news_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/activities.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="54" column="6" lean-forward="true" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/web/WebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1629#1630#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1983#1984#0" expanded="true" />
+            <element signature="e#2087#2088#0" expanded="true" />
+            <element signature="e#2188#2189#0" expanded="true" />
+            <element signature="e#2295#2296#0" expanded="true" />
+            <element signature="e#2507#2508#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/TypeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/scenic_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="224" column="69" selection-end-line="422" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/FileDao.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/RestaurantDtoDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="112">
           <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/File.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/File.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/FileDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/HotelServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="3">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/FileDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/HotelDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Restaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/core/service/Service.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/FileService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/RestaurantDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="247">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RestaurantDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/RestaurantService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/RestaurantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/FileServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/dto/RestaurantDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="361">
+          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/dto/ScenicDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="342">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/FileDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ScenicDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/component/InterceptorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        <state relative-caret-position="370">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/file.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="407">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/FileUploadController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="57">
+          <caret line="3" column="73" selection-start-line="3" selection-start-column="73" selection-end-line="3" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/Scenic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/entity/ScenicExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/MemberDao.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/sjxy/graduate/GraduateApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state relative-caret-position="190">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MemberDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/TestUploadUtilController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ScenicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/dao/ScenicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/ScenicService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/MemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/config/Myconfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
           <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#form#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/CodeUtilController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/utils/ConditionUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/service/impl/ScenicServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/MemberController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+        <state relative-caret-position="109">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/sjxy/graduate/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/include/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="20" column="120" selection-start-line="20" selection-start-column="120" selection-end-line="20" selection-end-column="120" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

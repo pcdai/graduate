@@ -8,6 +8,7 @@ import java.io.Serializable;
  * @author dpc
  * @since 2020-03-23 16:03:09
  */
+
 public class Scenic implements Serializable {
     private static final long serialVersionUID = 493872214223193942L;
     

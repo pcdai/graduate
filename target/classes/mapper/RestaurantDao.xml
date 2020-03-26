@@ -12,7 +12,21 @@
         <result property="info" column="info" jdbcType="VARCHAR"/>
         <result property="hot" column="hot" jdbcType="VARCHAR"/>
     </resultMap>
+    <resultMap type="cn.sjxy.graduate.entity.dto.RestaurantDto" id="RestaurantDtoMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="styleId" column="style_id" jdbcType="INTEGER"/>
+        <result property="specialty" column="specialty" jdbcType="VARCHAR"/>
+        <result property="location" column="location" jdbcType="VARCHAR"/>
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="img" column="img" jdbcType="VARCHAR"/>
+        <result property="info" column="info" jdbcType="VARCHAR"/>
+        <result property="hot" column="hot" jdbcType="VARCHAR"/>
+    </resultMap>
 
+
+<select id="queryForOne" resultMap="RestaurantDtoMap">
+    select * from restaurant where id=#{id}
+</select>
 
 
 </mapper>
