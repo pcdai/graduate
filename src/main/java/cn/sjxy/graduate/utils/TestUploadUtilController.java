@@ -44,8 +44,9 @@ public class TestUploadUtilController {
         String strip = StringUtils.strip(list.toString(), "[]");
         System.out.println("strip = " + strip);
         Restaurant restaurant = new Restaurant();
+        restaurant.setId(2);
         restaurant.setImg(strip);
-        restaurantService.save(restaurant);
+        restaurantService.update(restaurant);
         return "ok";
     }
 

@@ -28,6 +28,15 @@ public interface ScenicService {
     List<Scenic> queryAllHotScenicLimitFour();
     void save(Scenic scenic);
 
+    /**
+     * 见名知意
+     * @return
+     */
+    List<Scenic> queryForRelax();
 
+    List<Scenic> findByCondition(String option);
 
+    List<Scenic> queryForHotScenice();
+
+    List<Scenic> relaxScenicList();
 }

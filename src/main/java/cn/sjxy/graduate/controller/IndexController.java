@@ -8,7 +8,9 @@ import cn.sjxy.graduate.utils.ConditionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import tk.mybatis.mapper.entity.Condition;
 
 import javax.servlet.http.HttpSession;
@@ -32,6 +34,15 @@ public class IndexController {
     public String initIndex(HttpSession session, Model model) {
         List<Scenic> scenics = scenicService.queryAllHotScenicLimitFour();
         model.addAttribute("scenics", scenics);
+        List<Scenic> scenics1 = scenicService.queryForRelax();
+        model.addAttribute("scenics1", scenics1);
         return "index";
+    }
+
+    @GetMapping("/search")
+    @ResponseBody
+    public String search(String option) {
+        List<Scenic> list = scenicService.findByCondition("%"+option+"%");
+        return null;
     }
 }

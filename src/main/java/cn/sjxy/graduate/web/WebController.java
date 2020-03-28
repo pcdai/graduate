@@ -1,9 +1,11 @@
 package cn.sjxy.graduate.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 
 /**
  * @Author dpc
@@ -11,67 +13,62 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 public class WebController {
-    /**
-     * <li><a href="${ctxPath}/my_index.html"><i class="i1"></i>我的主页</a></li>
-     * <li><a href="${ctxPath}/write_note.html"><i class="i2"></i>写游记</a></li>
-     * <li><a href="${ctxPath}/my_note.html"><i class="i9"></i>我的游记</a></li>
-     * <li><a href="${ctxPath}/collection_list.html"><i class="i3"></i>我的收藏</a></li>
-     * <li><a href="${ctxPath}/project_order.html"><i class="i4"></i>商品订单</a></li>
-     * <li><a href="${ctxPath}/scenic_order.html"><i class="i5"></i>旅游订单</a></li>
-     * <li><a href="${ctxPath}/note_comments.html"><i class="i6"></i>我的评论</a></li>
-     * <li><a href="${ctxPath}/my_info.html"><i class="i7"></i>设置</a></li>
-     * <li><a href="${ctxPath}/logout"><i class="i8"></i>退出</a></li>
-     * <li class="tb"><a href="${ctxPath}/shop_car.html"><i class="cart_ico"></i>购物车</a><span>|</span></li>
-     * <li class="tb"><a href="${ctxPath}/news_list.html">用户帮助中心</a><span>|</span></li>
-     */
+
     @GetMapping("/my_index.html")
-    public String my_index() {
-        return "my_index.html";
+    public String my_index(Model model) {
+        model.addAttribute("index",new Date());
+        return "my_index";
     }
 
     @GetMapping("/write_note.html")
     public String write_note() {
-        return "write_note.html";
+        return "write_note";
     }
 
     @GetMapping("/my_note.html")
     public String my_note() {
-        return "my_note.html";
+        return "my_note";
+    }
+
+    @GetMapping("/ok")
+    public String ok(Model model) {
+        model.addAttribute("index",new Date());
+        return "ok";
     }
 
     @GetMapping("/collection_list.html")
     public String collection_list() {
-        return "collection_list.html";
+        return "collection_list";
     }
 
     @GetMapping("/project_order.html")
     public String project_order() {
-        return "project_order.html";
+        return "project_order";
     }
 
     @GetMapping("/scenic_order.html")
     public String scenic_order() {
-        return "scenic_order.html";
+        return "scenic_order";
     }
 
     @GetMapping("/note_comments.html")
     public String note_comments() {
-        return "note_comments.html";
+        return "note_comments";
     }
 
     @GetMapping("/shop_car.html")
     public String shop_car() {
-        return "shop_car.html";
+        return "shop_car";
     }
 
     @GetMapping("/my_info.html")
     public String my_info() {
-        return "my_info.html";
+        return "my_info";
     }
 
     @GetMapping("/news_list.html")
     public String news_list() {
-        return "news_list.html";
+        return "news_list";
     }
 
     @GetMapping("/logout")
@@ -80,7 +77,8 @@ public class WebController {
         return "redirect:/";
     }
     @GetMapping("/scenic_list.html")
-    public String scenic_list() {
-        return "scenic_list.html";
+    public String scenic_list(Model model) {
+        model.addAttribute("index",new Date());
+        return "scenic_list";
     }
 }

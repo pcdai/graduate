@@ -35,6 +35,26 @@ public class ScenicServiceImpl implements ScenicService {
 
     }
 
+    @Override
+    public List<Scenic> queryForRelax() {
+        return scenicDao.queryForRelax();
+    }
+
+    @Override
+    public List<Scenic> findByCondition(String option) {
+        return scenicDao.findByCondition(option);
+    }
+
+    @Override
+    public List<Scenic> queryForHotScenice() {
+        return scenicDao.queryForHotScenice();
+    }
+
+    @Override
+    public List<Scenic> relaxScenicList() {
+        return scenicDao.relaxScenicList();
+    }
+
     /**
      * 通过ID查询单条数据
      *

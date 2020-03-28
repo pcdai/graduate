@@ -29,6 +29,23 @@ public class Scenic implements Serializable {
     * 地址
     */
     private String area;
+
+    @Override
+    public String toString() {
+        return "Scenic{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", icon='" + icon + '\'' +
+                ", img='" + img + '\'' +
+                ", area='" + area + '\'' +
+                ", ticket='" + ticket + '\'' +
+                ", desc='" + desc + '\'' +
+                ", typeId=" + typeId +
+                ", evaluate='" + evaluate + '\'' +
+                ", hot='" + hot + '\'' +
+                '}';
+    }
+
     /**
     * 门票价格
     */

@@ -11,4 +11,12 @@ import org.apache.ibatis.annotations.Param;
 public interface ScenicDao {
 
     List<Scenic> queryAllHotScenicLimitFour();
+
+    List<Scenic> queryForRelax();
+
+    List<Scenic> findByCondition(String option);
+
+    List<Scenic> queryForHotScenice();
+
+    List<Scenic> relaxScenicList();
 }

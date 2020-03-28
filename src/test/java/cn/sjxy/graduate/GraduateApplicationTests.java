@@ -2,10 +2,13 @@ package cn.sjxy.graduate;
 
 import cn.sjxy.graduate.dao.RestaurantDao;
 import cn.sjxy.graduate.dao.ScenicDao;
+import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.service.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @SpringBootTest
 class GraduateApplicationTests {
@@ -13,6 +16,7 @@ class GraduateApplicationTests {
     private ScenicDao scenicDao;
     @Test
     public void test(){
-
+        List<Scenic> list = scenicDao.findByCondition("%"+"南京"+"%");
+        System.out.println("list = " + list);
     }
 }

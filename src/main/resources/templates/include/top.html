@@ -1,7 +1,6 @@
 <!-------------------工具栏------------------->
 <!-------------------版头------------------->
 <div id="toolbar">
-
     <div class="cw1200">
         <ul class="fl">
             <li class="tb"><p>您好，欢迎访问Zhiqi Travel Website！</p></li>
@@ -12,18 +11,19 @@
         <ul class="fr">
             <li class="tb">
                 <a href="#">${session.member.name!}</a>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport"
-                              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                        <title>Document</title>
-                    </head>
-                    <body>
-                    
-                    </body>
-                    </html>}</a>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport"
+                          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                    <title>Document</title>
+                </head>
+                <body>
+
+                </body>
+                </html>
+                </a>
                 <!-------------------用户------------------->
                 <div class="user">
                     <a class="user-hd" href="#">
@@ -33,8 +33,6 @@
                     <div class="user-bd">
                         <ul class="nav_sort">
                             <li><a href="${ctxPath}/my_index.html"><i class="i1"></i>我的主页</a></li>
-                            <li><a href="${ctxPath}/write_note.html"><i class="i2"></i>写游记</a></li>
-                            <li><a href="${ctxPath}/my_note.html"><i class="i9"></i>我的游记</a></li>
                             <li><a href="${ctxPath}/collection_list.html"><i class="i3"></i>我的收藏</a></li>
                             <li><a href="${ctxPath}/project_order.html"><i class="i4"></i>商品订单</a></li>
                             <li><a href="${ctxPath}/scenic_order.html"><i class="i5"></i>旅游订单</a></li>
@@ -56,32 +54,29 @@
 <div id="header">
     <div class="cw1200">
         <!-------------------logo------------------->
-        <div class="logo fl"><a title="" href="index.html"><img alt="" src="${ctxPath}/image/t_logo.jpg"></a></div>
+        <div class="logo fl"><a title="" href="${ctxPath}/index"><img alt="" src="${ctxPath}/image/t_logo.jpg"></a>
+        </div>
         <div class="search_nav fl">
             <!-------------------搜索------------------->
             <div class="search radius6">
-                <form name="searchform" method="post" action="/e/search/index.php">
+                <form name="searchform" method="post" action="${ctxPath}/search">
                     <input name='ecmsfrom' type='hidden' value='9'>
-                    <input type="hidden" name="show" value="title,newstext">
-                    <select name="classid" id="choose">
-                        <option value="0">景区</option>
-                        <option value="1">特产</option>
-                        <option value="4">游记</option>
-                        <option value="22">文章</option>
+                    <select name="type" id="choose">
+                        <option>旅游</option>
                     </select>
-                    <input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的关键词" >
-                    <input class="btn_srh" type="submit" name="submit" value="搜索">
+                    <input class="inp_srh" name="keyboard" id="searchName" placeholder="请输入您要搜索的景区">
+                    <input class="btn_srh" type="submit" value="搜索">
                 </form>
             </div>
             <script type="text/javascript" src="${ctxPath}/js/jquery.select.js"></script>
             <!-------------------导航------------------->
             <div class="nav">
                 <ul>
-                    <li><a title="" class="cur" href="index.html">首页</a></li>
-                    <li><a class="tta" title="" href="scenic_list.html">洛阳旅游</a></li>
-                    <li><a title="" href="mall_list.html">特产商城</a></li>
-                    <li><a title="" href="note_list.html">美丽乡村</a></li>
-                    <li><a title="" href="news_list.html">新闻资讯</a></li>
+                    <li><a title=""  href="${ctxPath}/index">首页</a></li>
+                    <li><a class="tta" title="" href="${ctxPath}/scenic/hotScenicList">洛阳旅游</a></li>
+                    <li><a title="" href="${ctxPath}/mall_list.html">特产商城</a></li>
+                    <li><a title="" href="${ctxPath}/note_list.html">美丽乡村</a></li>
+                    <li><a title="" href="${ctxPath}/news_list.html">新闻资讯</a></li>
                     <li><a title="" href="https://github.com/ZhiqiKou/TravelWeb">项目地址</a></li>
                 </ul>
             </div>
@@ -89,3 +84,6 @@
         <div class="clear"></div>
     </div>
 </div>
+<script type="text/javascript">
+
+</script>

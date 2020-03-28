@@ -24,33 +24,33 @@ public class Restaurant {
     @Id
     private Integer id;
     /**
-    * 风格id
-    */
+     * 风格id
+     */
     private Integer styleId;
     /**
-    * 特色菜
-    */
+     * 特色菜
+     */
     private String specialty;
     /**
-    * 地理位置
-    */
+     * 地理位置
+     */
     private String location;
     /**
-    * 封面
-    */
+     * 封面
+     */
     private String icon;
     /**
-    * 详情图
-    */
+     * 详情图
+     */
     private String img;
     /**
-    * 门店信息
-    */
+     * 门店信息
+     */
     private String info;
     /**
-    * 热门 0:热门 1:不热门
-    */
+     * 热门 0:热门 1:不热门
+     */
     private String hot;
 
-
+    private String name;
 }
