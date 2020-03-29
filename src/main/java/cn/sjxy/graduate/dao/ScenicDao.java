@@ -32,4 +32,6 @@ public interface ScenicDao {
     void insertSelective(Scenic scenic);
 
     ScenicDto selectCommentByScenicId(Integer id);
+
+    void addComment(Integer id, String commentId);
 }

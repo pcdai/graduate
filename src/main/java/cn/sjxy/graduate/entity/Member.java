@@ -52,6 +52,10 @@ public class Member{
     * 已订购的酒店
     */
     private Integer hotelApplyId;
+    /**
+     * 头像
+     */
+    private String photo;
 
 
 }

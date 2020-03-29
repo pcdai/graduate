@@ -1,7 +1,9 @@
 package cn.sjxy.graduate.utils;
 
+import cn.sjxy.graduate.entity.Member;
 import cn.sjxy.graduate.entity.Restaurant;
 import cn.sjxy.graduate.entity.Scenic;
+import cn.sjxy.graduate.service.MemberService;
 import cn.sjxy.graduate.service.RestaurantService;
 import cn.sjxy.graduate.service.ScenicService;
 import org.apache.commons.lang3.StringUtils;
@@ -25,6 +27,8 @@ public class TestUploadUtilController {
     private RestaurantService restaurantService;
     @Autowired
     private ScenicService scenicService;
+    @Autowired
+    private MemberService memberService;
 
     @RequestMapping("/restaurant")
     @ResponseBody
@@ -71,5 +75,14 @@ public class TestUploadUtilController {
 
     }
 
+    @RequestMapping("/memberFile")
+    @ResponseBody
+    public String member(@RequestParam("name") MultipartFile file) {
+        String url = FileUtil.fileUpload(file);
+        Member member = new Member();
+        member.setPhoto(url);
+        memberService.save(member);
+        return "ok";
+    }
 
 }

@@ -71,6 +71,11 @@ public class ScenicServiceImpl implements ScenicService {
         return scenicDao.selectCommentByScenicId(id);
     }
 
+    @Override
+    public void addComment(Integer id, String commentId) {
+        scenicDao.addComment(id, commentId);
+    }
+
     /**
      * 通过ID查询单条数据
      *

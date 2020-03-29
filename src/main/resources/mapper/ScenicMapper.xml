@@ -151,7 +151,9 @@
         on s.comment_id=c.id
         where s.id=#{id}
     </select>
-
+    <update id="addComment">
+    update scenic set comment_id=#{commentId} where id=#{id}
+</update>
 
 
 </mapper>

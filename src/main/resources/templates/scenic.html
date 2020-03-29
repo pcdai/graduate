@@ -8,6 +8,8 @@
     <script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
     <!-------------Amazeui--------------->
     <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="${ctxPath}/css/amazeui.css">
     <!------------核心样式-------------->
     <link rel="stylesheet" type="text/css" href="${ctxPath}/css/style.css">
@@ -87,12 +89,14 @@
 
                     <div class="list">
                         <div class="tag">
-                            <a class="cur" href="#">最新评论</a><span>|</span><a href="#">正序排列</a>
+                            <a class="cur" id="asc" onclick="A('${scenic.id}')"
+                               href="javascript:void (0)">最新评论</a><span>|</span><a id="desc" onclick="B('${scenic.id}')"
+                                                                                   href="javascript:void (0)">正序排列</a>
                         </div>
-                        <ul>
+                        <ul id="commentId">
                             <%for(item in comments!){ %>
                             <li>
-                                <div class="pic"><img src="${ctxPath}/image/head1.jpg"/></div>
+                                <div class="pic"><img src="${item.phone}"/></div>
                                 <div class="con">
                                     <label>${item.memberName}</label>
                                     <p>${item.comment}</p>
@@ -102,6 +106,18 @@
                             </li>
                             <%}%>
                         </ul>
+                        <form action="${ctxPath}/comment/addComment" method="post">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input type="hidden" name="scenicId" value="${scenic.id}"/>
+                                    <label for="commentText" class="control-label">请输入你的评论:</label>
+                                    <textarea class="form-control" name="comment" id="commentText"></textarea>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary" id="suBtn">提交</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
@@ -243,5 +259,68 @@
         <div class="clear"></div>
     </div>
 </div>
+<script type="text/javascript">
+    function A(id) {
+        $.ajax({
+            type: "GET",
+            url: "${ctxPath}/scenic/scenicCommentDesc",
+            data: {
+                "id": id
+            },
+            success: function (res) {
+                initComment(res)
+                $("#asc").addClass("cur");
+                $("#desc").removeClass("cur");
+            }
+        })
+    }
+
+    function initComment(res) {
+        $("#commentId").empty();
+        $.each(res, function () {
+            $('<li>\n' +
+                '                                <div class="pic"><img src="' + this.phone + '"/></div>\n' +
+                '                                <div class="con">\n' +
+                '                                    <label>' + this.memberName + '</label>\n' +
+                '                                    <p>' + this.comment + '</p>\n' +
+                '                                    <span>发表于：2017-02-05 14:20</span>\n' +
+                '                                </div>\n' +
+                '                                <div class="tip"><span class="t_a t_box">沙发</span></div>\n' +
+                '                            </li>').appendTo("#commentId")
+        })
+    }
+
+    function B(id) {
+        $.ajax({
+            type: "GET",
+            url: "${ctxPath}/scenic/scenicCommentDesc",
+            data: {
+                "id": id,
+                "pid": "2"
+            },
+            success: function (res) {
+                initComment(res)
+                $("#desc").addClass("cur");
+                $("#asc").removeClass("cur");
+            }
+        });
+    }
+
+    /* $("#suBtn").click(function () {
+         var comment = $("#commentText").val();
+         $.ajax({
+             type: "POST",
+             url: "${ctxPath}/comment/addComment",
+             data: {
+                 "comment": comment
+             },
+             success: function (res) {
+                 if (res == "ok") {
+                     window.location.href="";
+                 }
+             }
+         })
+     })*/
+</script>
 </body>
 </html>

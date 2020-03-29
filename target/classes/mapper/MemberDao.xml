@@ -12,8 +12,9 @@
         <result property="cardId" column="card_id" jdbcType="INTEGER"/>
         <result property="scenicApplyId" column="scenic_apply_id" jdbcType="INTEGER"/>
         <result property="hotelApplyId" column="hotel_apply_id" jdbcType="INTEGER"/>
+        <result property="photo" column="photo" jdbcType="VARCHAR"></result>
     </resultMap>
-<select id="doLogin" resultMap="MemberMap">
+    <select id="doLogin" resultMap="MemberMap">
     select * from member where account=#{account} and password=#{password}
 </select>
 

@@ -57,11 +57,42 @@ public class ScenicController {
 
     @GetMapping("/scenicDetails")
     public String scenicDetails(Integer id, Model model) {
+        /**
+         * 景点各种信息
+         */
         Scenic scenic = scenicService.queryById(id);
         if (!StringUtils.isEmpty(scenic.getImg())) {
             scenic.setImgList(Arrays.asList(scenic.getImg().split(",")));
         }
         model.addAttribute("scenic", scenic);
+        /**
+         * 景点评论
+         */
+        List<Comment> comments = null;
+        ScenicDto scenicDto = scenicService.selectCommentByScenicId(id);
+        if (scenicDto != null && !StringUtils.isEmpty(scenicDto.getCommentId())) {
+            scenicDto.setComment(Arrays.asList(scenicDto.getCommentId().split(",")));
+            Condition condition = ConditionUtil.getCondition(Comment.class);
+            if (scenicDto.getComment() != null) {
+                condition.createCriteria().andIn("id", scenicDto.getComment());
+                comments = commentService.findByCondition(condition);
+            }
+        }
+        ArrayList<Integer> list = new ArrayList<>();
+        if (!CollectionUtils.isEmpty(comments)) {
+            for (Comment comment : comments) {
+                comment.setMemberName(memberService.findBy("id", comment.getUserId()).getName());
+                comment.setPhone(memberService.findBy("id", comment.getUserId()).getPhoto());
+            }
+
+            model.addAttribute("comments", comments);
+        }
+        return "scenic";
+    }
+
+    @GetMapping("/scenicCommentDesc")
+    @ResponseBody
+    public List<Comment> scenicCommentDesc(Integer id, String pid) {
         List<Comment> comments = null;
         ScenicDto scenicDto = scenicService.selectCommentByScenicId(id);
         if (scenicDto != null && !StringUtils.isEmpty(scenicDto.getCommentId())) {
@@ -70,20 +101,20 @@ public class ScenicController {
             Condition condition = ConditionUtil.getCondition(Comment.class);
             if (scenicDto.getComment() != null) {
                 condition.createCriteria().andIn("id", scenicDto.getComment());
+                if (pid != null) {
+                    condition.orderBy("id").desc();
+                }
                 comments = commentService.findByCondition(condition);
             }
         }
-
         ArrayList<Integer> list = new ArrayList<>();
         if (!CollectionUtils.isEmpty(comments)) {
             for (Comment comment : comments) {
                 comment.setMemberName(memberService.findBy("id", comment.getUserId()).getName());
-                System.out.println(comment.getMemberName());
+                comment.setPhone(memberService.findBy("id", comment.getUserId()).getPhoto());
             }
-
-            model.addAttribute("comments", comments);
         }
-        return "scenic";
+        return comments;
     }
 
 }

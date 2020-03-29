@@ -50,4 +50,6 @@ public interface ScenicService {
     List<Scenic> queryForScenic();
 
     ScenicDto selectCommentByScenicId(Integer id);
+
+    void addComment(Integer id, String commentId);
 }

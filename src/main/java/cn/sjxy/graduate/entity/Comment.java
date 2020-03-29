@@ -25,4 +25,6 @@ public class Comment {
 
     @Transient
     private String memberName;
+    @Transient
+    private String phone;
 }
