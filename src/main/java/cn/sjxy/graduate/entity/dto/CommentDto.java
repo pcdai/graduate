@@ -1,6 +1,6 @@
 package cn.sjxy.graduate.entity.dto;
 
-import cn.sjxy.graduate.entity.Scenic;
+import cn.sjxy.graduate.entity.Comment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,14 +10,12 @@ import java.util.List;
 
 /**
  * @Author dpc
- * @Date 2020/3/26 14:42
+ * @Date 2020/3/29 10:19
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class ScenicDto extends Scenic {
-    private List imgList;
-    private List comment;
-    private List userName;
+public class CommentDto extends Comment {
+    private String MemberName;
 }

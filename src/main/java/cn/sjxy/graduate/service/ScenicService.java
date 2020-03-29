@@ -1,6 +1,8 @@
 package cn.sjxy.graduate.service;
 
+import cn.sjxy.graduate.entity.Comment;
 import cn.sjxy.graduate.entity.Scenic;
+import cn.sjxy.graduate.entity.dto.ScenicDto;
 
 import java.util.List;
 
@@ -22,14 +24,17 @@ public interface ScenicService {
 
     /**
      * 查询热门景点前四位
+     *
      * @param hot
      * @return
      */
     List<Scenic> queryAllHotScenicLimitFour();
+
     void save(Scenic scenic);
 
     /**
      * 见名知意
+     *
      * @return
      */
     List<Scenic> queryForRelax();
@@ -39,4 +44,10 @@ public interface ScenicService {
     List<Scenic> queryForHotScenice();
 
     List<Scenic> relaxScenicList();
+
+    List<Scenic> scenicList();
+
+    List<Scenic> queryForScenic();
+
+    ScenicDto selectCommentByScenicId(Integer id);
 }

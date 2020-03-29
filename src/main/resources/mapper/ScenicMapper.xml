@@ -10,9 +10,28 @@
         <result column="ticket" property="ticket" jdbcType="VARCHAR"/>
         <result column="desc" property="desc" jdbcType="VARCHAR"/>
         <result column="type_id" property="typeId" jdbcType="INTEGER"/>
-        <result column="evaluate" property="evaluate" jdbcType="VARCHAR"/>
+        <result column="comment_id" property="commentId" jdbcType="INTEGER"/>
         <result column="hot" property="hot" jdbcType="VARCHAR"/>
+        <result column="details" property="details" jdbcType="VARCHAR"/>
+        <result column="contact" property="contact" jdbcType="VARCHAR"/>
+        <result column="open_time" property="openTime" jdbcType="VARCHAR"/>
     </resultMap>
+    <resultMap id="ScenicDtoMap" type="cn.sjxy.graduate.entity.dto.ScenicDto">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="icon" property="icon" jdbcType="VARCHAR"/>
+        <result column="img" property="img" jdbcType="VARCHAR"/>
+        <result column="area" property="area" jdbcType="VARCHAR"/>
+        <result column="ticket" property="ticket" jdbcType="VARCHAR"/>
+        <result column="desc" property="desc" jdbcType="VARCHAR"/>
+        <result column="type_id" property="typeId" jdbcType="INTEGER"/>
+        <result column="comment_id" property="commentId" jdbcType="VARCHAR"/>
+        <result column="hot" property="hot" jdbcType="VARCHAR"/>
+        <result column="details" property="details" jdbcType="VARCHAR"/>
+        <result column="contact" property="contact" jdbcType="VARCHAR"/>
+        <result column="open_time" property="openTime" jdbcType="VARCHAR"/>
+    </resultMap>
+
     <select id="queryAllHotScenicLimitFour" resultMap="BaseResultMap">
   select * from scenic where hot=0 limit 5
 </select>
@@ -29,4 +48,110 @@
     <select id="relaxScenicList" resultMap="BaseResultMap">
     select * from scenic join type on scenic.type_id=type.id where type.id=1
   </select>
+    <select id="scenicList" resultMap="BaseResultMap">
+        select * from scenic
+    </select>
+
+    <select id="queryforScenic" resultMap="BaseResultMap">
+        select * from scenic join type on scenic.type_id=type.id where type.id=2
+    </select>
+    <insert id="insertSelective" parameterType="cn.sjxy.graduate.entity.Scenic">
+        insert into scenic
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="icon != null">
+                icon,
+            </if>
+            <if test="img != null">
+                img,
+            </if>
+            <if test="area != null">
+                area,
+            </if>
+            <if test="ticket != null">
+                ticket,
+            </if>
+            <if test="desc != null">
+                desc,
+            </if>
+            <if test="typeId != null">
+                type_id,
+            </if>
+            <if test="evaluate != null">
+                evaluate,
+            </if>
+            <if test="hot != null">
+                hot,
+            </if>
+            <if test="details !=null">
+                details,
+            </if>
+            <if test="contact !=null">
+                contact,
+            </if>
+            <if test="openTime !=null">
+                open_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null">
+                #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="img != null">
+                #{img,jdbcType=VARCHAR},
+            </if>
+            <if test="area != null">
+                #{area,jdbcType=VARCHAR},
+            </if>
+            <if test="ticket != null">
+                #{ticket,jdbcType=VARCHAR},
+            </if>
+            <if test="desc != null">
+                #{desc,jdbcType=VARCHAR},
+            </if>
+            <if test="typeId != null">
+                #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="evaluate != null">
+                #{evaluate,jdbcType=VARCHAR},
+            </if>
+            <if test="hot != null">
+                #{hot,jdbcType=VARCHAR},
+            </if>
+            <if test="details != null">
+                #{details,jdbcType=VARCHAR},
+            </if>
+            <if test="contact != null">
+                #{contact,jdbcType=VARCHAR},
+            </if>
+            <if test="openTime != null">
+                #{openTime,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="queryForId" resultMap="BaseResultMap">
+        select * from scenic where id=#{id}
+    </select>
+
+    <select id="selectCommentByScenicId" resultMap="ScenicDtoMap">
+        select s.*,c.*
+        from scenic s join comment c
+        on s.comment_id=c.id
+        where s.id=#{id}
+    </select>
+
+
+
 </mapper>

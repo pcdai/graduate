@@ -32,8 +32,19 @@ public class IndexController {
 
     @RequestMapping("/index")
     public String initIndex(HttpSession session, Model model) {
+        /**
+         * 热门景点，做轮播
+         */
         List<Scenic> scenics = scenicService.queryAllHotScenicLimitFour();
         model.addAttribute("scenics", scenics);
+        /**
+         * 景区 首页展示
+         */
+        List<Scenic> scenics2=scenicService.queryForScenic();
+        model.addAttribute("scenics2", scenics2);
+        /**
+         * 休闲 首页展示
+         */
         List<Scenic> scenics1 = scenicService.queryForRelax();
         model.addAttribute("scenics1", scenics1);
         return "index";

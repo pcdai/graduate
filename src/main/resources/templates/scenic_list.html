@@ -32,9 +32,10 @@
                 </div>
                 <!------------------列表分类-------------------->
                 <div id="list_sort">
-
+                    <span>产品类型：</span>
                     <div class="list_1">
-
+                        <a class="cur" href="#">旅游景区</a>
+                        <a href="${ctxPath}/scenicApply/activities_list.html">旅游活动</a>
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -43,13 +44,14 @@
                     <ul>
                         <%for(item in list!){%>
                         <li>
-                            <div class="pic"><a href="${ctxPath}/scenic/?id=${item.id}"><img class="scale-effect" class="scale-effect" src="${item.icon}"/></a></div>
+                            <div class="pic"><a href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img class="scale-effect" class="scale-effect" src="${item.icon}"/></a></div>
                             <div class="con">
-                                <h3><a href="${ctxPath}/scenic/?id=${item.id}">${item.name}</a></h3>
+                                <h3><a href="${ctxPath}/scenic/scenicDetails?id=${item.id}">${item.name}</a></h3>
                                 <p>${item.desc}</p>
                             </div>
                             <div class="tip">
-                                <img src="${ctxPath}/image/leisure_ico.png"/>休闲
+                                <img src="${ctxPath}/image/leisure_ico.png"/>
+                                ${item.typeId==1?"休闲":"景区"}
                             </div>
                             <div class="clear"></div>
                         </li>

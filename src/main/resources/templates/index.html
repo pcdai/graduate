@@ -41,37 +41,31 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
 </script>
 
 <!------------------广告-------------------->
-<div class="h_gg">
-    <a title="" href="#"><img alt="" src="${ctxPath}/image/g1.jpg"/></a>
-    <a title="" href="#"><img alt="" src="${ctxPath}/image/g2.jpg"/></a>
-    <a title="" href="#"><img alt="" src="${ctxPath}/image/g3.jpg"/></a>
-    <a title="" href="#"><img alt="" src="${ctxPath}/image/g4.jpg"/></a>
-</div>
+
 
 <!------------------南京旅游-------------------->
 <div id="h_scenic">
     <div class="cw1200">
-        这里有图片class属性为title
+        <div class="title"><img alt="" src="${ctxPath}/image/h_title2.png"/></div>
         <div class="con">
-           这里有图片class属性为tag
+            <div class="tag"><img alt="" src="${ctxPath}/image/h_title2_t.jpg"/></div>
             <div class="box">
                 <ul>
-                    <%for(item in scenics!){%>
-                    <li><a title="" href="${ctxPath}/scenic?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/><span>${item.name}</span></a></li>
+                    <%for(item in scenics2!){%>
+                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/><span>${item.name}</span></a></li>
                     <%}%>
                     <div class="clear"></div>
                 </ul>
                 <div class="more"><a href="${ctxPath}/scenic/hotScenicList">热门景区<span>+</span></a></div>
-                
             </div>
             <div class="box">
                 <ul>
                     <%for(item in scenics1!){%>
-                    <li><a title="" href="${ctxPath}/scenic?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/><span>${item.name}</span></a></li>
+                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/><span>${item.name}</span></a></li>
                     <%}%>
                     <div class="clear"></div>
                 </ul>
-                <div class="more"><a title="" href="${ctxPath}/scenic/scenicRelaxList">休闲度假<span>+</span></a></div>
+                <div class="more"><a title="" href="${ctxPath}/scenic/hotScenicList">休闲度假<span>+</span></a></div>
             </div>
             <div class="clear"></div>
         </div>

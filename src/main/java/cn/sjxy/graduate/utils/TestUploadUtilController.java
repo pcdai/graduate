@@ -42,7 +42,6 @@ public class TestUploadUtilController {
     public String testMore(HttpServletRequest request) {
         List<String> list = FileUtil.filesUpload(request);
         String strip = StringUtils.strip(list.toString(), "[]");
-        System.out.println("strip = " + strip);
         Restaurant restaurant = new Restaurant();
         restaurant.setId(2);
         restaurant.setImg(strip);
@@ -50,7 +49,7 @@ public class TestUploadUtilController {
         return "ok";
     }
 
-    @RequestMapping("/scenic")
+    @RequestMapping("/scenicFile")
     @ResponseBody
     public String scenic(@RequestParam("name") MultipartFile file) {
         String url = FileUtil.fileUpload(file);
@@ -59,4 +58,18 @@ public class TestUploadUtilController {
         scenicService.save(scenic);
         return "ok";
     }
+
+    @RequestMapping("/scenicMore")
+    @ResponseBody
+    public String testMore2(HttpServletRequest request) {
+        List<String> list = FileUtil.filesUpload(request);
+        String strip = StringUtils.strip(list.toString(), "[]");
+        Scenic scenic = new Scenic();
+        scenic.setImg(strip);
+        scenicService.save(scenic);
+        return "ok";
+
+    }
+
+
 }

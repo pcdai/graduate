@@ -3,6 +3,7 @@ package cn.sjxy.graduate.service.impl;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.dao.ScenicDao;
 import cn.sjxy.graduate.entity.ScenicExample;
+import cn.sjxy.graduate.entity.dto.ScenicDto;
 import cn.sjxy.graduate.service.ScenicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,17 +23,17 @@ public class ScenicServiceImpl implements ScenicService {
 
     @Override
     public Scenic queryById(Integer id) {
-        return null;
+        return scenicDao.queryForId(id);
     }
 
     @Override
     public List<Scenic> queryAllHotScenicLimitFour() {
-     return scenicDao.queryAllHotScenicLimitFour();
+        return scenicDao.queryAllHotScenicLimitFour();
     }
 
     @Override
     public void save(Scenic scenic) {
-
+        scenicDao.insertSelective(scenic);
     }
 
     @Override
@@ -53,6 +54,21 @@ public class ScenicServiceImpl implements ScenicService {
     @Override
     public List<Scenic> relaxScenicList() {
         return scenicDao.relaxScenicList();
+    }
+
+    @Override
+    public List<Scenic> scenicList() {
+        return scenicDao.scenicList();
+    }
+
+    @Override
+    public List<Scenic> queryForScenic() {
+        return scenicDao.queryforScenic();
+    }
+
+    @Override
+    public ScenicDto selectCommentByScenicId(Integer id) {
+        return scenicDao.selectCommentByScenicId(id);
     }
 
     /**
