@@ -1,9 +1,11 @@
 package cn.sjxy.graduate.utils;
 
 import cn.sjxy.graduate.entity.Member;
+import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.entity.Restaurant;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.service.MemberService;
+import cn.sjxy.graduate.service.NewsService;
 import cn.sjxy.graduate.service.RestaurantService;
 import cn.sjxy.graduate.service.ScenicService;
 import org.apache.commons.lang3.StringUtils;
@@ -82,6 +84,31 @@ public class TestUploadUtilController {
         Member member = new Member();
         member.setPhoto(url);
         memberService.save(member);
+        return "ok";
+    }
+
+    @Autowired
+    private NewsService newsService;
+
+    @RequestMapping("/newsFile")
+    @ResponseBody
+    public String newsFile(@RequestParam("name") MultipartFile file) {
+        String upload = FileUtil.fileUpload(file);
+        News news = new News();
+        news.setImg(upload);
+        newsService.save(news);
+        return "ok";
+    }
+
+    @RequestMapping("newsList")
+    @ResponseBody
+    public String newsList(HttpServletRequest request) {
+        List<String> list = FileUtil.filesUpload(request);
+        System.out.println("list = " + list);
+        String strip = StringUtils.strip(list.toString(), "[]");
+        News news = new News();
+        news.setImg(strip);
+        newsService.save(news);
         return "ok";
     }
 

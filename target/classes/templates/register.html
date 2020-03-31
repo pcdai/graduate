@@ -33,14 +33,16 @@
             <div class="inner">
                 <h1>毕业设计</h1>
             </div>
-            <form id="form" method="post" action="${ctxPath}/member/register">
+            <form id="testForm" enctype="multipart/form-data" method="post" action="${ctxPath}/member/register">
                 ${errorMsg1!}
                 <input type="text" name="account" placeholder="账号"><br>
                 <input type="password" name="password" placeholder="密码"><br>
+                <input type="text" name="name" placeholder="昵称"><br>
+                头像： <input type="file" name="photo" placeholder="头像">
                 ${errorMsg2!}
                 <input type="email" id="email" name="email" placeholder="邮箱"><br>
                 ${errorMsg!}
-                <input type="text" name="code" placeholder="验证码">
+                <input type="text" name="code1" placeholder="验证码">
                 <p onclick="getCode()" class="button">获取验证码</p><br>
                 <input type="submit" value="注册">
             </form>
@@ -56,37 +58,13 @@
 <div id="bg"></div>
 <!-- Scripts -->
 <script src="${ctxPath}/js/jquery@1.11.js"></script>
-<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+
 <script src="${ctxPath}/js/skel.min.js"></script>
 <script src="${ctxPath}/js/util.js"></script>
+<script src="${ctxPath}/js/jquery.validate.min.js"></script>
 <script src="${ctxPath}/js/main.js"></script>
 <script language="javascript">
-    function getCode() {
-        var email = $("#email").val();
-        console.log(email)
-        if (email==""){
-            alert("邮箱不得为空")
-            return false;
-        }
-        var regExp = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-        if(!regExp.test(email)){
-            alert("邮箱格式不正确")
-            return false;
-        }
-        $.ajax({
-            url: "${ctxPath}/getCode",
-            type: "get",
-            data: {
-                "email": email
-            },
-            success: function (res) {
-                if (res == "ok") {
-                    alert("验证码发送成功")
-                }
-            }
-        })
-    }
-    $("#form").validate({
+    $("#testForm").validate({
         rules:{
             account:{
                 required:true,
@@ -96,9 +74,12 @@
                 required:true,
                 minlength:6
             },
+            name:{
+                required:true,
+            },
             email:{
                 required:true,
-               email:true
+                email:true
             },
             code:{
                 required:true,
@@ -115,6 +96,9 @@
                 required:"密码不得为空",
                 minlength:"密码不得少于六位"
             },
+            name:{
+                required:"昵称不得为空",
+            },
             email:{
                 required:"邮箱不得为空",
                 email:"邮箱格式不正确"
@@ -126,6 +110,32 @@
             }
         }
     })
+
+    function getCode() {
+        var email = $("#email").val();
+        console.log(email)
+        if (email == "") {
+            alert("邮箱不得为空")
+            return false;
+        }
+        var regExp = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if (!regExp.test(email)) {
+            alert("邮箱格式不正确")
+            return false;
+        }
+        $.ajax({
+            url: "${ctxPath}/getCode",
+            type: "get",
+            data: {
+                "email": email
+            },
+            success: function (res) {
+                if (res == "ok") {
+                    alert("验证码发送成功")
+                }
+            }
+        })
+    }
 </script>
 </body>
 </html>

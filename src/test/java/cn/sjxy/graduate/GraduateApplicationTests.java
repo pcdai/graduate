@@ -5,6 +5,7 @@ import cn.sjxy.graduate.dao.RestaurantDao;
 import cn.sjxy.graduate.dao.ScenicDao;
 import cn.sjxy.graduate.entity.Comment;
 import cn.sjxy.graduate.entity.Member;
+import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.entity.dto.CommentDto;
 import cn.sjxy.graduate.entity.dto.RestaurantDto;
@@ -85,6 +86,18 @@ class GraduateApplicationTests {
             comment.setMemberName( memberService.findBy("id",comment.getUserId()).getName());
             System.out.println(comment.getMemberName());
         }
+    }
+    @Autowired
+    private NewsService newsService;
+    @Test
+    public void test6(){
+        System.out.println("newsService.findAll() = " + newsService.findAll());
+    }
+    @Test
+    public void test7(){
+        List<News> five = newsService.findLimitFive();
+        for (News news : five) {
 
+        }
     }
 }

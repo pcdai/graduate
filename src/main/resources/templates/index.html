@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>首页</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-------------jquery库-------------->
-  	<script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
     <!-------------Amazeui--------------->
     <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
     <link rel="stylesheet" type="text/css" href="${ctxPath}/css/amazeui.css">
@@ -16,31 +16,37 @@
 <!------------------banner-------------------->
 <script src="${ctxPath}/js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
 <div class="h_banner">
-	<ul class="h_b_list">
-		<%for(item in scenics!){%>
-		<li><a style="background:url(${item.icon}) no-repeat center;" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"></a></li>
+    <ul class="h_b_list">
+        <%for(item in scenics!){%>
+        <li><a style="background:url(${item.icon}) no-repeat center;"
+               href="${ctxPath}/scenic/scenicDetails?id=${item.id}"></a></li>
         <%}%>
-	</ul>
-	<a class="prev" href="javascript:void(0)"><==</a>
-	<a class="next" href="javascript:void(0)">==></a>
+    </ul>
+    <a class="prev" href="javascript:void(0)"><==</a>
+    <a class="next" href="javascript:void(0)">==></a>
 </div>
 <script>
-/*鼠标移过，左右按钮显示*/
-$(".h_banner").hover(function(){
-	$(this).find(".prev,.next").fadeTo("show",0.5);
-},function(){
-	$(this).find(".prev,.next").hide();
-})
-/*鼠标移过某个按钮 高亮显示*/
-$(".prev,.next").hover(function(){
-	$(this).fadeTo("show",1);
-},function(){
-	$(this).fadeTo("show",0.7);
-})
-$(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold", autoPlay:true, delayTime:700 , autoPage:true });
+    /*鼠标移过，左右按钮显示*/
+    $(".h_banner").hover(function () {
+        $(this).find(".prev,.next").fadeTo("show", 0.5);
+    }, function () {
+        $(this).find(".prev,.next").hide();
+    })
+    /*鼠标移过某个按钮 高亮显示*/
+    $(".prev,.next").hover(function () {
+        $(this).fadeTo("show", 1);
+    }, function () {
+        $(this).fadeTo("show", 0.7);
+    })
+    $(".h_banner").slide({
+        titCell: ".num ul",
+        mainCell: ".h_b_list",
+        effect: "fold",
+        autoPlay: true,
+        delayTime: 700,
+        autoPage: true
+    });
 </script>
-
-<!------------------广告-------------------->
 
 
 <!------------------南京旅游-------------------->
@@ -52,7 +58,10 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
             <div class="box">
                 <ul>
                     <%for(item in scenics2!){%>
-                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/><span>${item.name}</span></a></li>
+                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt=""
+                                                                                              class="scale-effect"
+                                                                                              src="${item.icon}"/><span>${item.name}</span></a>
+                    </li>
                     <%}%>
                     <div class="clear"></div>
                 </ul>
@@ -61,7 +70,10 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
             <div class="box">
                 <ul>
                     <%for(item in scenics1!){%>
-                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/><span>${item.name}</span></a></li>
+                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt=""
+                                                                                              class="scale-effect"
+                                                                                              src="${item.icon}"/><span>${item.name}</span></a>
+                    </li>
                     <%}%>
                     <div class="clear"></div>
                 </ul>
@@ -71,6 +83,7 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
         </div>
     </div>
 </div>
+
 <!------------------南京美食-------------------->
 <div id="h_food">
     <div class="cw1200">
@@ -78,7 +91,8 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
         <div class="con">
             <div class="box fl">
                 <div class="big">
-                    <div class="pic"><a title="" href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/f0.jpg"/></a></div>
+                    <div class="pic"><a title="" href="#"><img alt="" class="scale-effect"
+                                                               src="${ctxPath}/image/f0.jpg"/></a></div>
                     <p>所谓“水席”，有二层含义：一是以汤水见长，二是吃一道换一道，一道道上菜，象流水一般，故名“水席”。洛阳水席最初只是在民间流行，唐代武则天时，将洛...</p>
                 </div>
                 <div class="list">
@@ -108,7 +122,8 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
             </div>
             <div class="box fr">
                 <div class="big">
-                    <div class="pic"><a href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/f00.jpg"/></a></div>
+                    <div class="pic"><a href="#"><img alt="" class="scale-effect" src="${ctxPath}/image/f00.jpg"/></a>
+                    </div>
                     <p>所谓“水席”，有二层含义：一是以汤水见长，二是吃一道换一道，一道道上菜，象流水一般，故名“水席”。洛阳水席最初只是在民间流行，唐代武则天时，将洛...</p>
                 </div>
                 <div class="list">
@@ -175,7 +190,7 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
                         <img alt="" class="scale-effect" src="${ctxPath}/image/t5.jpg"/>
                         <p>大麦茶</p>
                     </a>
-                </li>       
+                </li>
             </ul>
         </div>
     </div>
@@ -194,7 +209,8 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
                         <div class="user">
                             <div class="head"><img alt="" src="${ctxPath}/image/head1.jpg"/></div>
                             <p>A monologue. 独白。</p>
-                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img
+                                    src="${ctxPath}/image/state_icon2.png"/>20</label></span>
                         </div>
                         <div class="cont">
                             <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
@@ -210,7 +226,8 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
                         <div class="user">
                             <div class="head"><img alt="" src="${ctxPath}/image/hh2.jpg"/></div>
                             <p>卖萌の小喵咪</p>
-                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img
+                                    src="${ctxPath}/image/state_icon2.png"/>20</label></span>
                         </div>
                         <div class="cont">
                             <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
@@ -226,7 +243,8 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
                         <div class="user">
                             <div class="head"><img src="${ctxPath}/image/hh3.jpg"/></div>
                             <p>独闯世界fell</p>
-                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img
+                                    src="${ctxPath}/image/state_icon2.png"/>20</label></span>
                         </div>
                         <div class="cont">
                             <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
@@ -242,7 +260,8 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
                         <div class="user">
                             <div class="head"><img src="${ctxPath}/image/hh4.jpg"/></div>
                             <p>大叔god说走就走</p>
-                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img src="${ctxPath}/image/state_icon2.png"/>20</label></span>
+                            <span><label><img alt="" src="${ctxPath}/image/state_icon1.png"/>18</label><label><img
+                                    src="${ctxPath}/image/state_icon2.png"/>20</label></span>
                         </div>
                         <div class="cont">
                             <a title="" href="#"><h3>洛阳，历史长河中的一处停歇</h3></a>
@@ -250,7 +269,7 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
                         </div>
                     </div>
                 </li>
-                
+
                 <div class="clear"></div>
             </ul>
         </div>
@@ -263,41 +282,41 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
             <div class="title"><img alt="" src="${ctxPath}/image/h_title6.png"/></div>
             <div class="con">
                 <ul>
-                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n1.jpg"/><p>春节逛吃哪里去？看洛阳庙会、灯展集锦</p></a></li>
-                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n2.jpg"/><p>春节洛阳九县六区超嗨的节目单出炉</p></a></li>
-                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n3.jpg"/><p>栾川各景区“冬游季”活动大比拼</p></a></li>
-                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n4.jpg"/><p>美！滑雪看戏吃鱼宴，今年过年来嵩县！</p></a></li>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n1.jpg"/>
+                        <p>春节逛吃哪里去？看洛阳庙会、灯展集锦</p></a></li>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n2.jpg"/>
+                        <p>春节洛阳九县六区超嗨的节目单出炉</p></a></li>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n3.jpg"/>
+                        <p>栾川各景区“冬游季”活动大比拼</p></a></li>
+                    <li><a title="" href="article.html"><img class="scale-effect" src="${ctxPath}/image/n4.jpg"/>
+                        <p>美！滑雪看戏吃鱼宴，今年过年来嵩县！</p></a></li>
                 </ul>
             </div>
         </div>
         <div class="hot_news fr">
             <div class="title"><img src="${ctxPath}/image/h_title7.png"/></div>
             <div class="con">
-     
+
                 <div data-am-widget="slider" class="pic am-slider am-slider-c4" data-am-slider='{"controlNav":false}'>
                     <ul class="am-slides">
+                       <%for(item in newsList!){%>
+                        <%if(itemLP.index<3){%>
                         <li>
-                            <a href="article.html">
-								<img alt="" src="${ctxPath}/image/n5.jpg"/>
-								<div class="am-slider-desc">春节黄金周，洛阳旅游全线飘红</div>
-							</a>
+                            <a href="${ctxPath}/news/newsDetails?id=${item.id}">
+                                <img alt="${item.title}" src="${item.icon}"/>
+                                <div class="am-slider-desc">${item.title}</div>
+                            </a>
                         </li>
-                        <li>
-                            <a href="article.html">
-								<img alt="" src="${ctxPath}/image/n5.jpg"/>
-								<div class="am-slider-desc">春节黄金周，洛阳旅游全线飘红</div>
-							</a>
-                        </li>
+                        <%}%>
+                        <%}%>
                     </ul>
                 </div>
 
                 <div class="list">
-                    <ul>
-                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
-                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
-                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
-                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
-                        <li><a title="" href="article.html">正月十五，这些习俗要了解02/09</a><span>01/18</span></li>
+                    <ul id="newsId">
+                        <%for(item in newsList!){%>
+                        <li><a title="${item.title}" href="${ctxPath}/news/newsDetails?id=${item.id}">${item.title}</a><span>${item.time}</span></li>
+                        <%}%>
                     </ul>
                 </div>
             </div>
@@ -305,6 +324,8 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
         <div class="clear"></div>
     </div>
 </div>
+
+
 <!-----------------版底---------------->
 <div id="footer">
     <div class="cw1200">
@@ -318,5 +339,21 @@ $(".h_banner").slide({ titCell:".num ul" , mainCell:".h_b_list" , effect:"fold",
         <div class="clear"></div>
     </div>
 </div>
+<script type="text/javascript">
+  /*  $.ajax({
+        type: "GET",
+        url: "${ctxPath}/news/getNewsList",
+        success: function (res) {
+
+        }
+    })
+
+    function initNews(res) {
+        $("#newsId").empty();
+        $.each(res, function (index, item) {
+
+        })
+    }*/
+</script>
 </body>
 </html>

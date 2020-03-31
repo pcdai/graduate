@@ -1,7 +1,9 @@
 package cn.sjxy.graduate.controller;
 
+import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.entity.Restaurant;
 import cn.sjxy.graduate.entity.Scenic;
+import cn.sjxy.graduate.service.NewsService;
 import cn.sjxy.graduate.service.RestaurantService;
 import cn.sjxy.graduate.service.ScenicService;
 import cn.sjxy.graduate.utils.ConditionUtil;
@@ -29,6 +31,8 @@ public class IndexController {
 
     @Autowired
     private RestaurantService restaurantService;
+    @Autowired
+    private NewsService newsService;
 
     @RequestMapping("/index")
     public String initIndex(HttpSession session, Model model) {
@@ -45,6 +49,12 @@ public class IndexController {
         /**
          * 休闲 首页展示
          */
+        /**
+         * 热点新闻
+         */
+        List<News> five = newsService.findLimitFive();
+
+        model.addAttribute("newsList", five);
         List<Scenic> scenics1 = scenicService.queryForRelax();
         model.addAttribute("scenics1", scenics1);
         return "index";
