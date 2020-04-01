@@ -100,7 +100,7 @@
                                 <div class="con">
                                     <label>${item.memberName}</label>
                                     <p>${item.comment}</p>
-                                    <span>发表于：2017-02-05 14:20</span>
+                                    <span>发表于：${item.commentTime}</span>
                                 </div>
                                 <div class="tip"><span class="t_a t_box">沙发</span></div>
                             </li>
@@ -283,7 +283,7 @@
                 '                                <div class="con">\n' +
                 '                                    <label>' + this.memberName + '</label>\n' +
                 '                                    <p>' + this.comment + '</p>\n' +
-                '                                    <span>发表于：2017-02-05 14:20</span>\n' +
+                '                                    <span>发表于：'+this.commentTime+'</span>\n' +
                 '                                </div>\n' +
                 '                                <div class="tip"><span class="t_a t_box">沙发</span></div>\n' +
                 '                            </li>').appendTo("#commentId")

@@ -3,6 +3,7 @@ package cn.sjxy.graduate.controller;
 import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.service.NewsService;
 import cn.sjxy.graduate.utils.ConditionUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Condition;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,14 +35,24 @@ public class NewsController {
 
     @RequestMapping("/newsDetails")
     public String newsDetails(Integer id, Model model, HttpServletRequest request) {
-        Integer count = 0;
         News news = newsService.findById(id);
-        if (news != null) {
-            count = news.getCount();
+        if (news != null && !StringUtils.isEmpty(news.getImg())) {
+            String[] split = news.getDetails().split("@@@");
+            if (split.length <= 1) {
+                news.setDetailsList(Arrays.asList(news.getDetails()));
+            }
+            news.setDetailsList(Arrays.asList(split));
         }
-        count += count;
+        if (news != null && !StringUtils.isEmpty(news.getImg())) {
+            news.setImgList(Arrays.asList(news.getImg().split(",")));
+        }
+        Integer count = news.getCount();
+        count=count+1;
         news.setCount(count);
+        newsService.update(news);
         model.addAttribute("news", news);
-        return "article.html";
+        model.addAttribute("times", count);
+        return "article";
+
     }
 }

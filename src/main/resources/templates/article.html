@@ -4,18 +4,18 @@
     <title>文章</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-------------jquery库-------------->
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
     <!-------------Amazeui--------------->
-    <script type="text/javascript" src="js/amazeui.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/amazeui.css">
+    <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/css/amazeui.css">
     <!------------核心样式-------------->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/css/style.css">
 </head>
 <body>
 <!-------------------工具栏------------------->
 <%layout("/include/top.html"){}%>
 
-${news}
+
 <!------------------子页框架-------------------->
 <div id="sub_from">
     <div class="cw1200">
@@ -23,19 +23,19 @@ ${news}
             <!------------------公共盒子-------------------->
             <div class="public_box bg1">
                 <div class="public_title">
-                    <div class="fl"><img src="images/from_title_left.png"/></div>
+                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
                     <div class="con">
-                        <div class="lamp_ico"><img src="images/lamp_ico.png"/></div>
-                        <div class="name"><img src="images/f_t_article.png"/></div>
+                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                        <div class="name"><img src="${ctxPath}/image/f_t_article.png"/></div>
                     </div>
-                    <div class="fr"><img src="images/from_title_right.png"/></div>
+                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
                     <div class="clear"></div>
                 </div>
                 <!------------------文章-------------------->
                 <div id="article">
                     <div class="title">
-                        <h2>我市国家3A级旅游景区有望增至18家</h2>
-                        <p>发布时间：2017/02/08 10:39 阅读 0 次</p>
+                        <h2>${news.title}</h2>
+                        <p>发布时间：${news.time} 阅读 ${times} 次</p>
                         <div class="bdsharebuttonbox">
                             <a href="#" class="bds_more" data-cmd="more"></a>
                             <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
@@ -68,20 +68,36 @@ ${news}
                         with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
                     </div>
                     <div class="con">
-                        <p>
-                            日前，记者从市旅发委获悉，我市旅游资源规划开发质量等级评定委员会通过现场检查、达标审核、集体研究等程序，经公示无异议后，确定我市新安函谷关景区、伊川鹤鸣峡风景区、嵩县石头部落景区、东方红工业游景区4家景区为国家3A级旅游景区。</p>
-                        <p>至此，我市国家A级旅游景区数量已增至45家。其中，国家5A级旅游景区5家，国家4A级旅游景区18家，国家3A级旅游景区17家，国家2A级旅游景区5家。</p>
-                        <p>另悉，嵩县白云小镇景区也有望获批国家3A级旅游景区，目前正在公示(2月4日至9日)。待公示结束，我市国家A级旅游景区数量将达到46家。</p>
-                        <img src="images/y1.jpg"/>
-                        <p>
-                            日前，记者从市旅发委获悉，我市旅游资源规划开发质量等级评定委员会通过现场检查、达标审核、集体研究等程序，经公示无异议后，确定我市新安函谷关景区、伊川鹤鸣峡风景区、嵩县石头部落景区、东方红工业游景区4家景区为国家3A级旅游景区。</p>
-                        <img src="images/y2.jpg"/>
-                        <p>至此，我市国家A级旅游景区数量已增至45家。其中，国家5A级旅游景区5家，国家4A级旅游景区18家，国家3A级旅游景区17家，国家2A级旅游景区5家。</p>
-                        <p>另悉，嵩县白云小镇景区也有望获批国家3A级旅游景区，目前正在公示(2月4日至9日)。待公示结束，我市国家A级旅游景区数量将达到46家。</p>
-                        <img src="images/y3.jpg"/>
-                        <p>
-                            市旅发委产业促进科科长赵晖表示，我市国家3A级景区队伍的壮大，将进一步提升我市旅游业发展的核心竞争力，提高我市旅游产业经济效益，促进我市旅游业转型升级，为洛阳市发展全域旅游及创建国际文化旅游名城提供强大支撑。(金曦
-                            林琳)(2月4日至9日)。待公示结束，我市国家A级旅游景区数量将达到46家。</p>
+                        <%for(item in news.detailsList!){%>
+                        <%if(itemLP.index==1){%>
+                        <P>${item}</P>
+                        <%}%>
+                        <%}%>
+                        <%for(item in news.imgList!){%>
+                        <%if(itemLP.index==1){%>
+                        <img src="${item}" alt=""/>
+                        <%}%>
+                        <%}%>
+                        <%for(item in news.detailsList!){%>
+                        <%if(itemLP.index==2){%>
+                        <P>${item}</P>
+                        <%}%>
+                        <%}%>
+                        <%for(item in news.imgList!){%>
+                        <%if(itemLP.index==2){%>
+                        <img src="${item}" alt=""/>
+                        <%}%>
+                        <%}%>
+                        <%for(item in news.detailsList!){%>
+                        <%if(itemLP.index==3){%>
+                        <P>${item}</P>
+                        <%}%>
+                        <%}%>
+                        <%for(item in news.imgList!){%>
+                        <%if(itemLP.index==3){%>
+                        <img src="${item}" alt=""/>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -90,32 +106,32 @@ ${news}
             <!------------------公共盒子-------------------->
             <div class="public_box bg2">
                 <div class="public_title">
-                    <div class="fl"><img src="images/from_title_left.png"/></div>
+                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
                     <div class="con">
-                        <div class="lamp_ico"><img src="images/lamp_ico.png"/></div>
-                        <div class="name"><img src="images/f_t_mobile_platform.png"/></div>
+                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                        <div class="name"><img src="${ctxPath}/image/f_t_mobile_platform.png"/></div>
                     </div>
-                    <div class="fr"><img src="images/from_title_right.png"/></div>
+                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
                     <div class="clear"></div>
                 </div>
                 <!------------------移动平台-------------------->
                 <div id="mobile_platform">
-                    <img src="images/mp_pic.jpg"/>
-                    <img src="images/mp_tag.png"/>
-                    <img src="images/rwm.jpg"/>
+                    <img src="${ctxPath}/image/mp_pic.jpg"/>
+                    <img src="${ctxPath}/image/mp_tag.png"/>
+                    <img src="${ctxPath}/image/rwm.jpg"/>
                     <p>微信订票/查询优惠政策请扫二维码</p>
                 </div>
             </div>
             <!------------------公共盒子-------------------->
             <div class="public_box bg2">
                 <div class="public_title">
-                    <div class="fl"><img src="images/from_title_left.png"/></div>
+                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
                     <div class="con">
-                        <div class="lamp_ico"><img src="images/lamp_ico.png"/></div>
-                        <div class="name"><img src="images/f_t_culture.png"/></div>
+                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                        <div class="name"><img src="${ctxPath}/image/f_t_culture.png"/></div>
                         <div class="more"><a href="news_list.html">更多>></a></div>
                     </div>
-                    <div class="fr"><img src="images/from_title_right.png"/></div>
+                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
                     <div class="clear"></div>
                 </div>
                 <!------------------公共推荐-------------------->
@@ -123,19 +139,19 @@ ${news}
                     <ul>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
@@ -146,13 +162,13 @@ ${news}
             <!------------------公共盒子-------------------->
             <div class="public_box bg2">
                 <div class="public_title">
-                    <div class="fl"><img src="images/from_title_left.png"/></div>
+                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
                     <div class="con">
-                        <div class="lamp_ico"><img src="images/lamp_ico.png"/></div>
-                        <div class="name"><img src="images/f_t_project.png"/></div>
+                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                        <div class="name"><img src="${ctxPath}/image/f_t_project.png"/></div>
                         <div class="more"><a href="mall_list.html">更多>></a></div>
                     </div>
-                    <div class="fr"><img src="images/from_title_right.png"/></div>
+                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
                     <div class="clear"></div>
                 </div>
                 <!------------------公共推荐-------------------->
@@ -160,19 +176,19 @@ ${news}
                     <ul>
                         <li>
                             <a href="project.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="project.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="project.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
@@ -183,13 +199,13 @@ ${news}
             <!------------------公共盒子-------------------->
             <div class="public_box bg2">
                 <div class="public_title">
-                    <div class="fl"><img src="images/from_title_left.png"/></div>
+                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
                     <div class="con">
-                        <div class="lamp_ico"><img src="images/lamp_ico.png"/></div>
-                        <div class="name"><img src="images/f_t_food.png"/></div>
+                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                        <div class="name"><img src="${ctxPath}/image/f_t_food.png"/></div>
                         <div class="more"><a href="news_list.html">更多>></a></div>
                     </div>
-                    <div class="fr"><img src="images/from_title_right.png"/></div>
+                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
                     <div class="clear"></div>
                 </div>
                 <!------------------公共推荐-------------------->
@@ -197,19 +213,19 @@ ${news}
                     <ul>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
@@ -220,13 +236,13 @@ ${news}
             <!------------------公共盒子-------------------->
             <div class="public_box bg2">
                 <div class="public_title">
-                    <div class="fl"><img src="images/from_title_left.png"/></div>
+                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
                     <div class="con">
-                        <div class="lamp_ico"><img src="images/lamp_ico.png"/></div>
-                        <div class="name"><img src="images/f_t_life.png"/></div>
+                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                        <div class="name"><img src="${ctxPath}/image/f_t_life.png"/></div>
                         <div class="more"><a href="news_list.html">更多>></a></div>
                     </div>
-                    <div class="fr"><img src="images/from_title_right.png"/></div>
+                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
                     <div class="clear"></div>
                 </div>
                 <!------------------公共推荐-------------------->
@@ -234,19 +250,19 @@ ${news}
                     <ul>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
                         <li>
                             <a href="article.html">
-                                <div class="pic"><img src="images/2016122223895.jpg"/></div>
+                                <div class="pic"><img src="${ctxPath}/image/2016122223895.jpg"/></div>
                                 <p>洛阳古城慢时</p>
                             </a>
                         </li>
@@ -262,8 +278,8 @@ ${news}
 <!-----------------版底---------------->
 <div id="footer">
     <div class="cw1200">
-        <div class="line"><img src="images/b_line.png"/></div>
-        <div class="b_logo"><img src="images/b_logo.png"/></div>
+        <div class="line"><img src="${ctxPath}/image/b_line.png"/></div>
+        <div class="b_logo"><img src="${ctxPath}/image/b_logo.png"/></div>
         <div class="con">
             <p>Zhiqi文化旅游发展有限公司 版权所有</p>
             <p>地址：河南省洛阳市Zhiqi文化游客接待中心　邮编：000000　电话：0000-00000000　业务电话：0000-0000000</p>

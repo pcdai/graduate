@@ -33,6 +33,8 @@ public class News {
     private String img;
     @Transient
     private List imgList;
+    @Transient
+    private List detailsList;
     private Integer count;
     private String details;
     @JsonFormat(pattern=DDFormat, timezone = TIME_ZONE)
