@@ -13,6 +13,7 @@
         <result property="scenicApplyId" column="scenic_apply_id" jdbcType="INTEGER"/>
         <result property="hotelApplyId" column="hotel_apply_id" jdbcType="INTEGER"/>
         <result property="photo" column="photo" jdbcType="VARCHAR"></result>
+        <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
     </resultMap>
     <select id="doLogin" resultMap="MemberMap">
     select * from member where account=#{account} and password=#{password}

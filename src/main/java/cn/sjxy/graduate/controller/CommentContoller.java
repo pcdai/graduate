@@ -1,10 +1,14 @@
 package cn.sjxy.graduate.controller;
 
+import cn.hutool.core.date.DateUnit;
 import cn.sjxy.graduate.entity.Comment;
 import cn.sjxy.graduate.entity.Member;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.service.CommentService;
 import cn.sjxy.graduate.service.ScenicService;
+import cn.sjxy.graduate.utils.Data;
+import cn.sjxy.graduate.utils.DateUtil;
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.persistence.Id;
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 
 /**
  * @Author dpc
@@ -36,10 +41,10 @@ public class CommentContoller {
         Comment comment1 = new Comment();
         comment1.setComment(comment);
         comment1.setUserId(member.getId());
+        comment1.setCommentTime(new Date());
         commentService.save(comment1);
         Comment comment2 = commentService.findBy("comment", comment);
         Integer comment2Id = comment2.getId();
-        System.out.println("comment2Id = " + comment2Id);
         Scenic scenic = scenicService.queryById(scenicId);
         String commentId = scenic.getCommentId();
         commentId = commentId + "," + comment2Id;

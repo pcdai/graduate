@@ -9,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -19,7 +20,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Comment {
+public class Comment implements Serializable {
     private static final String DDFormat = "yyyy-MM-dd";
     private static final String TIME_ZONE = "GMT+8";
 

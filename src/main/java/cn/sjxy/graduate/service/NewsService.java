@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface NewsService extends Service<News> {
     List<News> findLimitFive();
+
+    List<News> findByTypeId(Integer id);
 }

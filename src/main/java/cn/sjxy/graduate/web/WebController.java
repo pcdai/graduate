@@ -1,11 +1,15 @@
 package cn.sjxy.graduate.web;
 
+import cn.sjxy.graduate.entity.NewsType;
+import cn.sjxy.graduate.service.NewsTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Author dpc
@@ -13,7 +17,8 @@ import java.util.Date;
  */
 @Controller
 public class WebController {
-
+    @Autowired
+    private NewsTypeService newsTypeService;
     @GetMapping("/my_index.html")
     public String my_index(Model model) {
         model.addAttribute("index",new Date());
@@ -66,8 +71,11 @@ public class WebController {
         return "my_info";
     }
 
+
     @GetMapping("/news_list.html")
-    public String news_list() {
+    public String news_list(Model model) {
+        List<NewsType> typeList = newsTypeService.findAll();
+        model.addAttribute("typeList",typeList);
         return "news_list";
     }
 

@@ -4,7 +4,9 @@ import cn.sjxy.graduate.core.service.AbstractService;
 import cn.sjxy.graduate.dao.NewsDao;
 import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.service.NewsService;
+import cn.sjxy.graduate.utils.ConditionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,5 +23,11 @@ public class NewsServiceImpl extends AbstractService<News> implements NewsServic
     @Override
     public List<News> findLimitFive() {
         return newsDao.findLimitFive();
+    }
+
+    @Override
+    public List<News> findByTypeId(Integer id) {
+
+        return newsDao.findByTypeId(id);
     }
 }

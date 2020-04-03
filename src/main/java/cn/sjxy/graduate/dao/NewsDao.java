@@ -12,4 +12,6 @@ import java.util.List;
 @org.apache.ibatis.annotations.Mapper
 public interface NewsDao extends Mapper<News> {
     List<News> findLimitFive();
+
+    List<News> findByTypeId(Integer id);
 }

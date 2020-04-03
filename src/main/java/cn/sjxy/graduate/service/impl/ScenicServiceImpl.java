@@ -1,11 +1,13 @@
 package cn.sjxy.graduate.service.impl;
 
+import cn.sjxy.graduate.core.service.AbstractService;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.dao.ScenicDao;
 import cn.sjxy.graduate.entity.ScenicExample;
 import cn.sjxy.graduate.entity.dto.ScenicDto;
 import cn.sjxy.graduate.service.ScenicService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +19,7 @@ import java.util.List;
  * @since 2020-03-23 16:03:09
  */
 @Service("scenicService")
-public class ScenicServiceImpl implements ScenicService {
+public class ScenicServiceImpl extends AbstractService<Scenic> implements ScenicService {
     @Autowired
     private ScenicDao scenicDao;
 

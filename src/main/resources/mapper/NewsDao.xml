@@ -9,9 +9,16 @@
         <result property="count" column="count"/>
         <result property="details" column="details"/>
         <result property="time" column="time"/>
+        <result property="simple" column="simple"/>
         <result property="hot" column="hot"/>
+        <result property="newsTypeId" column="news_type_id"/>
+
     </resultMap>
     <select id="findLimitFive" resultMap="BaseResultMap">
         select * from news where hot =0 limit 5
+    </select>
+    <select id="findByTypeId" resultMap="BaseResultMap">
+        select * from news join news_type on news.news_type_id=news_type.id
+        where news.news_type_id=#{id}
     </select>
 </mapper>

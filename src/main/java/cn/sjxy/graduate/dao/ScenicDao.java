@@ -11,7 +11,7 @@ import cn.sjxy.graduate.entity.dto.ScenicDto;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 @Mapper
-public interface ScenicDao {
+public interface ScenicDao extends cn.sjxy.graduate.core.mapper.Mapper<Scenic> {
 
     List<Scenic> queryAllHotScenicLimitFour();
 
@@ -29,7 +29,6 @@ public interface ScenicDao {
 
     Scenic queryForId(Integer id);
 
-    void insertSelective(Scenic scenic);
 
     ScenicDto selectCommentByScenicId(Integer id);
 

@@ -1,7 +1,9 @@
 package cn.sjxy.graduate.controller;
 
 import cn.sjxy.graduate.entity.News;
+import cn.sjxy.graduate.entity.NewsType;
 import cn.sjxy.graduate.service.NewsService;
+import cn.sjxy.graduate.service.NewsTypeService;
 import cn.sjxy.graduate.utils.ConditionUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +27,28 @@ import java.util.List;
 public class NewsController {
     @Autowired
     private NewsService newsService;
+    @Autowired
+    private NewsTypeService newsTypeService;
 
     @ResponseBody
     @RequestMapping("/getNewsList")
     public List<News> getNewsList() {
 
         return newsService.findLimitFive();
+    }
+
+    @ResponseBody
+    @RequestMapping("/getNewsTypeList")
+    public List<NewsType> getNewsTypeList() {
+
+        return newsTypeService.findAll();
+    }
+
+    @ResponseBody
+    @RequestMapping("/getNewsListByTypeId")
+    public List<News> getNewsListByTypeId(Integer id) {
+
+        return newsService.findByTypeId(id);
     }
 
     @RequestMapping("/newsDetails")
@@ -47,7 +65,7 @@ public class NewsController {
             news.setImgList(Arrays.asList(news.getImg().split(",")));
         }
         Integer count = news.getCount();
-        count=count+1;
+        count = count + 1;
         news.setCount(count);
         newsService.update(news);
         model.addAttribute("news", news);

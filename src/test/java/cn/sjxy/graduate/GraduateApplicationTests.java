@@ -1,14 +1,9 @@
 package cn.sjxy.graduate;
 
-import cn.sjxy.graduate.dao.CommentDao;
 import cn.sjxy.graduate.dao.RestaurantDao;
-import cn.sjxy.graduate.dao.ScenicDao;
 import cn.sjxy.graduate.entity.Comment;
-import cn.sjxy.graduate.entity.Member;
 import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.entity.Scenic;
-import cn.sjxy.graduate.entity.dto.CommentDto;
-import cn.sjxy.graduate.entity.dto.RestaurantDto;
 import cn.sjxy.graduate.entity.dto.ScenicDto;
 import cn.sjxy.graduate.service.*;
 import cn.sjxy.graduate.utils.ConditionUtil;
@@ -33,9 +28,6 @@ class GraduateApplicationTests {
 
     @Test
     public void test() {
-        RestaurantDto restaurantDto = restaurantDao.queryForOne(2);
-        restaurantDto.setImgList(Arrays.asList(restaurantDto.getImg().split(",")));
-        System.out.println(restaurantDto.getImgList().size());
 
     }
 
@@ -98,6 +90,18 @@ class GraduateApplicationTests {
         List<News> five = newsService.findLimitFive();
         for (News news : five) {
 
+        }
+    }
+    @Test
+    public void test8(){
+        for (News news : newsService.findLimitFive()) {
+            System.out.println("news = " + news);
+        }
+    }
+    @Test
+    public void test9(){
+        for (Scenic scenic : scenicService.findAll()) {
+            System.out.println("scenic = " + scenic);
         }
     }
 }

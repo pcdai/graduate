@@ -12,11 +12,13 @@
 
 <body>
 <div style="text-align: center;margin-top: 50px">
+    餐厅单个文件上传
     <form action="${ctxPath}/restaurant" method="post" enctype="multipart/form-data">
         <p><input type="file" name="name"/></p>
         <p><input type="submit" value="上传视频"/></p>
     </form>
     =========================
+    餐厅多个文件上传
     <form method="post" action="${ctxPath}/restaurantMore" enctype="multipart/form-data">
         <input type="file" name="file"><br>
         <input type="file" name="file"><br>

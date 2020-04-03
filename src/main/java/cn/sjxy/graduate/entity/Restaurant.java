@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +44,8 @@ public class Restaurant {
      * 详情图
      */
     private String img;
+    @Transient
+    private List imgList;
     /**
      * 门店信息
      */
@@ -53,4 +56,5 @@ public class Restaurant {
     private String hot;
 
     private String name;
+    private Integer scenicId;
 }

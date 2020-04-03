@@ -1,5 +1,6 @@
 package cn.sjxy.graduate.service;
 
+import cn.sjxy.graduate.core.service.Service;
 import cn.sjxy.graduate.entity.Comment;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.entity.dto.ScenicDto;
@@ -12,7 +13,7 @@ import java.util.List;
  * @author dpc
  * @since 2020-03-23 16:03:09
  */
-public interface ScenicService {
+public interface ScenicService extends Service<Scenic> {
 
     /**
      * 通过ID查询单条数据
@@ -30,7 +31,7 @@ public interface ScenicService {
      */
     List<Scenic> queryAllHotScenicLimitFour();
 
-    void save(Scenic scenic);
+
 
     /**
      * 见名知意

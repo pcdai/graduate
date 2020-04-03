@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.List;
 
@@ -20,7 +21,7 @@ import java.util.List;
 @Entity
 public class Scenic implements Serializable {
     private static final long serialVersionUID = 493872214223193942L;
-
+    @Id
     private Integer id;
     /**
      * 名称
@@ -55,7 +56,6 @@ public class Scenic implements Serializable {
 
     private String openTime;
 
-
     /**
      * 地址
      */
@@ -68,7 +68,7 @@ public class Scenic implements Serializable {
     /**
      * 描述
      */
-    private String desc;
+    private String info;
     /**
      * 分类
      */
@@ -81,8 +81,5 @@ public class Scenic implements Serializable {
      * 热门 0:热门 1:不热门
      */
     private String hot;
-
-
-
 
 }

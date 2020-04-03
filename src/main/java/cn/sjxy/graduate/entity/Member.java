@@ -17,45 +17,48 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Member{
+public class Member {
     @Id
     private Integer id;
     /**
-    * 登录账号
-    */
+     * 登录账号
+     */
     private String account;
     /**
-    * 密码
-    */
+     * 密码
+     */
     private String password;
     /**
-    * 姓名
-    */
+     * 姓名
+     */
     private String name;
     /**
-    * 邮箱
-    */
+     * 邮箱
+     */
     private String email;
     /**
-    * 验证码
-    */
+     * 验证码
+     */
     private String code;
     /**
-    * 专有账户id
-    */
+     * 专有账户id
+     */
     private Integer cardId;
     /**
-    * 已订购的景点
-    */
+     * 已订购的景点
+     */
     private Integer scenicApplyId;
     /**
-    * 已订购的酒店
-    */
+     * 已订购的酒店
+     */
     private Integer hotelApplyId;
     /**
      * 头像
      */
     private String photo;
-
+    /**
+     * 手机号码
+     */
+    private String telephone;
 
 }

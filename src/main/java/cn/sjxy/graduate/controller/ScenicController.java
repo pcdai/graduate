@@ -10,6 +10,9 @@ import cn.sjxy.graduate.service.MemberService;
 import cn.sjxy.graduate.service.RestaurantService;
 import cn.sjxy.graduate.service.ScenicService;
 import cn.sjxy.graduate.utils.ConditionUtil;
+import cn.sjxy.graduate.utils.DateUtil;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,8 +22,10 @@ import org.springframework.web.bind.annotation.*;
 import tk.mybatis.mapper.entity.Condition;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -68,32 +73,15 @@ public class ScenicController {
         /**
          * 景点评论
          */
-        List<Comment> comments = null;
-        ScenicDto scenicDto = scenicService.selectCommentByScenicId(id);
-        if (scenicDto != null && !StringUtils.isEmpty(scenicDto.getCommentId())) {
-            scenicDto.setComment(Arrays.asList(scenicDto.getCommentId().split(",")));
-            Condition condition = ConditionUtil.getCondition(Comment.class);
-            if (scenicDto.getComment() != null) {
-                condition.createCriteria().andIn("id", scenicDto.getComment());
-                comments = commentService.findByCondition(condition);
-            }
-        }
-        ArrayList<Integer> list = new ArrayList<>();
-        if (!CollectionUtils.isEmpty(comments)) {
-            for (Comment comment : comments) {
-                comment.setMemberName(memberService.findBy("id", comment.getUserId()).getName());
-                comment.setPhone(memberService.findBy("id", comment.getUserId()).getPhoto());
-            }
-
-            model.addAttribute("comments", comments);
-        }
         return "scenic";
     }
 
     @GetMapping("/scenicCommentDesc")
     @ResponseBody
-    public List<Comment> scenicCommentDesc(Integer id, String pid) {
+    public PageInfo scenicCommentDesc(Integer id, String pid, @RequestParam(name = "pn", defaultValue = "1", required = false) Integer pn
+            , @RequestParam(name = "ps", defaultValue = "4", required = false) Integer ps) {
         List<Comment> comments = null;
+        PageInfo<Comment> info = null;
         ScenicDto scenicDto = scenicService.selectCommentByScenicId(id);
         if (scenicDto != null && !StringUtils.isEmpty(scenicDto.getCommentId())) {
             scenicDto.setComment(Arrays.asList(scenicDto.getCommentId().split(",")));
@@ -104,17 +92,45 @@ public class ScenicController {
                 if (pid != null) {
                     condition.orderBy("id").desc();
                 }
+                PageHelper.startPage(pn, ps);
                 comments = commentService.findByCondition(condition);
             }
         }
-        ArrayList<Integer> list = new ArrayList<>();
         if (!CollectionUtils.isEmpty(comments)) {
             for (Comment comment : comments) {
                 comment.setMemberName(memberService.findBy("id", comment.getUserId()).getName());
                 comment.setPhone(memberService.findBy("id", comment.getUserId()).getPhoto());
             }
+            info = new PageInfo<>(comments, 5);
         }
-        return comments;
+
+        return info;
+    }
+
+    @GetMapping("/submit_orders.html")
+    public String submit_orders(Integer id, Model model, HttpSession session) {
+        Scenic scenic = scenicService.queryById(id);
+        Member member = (Member) session.getAttribute("member");
+        String name = member.getName();
+        String telephone = member.getTelephone();
+        String date = DateUtil.format(new Date(), "yyyy-MM-dd");
+        model.addAttribute("name", name);
+        model.addAttribute("telephone", telephone);
+        model.addAttribute("date", date);
+        model.addAttribute("scenic", scenic);
+        return "submit_orders";
+    }
+
+    @GetMapping("/confirm")
+    @ResponseBody
+    public String confirm(Integer scenicId,String ticket,Integer num,HttpSession session) {
+        /**
+         * 笨方法。。但是目前只能想到这个办法
+         */
+        session.setAttribute("scenic",scenicId);
+            session.setAttribute("ticket",ticket);
+            session.setAttribute("num",num);
+            return "localhost:8080/scenicApply/confirm_order";
     }
 
 }

@@ -49,9 +49,8 @@ public class TestUploadUtilController {
         List<String> list = FileUtil.filesUpload(request);
         String strip = StringUtils.strip(list.toString(), "[]");
         Restaurant restaurant = new Restaurant();
-        restaurant.setId(2);
         restaurant.setImg(strip);
-        restaurantService.update(restaurant);
+        restaurantService.save(restaurant);
         return "ok";
     }
 

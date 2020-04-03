@@ -5,7 +5,7 @@
     <title>景区</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-------------jquery库-------------->
-    <script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/jquery-2.1.1.min.js"></script>
     <!-------------Amazeui--------------->
     <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
             <%}%>
         </ul>
         <script>
-            $("#botn").live("click", function () {
+            $("#botn").on("click", function () {
                 $(".am-gallery-item img").click();
             });
 
@@ -93,19 +93,25 @@
                                href="javascript:void (0)">最新评论</a><span>|</span><a id="desc" onclick="B('${scenic.id}')"
                                                                                    href="javascript:void (0)">正序排列</a>
                         </div>
+                        <input type="hidden" value="${scenic.id}" id="low"/>
                         <ul id="commentId">
-                            <%for(item in comments!){ %>
-                            <li>
-                                <div class="pic"><img src="${item.phone}"/></div>
-                                <div class="con">
-                                    <label>${item.memberName}</label>
-                                    <p>${item.comment}</p>
-                                    <span>发表于：${item.commentTime}</span>
-                                </div>
-                                <div class="tip"><span class="t_a t_box">沙发</span></div>
-                            </li>
-                            <%}%>
+                            <!-- <%for(item in comments!){ %>
+                             <li>
+                                 <div class="pic"><img src="${item.phone}"/></div>
+                                 <div class="con">
+                                     <label>${item.memberName}</label>
+                                     <p>${item.comment}</p>
+                                     <span>发表于：${item.commentTime}</span>
+                                 </div>
+                                 <div class="tip"><span class="t_a t_box">沙发</span></div>
+                             </li>
+                             <%}%>-->
                         </ul>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+
+                            </ul>
+                        </nav>
                         <form action="${ctxPath}/comment/addComment" method="post">
                             <div class="modal-body">
                                 <div class="form-group">
@@ -144,7 +150,7 @@
                         <li>详细地址：<span>${scenic.area}</span></li>
                         <li>费用：<label>${scenic.ticket}</label></li>
                     </ul>
-                    <a class="buy" href="submit_orders.html">立即预订</a>
+                    <a class="buy" href="${ctxPath}/scenic/submit_orders.html?id=${scenic.id}">立即预订</a>
                 </div>
             </div>
             <!------------------公共盒子-------------------->
@@ -260,15 +266,23 @@
     </div>
 </div>
 <script type="text/javascript">
+    var oneId = $("#low").val();
+    $(function () {
+
+        A(oneId)
+    })
+
     function A(id) {
         $.ajax({
             type: "GET",
             url: "${ctxPath}/scenic/scenicCommentDesc",
             data: {
+
                 "id": id
             },
             success: function (res) {
-                initComment(res)
+                initComment(res.list)
+                initPage(res)
                 $("#asc").addClass("cur");
                 $("#desc").removeClass("cur");
             }
@@ -283,7 +297,7 @@
                 '                                <div class="con">\n' +
                 '                                    <label>' + this.memberName + '</label>\n' +
                 '                                    <p>' + this.comment + '</p>\n' +
-                '                                    <span>发表于：'+this.commentTime+'</span>\n' +
+                '                                    <span>发表于：' + this.commentTime + '</span>\n' +
                 '                                </div>\n' +
                 '                                <div class="tip"><span class="t_a t_box">沙发</span></div>\n' +
                 '                            </li>').appendTo("#commentId")
@@ -299,12 +313,52 @@
                 "pid": "2"
             },
             success: function (res) {
-                initComment(res)
+                initComment(res.list)
                 $("#desc").addClass("cur");
                 $("#asc").removeClass("cur");
             }
         });
     }
+
+    function initPage(info) {
+        $('.pagination').empty();
+        if (info.isFirstPage) {
+            $('<li class="disabled"><a href="javascript:void(0)">上一页</a></li>').appendTo(".pagination")
+        } else {
+            $('<li><a class="navA" href="javascript:void(0)" pageNum="' + (info.pageNum - 1) + '" >上一页</a></li>').appendTo(".pagination")
+        }
+        $.each(info.navigatepageNums, function () {
+            if (this == info.pageNum) {
+                $('<li class="active"><a  href="javascript:void(0)"><span id="currentPage">' + this + '</span> <span class="sr-only">(current)</span></a></li>').appendTo(".pagination")
+            } else {
+                $(' <li><a class="navA" pageNum="' + this + '" href="javascript:void(0)">' + this + '</a></li>').appendTo(".pagination")
+            }
+        })
+        if (info.isLastPage) {
+            $('<li class="disabled"><a href="javascript:void(0)">下一页</a></li>').appendTo(".pagination")
+        } else {
+            $('<li><a class="navA" href="javascript:void(0)" pageNum="' + (info.pageNum + 1) + '">下一页</a></li>').appendTo(".pagination")
+        }
+        //这里也可以使用动态委派事件，但是效率低
+        $(".navA").click(function () {
+            var pn = $(this).attr("pageNum");
+            $.ajax({
+                type: "GET",
+                url: "${ctxPath}/scenic/scenicCommentDesc",
+                data: {
+
+                    "id": oneId,
+                    "pn": pn
+                },
+                success: function (res) {
+                  initComment(res.list)
+                    initPage(res)
+                }
+            })
+        })
+
+    }
+
 
     /* $("#suBtn").click(function () {
          var comment = $("#commentText").val();
