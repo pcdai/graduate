@@ -7,6 +7,8 @@
         <result property="scenicId" column="scenic_id" jdbcType="INTEGER"/>
         <result property="pay" column="pay" jdbcType="VARCHAR"/>
         <result property="memberId" column="member_id" jdbcType="INTEGER"/>
+        <result property="orderTime" column="order_time"/>
+        <result property="status" column="status"/>
     </resultMap>
 
 

@@ -100,13 +100,13 @@
 		<div class="pay_method">
 			<h2>支付方式</h2>
 			<ul>
-				<li><a class="cur" href="#">支付宝支付</a><span>选择支付宝支付商品金额</span></li>
+				<li><a class="cur" href="${ctxPath}/scenicApply/payOrder?ticket=${ticket}&scenicName=${scenic.name}">支付宝支付</a><span>选择支付宝支付商品金额</span></li>
 			</ul>
 		</div>
 		<div class="calculation">
 		
-			<input type="submit" href="#" value="结算" />
-			<span>应付金额： <b>￥200.0</b></span>
+			<input type="submit" class="" onclick="window.location='${ctxPath}/scenicApply/payOrder?ticket=${ticket}&scenicName=${scenic.name}'" value="结算"></input>
+			<span>应付金额： <b>￥${ticket}</b></span>
 			
 		</div>
 	</div>
