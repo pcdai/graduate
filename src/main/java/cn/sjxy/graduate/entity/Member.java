@@ -47,11 +47,11 @@ public class Member {
     /**
      * 已订购的景点
      */
-    private Integer scenicApplyId;
+    private String scenicApplyId;
     /**
      * 已订购的酒店
      */
-    private Integer hotelApplyId;
+    private String hotelApplyId;
     /**
      * 头像
      */

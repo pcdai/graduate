@@ -1,5 +1,6 @@
 package cn.sjxy.graduate.service.impl;
 
+import cn.sjxy.graduate.core.service.AbstractService;
 import cn.sjxy.graduate.entity.Hotel;
 import cn.sjxy.graduate.dao.HotelDao;
 import cn.sjxy.graduate.service.HotelService;
@@ -13,12 +14,9 @@ import org.springframework.stereotype.Service;
  * @since 2020-03-23 16:03:09
  */
 @Service("hotelService")
-public class HotelServiceImpl implements HotelService {
+public class HotelServiceImpl extends AbstractService<Hotel> implements HotelService {
     @Autowired
     private HotelDao hotelDao;
 
-    @Override
-    public Hotel queryById(Integer id) {
-        return hotelDao.queryById(id);
-    }
+
 }

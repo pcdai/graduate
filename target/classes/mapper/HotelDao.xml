@@ -7,13 +7,12 @@
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="icon" column="icon" jdbcType="VARCHAR"/>
         <result property="img" column="img" jdbcType="VARCHAR"/>
-        <result property="desc" column="desc" jdbcType="VARCHAR"/>
+        <result property="details" column="desc" jdbcType="VARCHAR"/>
         <result property="price" column="price" jdbcType="NUMERIC"/>
-        <result property="evaluate" column="evaluate" jdbcType="VARCHAR"/>
+        <result property="commentId" column="evaluate" jdbcType="VARCHAR"/>
         <result property="hot" column="hot" jdbcType="VARCHAR"/>
         <result property="area" column="area" jdbcType="VARCHAR"/>
+        <result property="scenicId" column="scenic_id" jdbcType="INTEGER"/>
     </resultMap>
-    <select id="queryById" resultMap="HotelMap">
-        select * from hotel where id=#{id}
-    </select>
+
 </mapper>

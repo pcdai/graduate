@@ -1,13 +1,7 @@
 package cn.sjxy.graduate.utils;
 
-import cn.sjxy.graduate.entity.Member;
-import cn.sjxy.graduate.entity.News;
-import cn.sjxy.graduate.entity.Restaurant;
-import cn.sjxy.graduate.entity.Scenic;
-import cn.sjxy.graduate.service.MemberService;
-import cn.sjxy.graduate.service.NewsService;
-import cn.sjxy.graduate.service.RestaurantService;
-import cn.sjxy.graduate.service.ScenicService;
+import cn.sjxy.graduate.entity.*;
+import cn.sjxy.graduate.service.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,6 +25,8 @@ public class TestUploadUtilController {
     private ScenicService scenicService;
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private HotelService hotelService;
 
     @RequestMapping("/restaurant")
     @ResponseBody
@@ -94,7 +90,7 @@ public class TestUploadUtilController {
     public String newsFile(@RequestParam("name") MultipartFile file) {
         String upload = FileUtil.fileUpload(file);
         News news = new News();
-        news.setImg(upload);
+        news.setIcon(upload);
         newsService.save(news);
         return "ok";
     }
@@ -108,6 +104,29 @@ public class TestUploadUtilController {
         News news = new News();
         news.setImg(strip);
         newsService.save(news);
+        return "ok";
+    }
+
+
+    @RequestMapping("/hotelFile")
+    @ResponseBody
+    public String hotelFile(@RequestParam("name") MultipartFile file) {
+        String upload = FileUtil.fileUpload(file);
+        Hotel hotel = new Hotel();
+        hotel.setIcon(upload);
+        hotelService.save(hotel);
+        return "ok";
+    }
+
+    @RequestMapping("hotelList")
+    @ResponseBody
+    public String hotelList(HttpServletRequest request) {
+        List<String> list = FileUtil.filesUpload(request);
+        System.out.println("list = " + list);
+        String strip = StringUtils.strip(list.toString(), "[]");
+        Hotel hotel = new Hotel();
+        hotel.setImg(strip);
+        hotelService.save(hotel);
         return "ok";
     }
 

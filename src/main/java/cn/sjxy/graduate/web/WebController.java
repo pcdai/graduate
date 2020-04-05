@@ -51,10 +51,7 @@ public class WebController {
         return "project_order";
     }
 
-    @GetMapping("/scenic_order.html")
-    public String scenic_order() {
-        return "scenic_order";
-    }
+
 
     @GetMapping("/note_comments.html")
     public String note_comments() {

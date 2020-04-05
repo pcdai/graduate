@@ -59,6 +59,20 @@
         <input type="file" name="file"><br>
         <input type="submit" value="提交">
     </form>
+    ==========================================================
+    hotel单个文件上传
+    <form action="${ctxPath}/hotelFile" method="post" enctype="multipart/form-data">
+        <p><input type="file" name="name"/></p>
+        <p><input type="submit" value="上传视频"/></p>
+    </form>
+    ==========================================================
+    hotel多个文件上传：
+    <form action="${ctxPath}/hotelList" method="post" enctype="multipart/form-data">
+        <input type="file" name="file"><br>
+        <input type="file" name="file"><br>
+        <input type="file" name="file"><br>
+        <input type="submit" value="提交">
+    </form>
 
 </div>
 </body>

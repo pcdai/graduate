@@ -14,4 +14,6 @@ import java.util.List;
 public interface RestaurantService extends Service<Restaurant> {
 
     List<Restaurant> selectHotLimit();
+
+   // List<Restaurant> findHotLimit3();
 }

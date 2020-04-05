@@ -70,9 +70,7 @@
             <div class="box">
                 <ul>
                     <%for(item in scenics1!){%>
-                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt=""
-                                                                                              class="scale-effect"
-                                                                                              src="${item.icon}"/><span>${item.name}</span></a>
+                    <li><a title="" href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/><span>${item.name}</span></a>
                     </li>
                     <%}%>
                     <div class="clear"></div>
@@ -85,20 +83,20 @@
 </div>
 <!------------------南京美食-------------------->
 
-<!------------------南京特产-------------------->
 
-<!------------------民宿推荐乡村-------------------->
 
 <!------------------首页新闻-------------------->
 <div id="h_news">
     <div class="cw1200">
         <div class="activity_news fl">
-            <div class="title"><img alt="" src="${ctxPath}/image/h_title3.png"/></div>
+            <div class="title"><img alt="" src="${ctxPath}/image/h_title6.png"/></div>
             <div class="con">
                 <ul>
-                  <%for(item in restList!){%>
+                  <%for(item in activityList!){%>
+                    <%if(itemLP.index<5){%>
                     <li><a title="" href="javascript:void (0)"><img class="scale-effect" src="${item.icon}"/>
                         <p>${item.info}</p></a></li>
+                    <%}%>
                     <%}%>
                 </ul>
             </div>
@@ -125,7 +123,9 @@
                 <div class="list">
                     <ul id="newsId">
                         <%for(item in newsList!){%>
+                        <%if(itemLP.index<10){%>
                         <li><a title="${item.title}" href="${ctxPath}/news/newsDetails?id=${item.id}">${item.title}</a><span>${item.time}</span></li>
+                        <%}%>
                         <%}%>
                     </ul>
                 </div>

@@ -10,8 +10,8 @@
         <result property="email" column="email" jdbcType="VARCHAR"/>
         <result property="code" column="code" jdbcType="VARCHAR"/>
         <result property="cardId" column="card_id" jdbcType="INTEGER"/>
-        <result property="scenicApplyId" column="scenic_apply_id" jdbcType="INTEGER"/>
-        <result property="hotelApplyId" column="hotel_apply_id" jdbcType="INTEGER"/>
+        <result property="scenicApplyId" column="scenic_apply_id" jdbcType="VARCHAR"/>
+        <result property="hotelApplyId" column="hotel_apply_id" jdbcType="VARCHAR"/>
         <result property="photo" column="photo" jdbcType="VARCHAR"></result>
         <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
     </resultMap>

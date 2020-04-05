@@ -1,5 +1,6 @@
 package cn.sjxy.graduate.service;
 
+import cn.sjxy.graduate.core.service.Service;
 import cn.sjxy.graduate.entity.Hotel;
 
 /**
@@ -8,7 +9,7 @@ import cn.sjxy.graduate.entity.Hotel;
  * @author dpc
  * @since 2020-03-23 16:03:09
  */
-public interface HotelService {
+public interface HotelService extends Service<Hotel> {
 
     /**
      * 通过ID查询单条数据
@@ -16,7 +17,7 @@ public interface HotelService {
      * @param id 主键
      * @return 实例对象
      */
-    Hotel queryById(Integer id);
+
 
 
 }

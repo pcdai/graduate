@@ -81,5 +81,13 @@ public class Scenic implements Serializable {
      * 热门 0:热门 1:不热门
      */
     private String hot;
+    /**
+     * 附近餐厅
+     */
+    private String restId;
+    /**
+     * 附近民宿
+     */
+    private String hotelId;
 
 }

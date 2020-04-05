@@ -75,6 +75,7 @@
             </ul>
         </div>
         <!-----------------景区信息---------------->
+        <input type="hidden" value="${scenic.name}" id="scenicName"/>
         <div class="info_mo">
             <table>
                 <tr>
@@ -175,16 +176,19 @@
         var num = $("#inputId").val();//购买数量
         var money = $("#realMoney").text();//总金额
         var scenicId = $("#scenicId").val();
+        var scenicName=$("#scenicName").val();
         console.log(num)
         console.log(money)
         console.log(scenicId)
+        console.log(scenicName)
         $.ajax({
             url: "${ctxPath}/scenic/confirm",
             type: "GET",
             data: {
                 "scenicId": scenicId,
                 "ticket": money,
-                "num": num
+                "num": num,
+                "scenicName":scenicName
             },
             success: function (res) {
                 console.log(res)

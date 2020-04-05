@@ -27,9 +27,5 @@ public class HotelController {
      * @param id 主键
      * @return 单条数据
      */
-    @GetMapping("selectOne")
-    public Hotel selectOne(Integer id) {
-        return this.hotelService.queryById(id);
-    }
 
 }

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>景区列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-------------jquery库-------------->
+    <script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
+    <!-------------Amazeui--------------->
+    <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/css/amazeui.css">
+    <!------------核心样式-------------->
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/css/style.css">
+</head>
+<body>
+<!-------------------工具栏------------------->
+<%layout("/include/top.html"){}%>
+
+<!------------------子页框架-------------------->
+<div id="sub_from">
+    <div class="cw1200">
+        <div class="w810 fl">
+            <!------------------公共盒子-------------------->
+            <div class="public_box bg1">
+                <div class="public_title">
+                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
+                    <div class="con">
+                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                        <div class="name"><img src="${ctxPath}/image/f_t_news_list.png"/></div>
+                    </div>
+                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
+                    <div class="clear"></div>
+                </div>
+                <!------------------列表分类-------------------->
+                <div id="list_sort">
+                    <span>产品类型：</span>
+                    <div class="list_1">
+                        <a class="cur" href="#">旅游景区</a>
+                        <a href="${ctxPath}/scenicApply/activities_list.html">旅游活动</a>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!------------------景区列表 ok-------------------->
+                <div id="scenic_list">
+                    <ul>
+                        <%for(item in scenicList!){%>
+                        <li>
+                            <div class="pic"><a href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img class="scale-effect" class="scale-effect" src="${item.icon}"/></a></div>
+                            <div class="con">
+                                <h3><a href="${ctxPath}/scenic/scenicDetails?id=${item.id}">${item.name}</a></h3>
+                                <p>${item.details}</p>
+                            </div>
+                            <div class="tip">
+                                <img src="${ctxPath}/image/leisure_ico.png"/>
+                                ${item.typeId==1?"休闲":"景区"}
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-----------------版底---------------->
+<div id="footer">
+    <div class="cw1200">
+        <div class="line"><img src="${ctxPath}/image/b_line.png"/></div>
+        <div class="b_logo"><img src="${ctxPath}/image/b_logo.png"/></div>
+        <div class="con">
+            <p>Zhiqi文化旅游发展有限公司 版权所有</p>
+            <p>地址：河南省洛阳市Zhiqi文化游客接待中心　邮编：000000　电话：0000-00000000　业务电话：0000-0000000</p>
+            <p>Copyright 2019 zhiqi All Rights Reserved | 豫ICP备00000000号　技术支持：zhiqi</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,14 +1,8 @@
 package cn.sjxy.graduate.controller;
 
-import cn.sjxy.graduate.entity.Comment;
-import cn.sjxy.graduate.entity.Member;
-import cn.sjxy.graduate.entity.Restaurant;
-import cn.sjxy.graduate.entity.Scenic;
+import cn.sjxy.graduate.entity.*;
 import cn.sjxy.graduate.entity.dto.ScenicDto;
-import cn.sjxy.graduate.service.CommentService;
-import cn.sjxy.graduate.service.MemberService;
-import cn.sjxy.graduate.service.RestaurantService;
-import cn.sjxy.graduate.service.ScenicService;
+import cn.sjxy.graduate.service.*;
 import cn.sjxy.graduate.utils.ConditionUtil;
 import cn.sjxy.graduate.utils.DateUtil;
 import com.github.pagehelper.PageHelper;
@@ -19,7 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import tk.mybatis.mapper.entity.Condition;
+import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -48,15 +44,42 @@ public class ScenicController {
     private CommentService commentService;
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private NewsService newsService;
+    @Autowired
+    private HotelService hotelService;
+    @Autowired
+    private ActivityService activityService;
 
     @GetMapping("/hotScenicList")
     public String hotScenicList(Model model) {
+        /**
+         * 所有景点
+         */
         List<Scenic> list = scenicService.scenicList();
         model.addAttribute("list", list);
-        Condition condition = ConditionUtil.getCondition(Restaurant.class);
-        condition.createCriteria().andEqualTo("hot", 0);
-        List<Restaurant> listHot = restaurantService.findByCondition(condition);
-        model.addAttribute("listHot", listHot);
+        /**
+         * 美食
+         */
+        List<Restaurant> restList = restaurantService.selectHotLimit();
+        model.addAttribute("restList", restList);
+        /**
+         * 新闻
+         */
+
+        List<News> newsList = newsService.findAll();
+        model.addAttribute("newsList", newsList);
+        /**
+         * 活动
+         */
+        List<Activity> activityList = activityService.findAll();
+        model.addAttribute("activityList", activityList);
+        /**
+         * 民宿
+         */
+        List<Hotel> hotelList = hotelService.findAll();
+        model.addAttribute("hotelList", hotelList);
+
         return "scenic_list";
     }
 
@@ -69,6 +92,24 @@ public class ScenicController {
         if (!StringUtils.isEmpty(scenic.getImg())) {
             scenic.setImgList(Arrays.asList(scenic.getImg().split(",")));
         }
+        /**
+         * 附近餐厅
+         */
+        Condition condition1 = ConditionUtil.getCondition(Restaurant.class);
+        if (!StringUtils.isEmpty(scenic.getRestId())) {
+            condition1.createCriteria().andIn("id", Arrays.asList(scenic.getRestId().split(",")));
+        }
+        List<Restaurant> restaurantList = restaurantService.findByCondition(condition1);
+        model.addAttribute("restaurantList", restaurantList);
+        /**
+         * 附近民宿
+         */
+        Condition condition = ConditionUtil.getCondition(Hotel.class);
+        if (!StringUtils.isEmpty(scenic.getHotelId())) {
+            condition.createCriteria().andIn("id", Arrays.asList(scenic.getHotelId().split(",")));
+        }
+        List<Hotel> hotelList = hotelService.findByCondition(condition);
+        model.addAttribute("hotelList", hotelList);
         model.addAttribute("scenic", scenic);
         /**
          * 景点评论
@@ -123,14 +164,29 @@ public class ScenicController {
 
     @GetMapping("/confirm")
     @ResponseBody
-    public String confirm(Integer scenicId,String ticket,Integer num,HttpSession session) {
+    public String confirm(Integer scenicId, String ticket, Integer num,String scenicName, HttpSession session) {
         /**
          * 笨方法。。但是目前只能想到这个办法
          */
-        session.setAttribute("scenic",scenicId);
-            session.setAttribute("ticket",ticket);
-            session.setAttribute("num",num);
-            return "localhost:8080/scenicApply/confirm_order";
+        session.setAttribute("scenic", scenicId);
+        session.setAttribute("ticket", ticket);
+        session.setAttribute("num", num);
+        session.setAttribute("scenicName",scenicName);
+        return "localhost:8080/scenicApply/confirm_order";
+    }
+
+    @GetMapping("search")
+    public String search(String keyWord, Model model) {
+        System.out.println("keyWord = " + keyWord);
+        Condition condition = ConditionUtil.getCondition(Scenic.class);
+        Example.Criteria criteria = condition.createCriteria();
+        criteria.andLike("name", "%" + keyWord + "%");
+        Example.Criteria criteria1 = condition.createCriteria();
+        criteria1.andLike("details", "%" + keyWord + "%");
+        condition.or(criteria1);
+        List<Scenic> scenics = scenicService.findByCondition(condition);
+        model.addAttribute("scenicList", scenics);
+        return "scenic_search";
     }
 
 }

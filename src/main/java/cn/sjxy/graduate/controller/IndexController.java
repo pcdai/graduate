@@ -1,8 +1,10 @@
 package cn.sjxy.graduate.controller;
 
+import cn.sjxy.graduate.entity.Activity;
 import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.entity.Restaurant;
 import cn.sjxy.graduate.entity.Scenic;
+import cn.sjxy.graduate.service.ActivityService;
 import cn.sjxy.graduate.service.NewsService;
 import cn.sjxy.graduate.service.RestaurantService;
 import cn.sjxy.graduate.service.ScenicService;
@@ -35,6 +37,8 @@ public class IndexController {
     private RestaurantService restaurantService;
     @Autowired
     private NewsService newsService;
+    @Autowired
+    private ActivityService activityService;
 
     @RequestMapping("/index")
     public String initIndex(HttpSession session, Model model) {
@@ -60,25 +64,11 @@ public class IndexController {
         List<Scenic> scenics1 = scenicService.queryForRelax();
         model.addAttribute("scenics1", scenics1);
         /**
-         * 餐厅,待做
+         * 活动
          */
-       /* Restaurant restaurant = restaurantService.findBy("id", 1);
-        Restaurant restaurant1 = restaurantService.findBy("id", 2);
-        if (restaurant != null && !StringUtils.isEmpty(restaurant.getImg())) {
-            restaurant.setImgList(Arrays.asList(restaurant.getImg().split(",")));
-        }
-        model.addAttribute("restaurant", restaurant);
-        if (restaurant1 != null && !StringUtils.isEmpty(restaurant1.getImg())) {
-            restaurant1.setImgList(Arrays.asList(restaurant1.getImg().split(",")));
-        }
-        model.addAttribute("restaurant1", restaurant1);*/
 
-        Restaurant restaurant = restaurantService.findBy("hot", "10");
-        model.addAttribute("restaurant", restaurant);
-        List<Restaurant> restaurantList = restaurantService.selectHotLimit();
-        model.addAttribute("restList", restaurantList);
-
-
+        List<Activity> activityList = activityService.findAll();
+        model.addAttribute("activityList", activityList);
 
         return "index";
 

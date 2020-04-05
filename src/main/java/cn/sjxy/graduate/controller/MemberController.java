@@ -1,9 +1,15 @@
 package cn.sjxy.graduate.controller;
 
 import cn.sjxy.graduate.entity.Member;
+import cn.sjxy.graduate.entity.Scenic;
+import cn.sjxy.graduate.entity.ScenicApply;
 import cn.sjxy.graduate.service.MemberService;
+import cn.sjxy.graduate.service.ScenicApplyService;
+import cn.sjxy.graduate.service.ScenicService;
 import cn.sjxy.graduate.utils.ConditionUtil;
 import cn.sjxy.graduate.utils.FileUtil;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +24,7 @@ import tk.mybatis.mapper.entity.Condition;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.servlet.http.HttpSession;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -29,6 +36,10 @@ import java.util.List;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private ScenicApplyService scenicApplyService;
+    @Autowired
+    private ScenicService scenicService;
 
     @PostMapping("/doLogin")
     public String loLogin(Member member, HttpSession session) {
@@ -42,7 +53,7 @@ public class MemberController {
     }
 
     @PostMapping("/register")
-    public String register(String account, String password, String email, String code1,String name, HttpSession session, Model model, @RequestParam("photo") MultipartFile file) {
+    public String register(String account, String password, String email, String code1, String name, HttpSession session, Model model, @RequestParam("photo") MultipartFile file) {
         System.out.println("file = " + file);
         String code = (String) session.getAttribute("code");
         if (!StringUtils.isEmpty(code) && !code.equals(code1)) {
@@ -76,8 +87,24 @@ public class MemberController {
         member.setPhoto(upload);
         member.setName(name);
         memberService.save(member);
-        System.out.println("memberService.findBy(\"photo\",upload) = " + memberService.findBy("photo", upload));
         return "login";
     }
 
+    @RequestMapping("scenic_order.html")
+    public String scenic_order(@RequestParam(name = "pn", defaultValue = "1", required = false) Integer pn
+            , @RequestParam(name = "ps", defaultValue = "4", required = false) Integer ps, HttpSession session, Model model) {
+        Member member = (Member) session.getAttribute("member");
+        Condition condition = ConditionUtil.getCondition(ScenicApply.class);
+        System.out.println(Arrays.asList(member.getScenicApplyId().split(",")));
+        condition.createCriteria().andIn("id", Arrays.asList(member.getScenicApplyId().split(",")));
+        PageHelper.startPage(pn, ps);
+        List<ScenicApply> scenicApplyList = scenicApplyService.findByCondition(condition);
+        for (ScenicApply scenicApply : scenicApplyList) {
+            scenicApply.setImg(scenicService.findById(scenicApply.getScenicId()).getIcon());
+        }
+        PageInfo<ScenicApply> info = new PageInfo<>(scenicApplyList, 5);
+        System.out.println("info = " + info);
+        model.addAttribute("info", info);
+        return "scenic_order";
+    }
 }

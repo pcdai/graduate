@@ -35,7 +35,7 @@
                             <li><a href="${ctxPath}/my_index.html"><i class="i1"></i>我的主页</a></li>
                             <li><a href="${ctxPath}/collection_list.html"><i class="i3"></i>我的收藏</a></li>
                             <li><a href="${ctxPath}/project_order.html"><i class="i4"></i>商品订单</a></li>
-                            <li><a href="${ctxPath}/scenic_order.html"><i class="i5"></i>旅游订单</a></li>
+                            <li><a href="${ctxPath}/member/scenic_order.html"><i class="i5"></i>旅游订单</a></li>
                             <li><a href="${ctxPath}/note_comments.html"><i class="i6"></i>我的评论</a></li>
                             <li><a href="${ctxPath}/my_info.html"><i class="i7"></i>设置</a></li>
                             <li><a href="${ctxPath}/logout"><i class="i8"></i>退出</a></li>
@@ -59,12 +59,12 @@
         <div class="search_nav fl">
             <!-------------------搜索------------------->
             <div class="search radius6">
-                <form name="searchform" method="post" action="${ctxPath}/search">
+                <form name="searchform" method="get" action="${ctxPath}/scenic/search">
                     <input name='ecmsfrom' type='hidden' value='9'>
                     <select name="type" id="choose">
                         <option>旅游</option>
                     </select>
-                    <input class="inp_srh" name="keyboard" id="searchName" placeholder="请输入您要搜索的景区">
+                    <input class="inp_srh" name="keyWord" id="keyWord" required placeholder="请输入您要搜索的景区">
                     <input class="btn_srh" type="submit" value="搜索">
                 </form>
             </div>

@@ -6,15 +6,18 @@ import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.entity.dto.ScenicDto;
 import cn.sjxy.graduate.service.*;
+import cn.sjxy.graduate.utils.ArrayUtil;
 import cn.sjxy.graduate.utils.ConditionUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import tk.mybatis.mapper.entity.Condition;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 @SpringBootTest
@@ -75,33 +78,66 @@ class GraduateApplicationTests {
 
         ArrayList<Integer> list = new ArrayList<>();
         for (Comment comment : comments) {
-            comment.setMemberName( memberService.findBy("id",comment.getUserId()).getName());
+            comment.setMemberName(memberService.findBy("id", comment.getUserId()).getName());
             System.out.println(comment.getMemberName());
         }
     }
+
     @Autowired
     private NewsService newsService;
+
     @Test
-    public void test6(){
+    public void test6() {
         System.out.println("newsService.findAll() = " + newsService.findAll());
     }
+
     @Test
-    public void test7(){
+    public void test7() {
         List<News> five = newsService.findLimitFive();
         for (News news : five) {
 
         }
     }
+
     @Test
-    public void test8(){
+    public void test8() {
         for (News news : newsService.findLimitFive()) {
             System.out.println("news = " + news);
         }
     }
+
     @Test
-    public void test9(){
+    public void test9() {
         for (Scenic scenic : scenicService.findAll()) {
             System.out.println("scenic = " + scenic);
         }
+    }
+
+    @Test
+    public void test10() {
+        Condition condition = ConditionUtil.getCondition(Scenic.class);
+        Example.Criteria criteria = condition.createCriteria();
+        criteria.andLike("name", "%" + "毛衣" + "%");
+        Example.Criteria criteria1 = condition.createCriteria();
+        criteria1.andLike("details", "%" + "毛衣" + "%");
+        condition.or(criteria1);
+        List<Scenic> scenics = scenicService.findByCondition(condition);
+        for (Scenic scenic : scenics) {
+            System.out.println(scenic.getName());
+        }
+    }
+
+    @Test
+    public void test11() {
+        String[] arr1 = {new String("" + 32)};
+        String applyId = memberService.findById(1).getScenicApplyId();
+        String[] split = applyId.split(",");
+
+        String[] minus = ArrayUtil.minus(arr1, split);
+        StringBuffer buffer = new StringBuffer();
+        for (String s : minus) {
+            buffer.append(s+",");
+        }
+        System.out.println("buffer = " + buffer.toString());
     }
 }
