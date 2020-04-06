@@ -82,15 +82,14 @@ public class ScenicApplyController {
     @GetMapping(value = "payOrder", produces = "text/html")
     public String payOrder(HttpSession session, Model model, String ticket, String scenicName) throws AlipayApiException {
         ScenicApply apply = (ScenicApply) session.getAttribute("apply");
+        apply.setStatus(0);
+        apply.setId(apply.getId());
+        scenicApplyService.update(apply);
         PayVo payVo = new PayVo();
         payVo.setTotal_amount(ticket);
         payVo.setSubject(scenicName);
         payVo.setOut_trade_no(apply.getPay());
         String pay = alipayTemplate.pay(payVo);
-        apply.setStatus(0);
-        apply.setId(apply.getId());
-        System.out.println("apply=" + apply);
-        scenicApplyService.update(apply);
         return pay;
     }
 

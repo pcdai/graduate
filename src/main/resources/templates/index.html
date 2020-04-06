@@ -18,8 +18,10 @@
 <div class="h_banner">
     <ul class="h_b_list">
         <%for(item in scenics!){%>
+        <%if(itemLP.index<5){%>
         <li><a style="background:url(${item.icon}) no-repeat center;"
                href="${ctxPath}/scenic/scenicDetails?id=${item.id}"></a></li>
+        <%}%>
         <%}%>
     </ul>
     <a class="prev" href="javascript:void(0)"><==</a>

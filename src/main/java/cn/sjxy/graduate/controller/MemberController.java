@@ -93,6 +93,7 @@ public class MemberController {
     @RequestMapping("scenic_order.html")
     public String scenic_order(@RequestParam(name = "pn", defaultValue = "1", required = false) Integer pn
             , @RequestParam(name = "ps", defaultValue = "4", required = false) Integer ps, HttpSession session, Model model) {
+
         Member member = (Member) session.getAttribute("member");
         Condition condition = ConditionUtil.getCondition(ScenicApply.class);
         System.out.println(Arrays.asList(member.getScenicApplyId().split(",")));

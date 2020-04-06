@@ -176,8 +176,9 @@ public class ScenicController {
     }
 
     @GetMapping("search")
-    public String search(String keyWord, Model model) {
+    public String search(String keyWord, Model model,String type) {
         System.out.println("keyWord = " + keyWord);
+        System.out.println("type = " + type);
         Condition condition = ConditionUtil.getCondition(Scenic.class);
         Example.Criteria criteria = condition.createCriteria();
         criteria.andLike("name", "%" + keyWord + "%");

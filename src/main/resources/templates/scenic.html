@@ -95,17 +95,6 @@
                         </div>
                         <input type="hidden" value="${scenic.id}" id="low"/>
                         <ul id="commentId">
-                            <!-- <%for(item in comments!){ %>
-                             <li>
-                                 <div class="pic"><img src="${item.phone}"/></div>
-                                 <div class="con">
-                                     <label>${item.memberName}</label>
-                                     <p>${item.comment}</p>
-                                     <span>发表于：${item.commentTime}</span>
-                                 </div>
-                                 <div class="tip"><span class="t_a t_box">沙发</span></div>
-                             </li>
-                             <%}%>-->
                         </ul>
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
@@ -324,21 +313,6 @@
     }
 
 
-    /* $("#suBtn").click(function () {
-         var comment = $("#commentText").val();
-         $.ajax({
-             type: "POST",
-             url: "${ctxPath}/comment/addComment",
-             data: {
-                 "comment": comment
-             },
-             success: function (res) {
-                 if (res == "ok") {
-                     window.location.href="";
-                 }
-             }
-         })
-     })*/
 </script>
 </body>
 </html>

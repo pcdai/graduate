@@ -27,6 +27,8 @@ public class TestUploadUtilController {
     private MemberService memberService;
     @Autowired
     private HotelService hotelService;
+    @Autowired
+    private StrategyService strategyService;
 
     @RequestMapping("/restaurant")
     @ResponseBody
@@ -107,7 +109,6 @@ public class TestUploadUtilController {
         return "ok";
     }
 
-
     @RequestMapping("/hotelFile")
     @ResponseBody
     public String hotelFile(@RequestParam("name") MultipartFile file) {
@@ -127,6 +128,28 @@ public class TestUploadUtilController {
         Hotel hotel = new Hotel();
         hotel.setImg(strip);
         hotelService.save(hotel);
+        return "ok";
+    }
+
+
+    @RequestMapping("/strategy")
+    @ResponseBody
+    public String strategy(@RequestParam("name") MultipartFile file) {
+        String upload = FileUtil.fileUpload(file);
+        Strategy strategy = new Strategy();
+        strategy.setIcon(upload);
+        strategyService.save(strategy);
+        return "ok";
+    }
+
+    @RequestMapping("strategyList")
+    @ResponseBody
+    public String strategyList(HttpServletRequest request) {
+        List<String> list = FileUtil.filesUpload(request);
+        String strip = StringUtils.strip(list.toString(), "[]");
+        Strategy strategy = new Strategy();
+        strategy.setImg(strip);
+        strategyService.save(strategy);
         return "ok";
     }
 

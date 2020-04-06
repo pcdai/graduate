@@ -2,6 +2,7 @@ package cn.sjxy.graduate.controller;
 
 import cn.sjxy.graduate.entity.Hotel;
 import cn.sjxy.graduate.service.HotelService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -12,7 +13,7 @@ import javax.annotation.Resource;
  * @author dpc
  * @since 2020-03-23 16:03:09
  */
-@RestController
+@Controller
 @RequestMapping("hotel")
 public class HotelController {
     /**
@@ -27,5 +28,4 @@ public class HotelController {
      * @param id 主键
      * @return 单条数据
      */
-
 }
