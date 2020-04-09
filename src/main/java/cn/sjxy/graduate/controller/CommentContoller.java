@@ -1,10 +1,8 @@
 package cn.sjxy.graduate.controller;
 
 import cn.hutool.core.date.DateUnit;
-import cn.sjxy.graduate.entity.Comment;
-import cn.sjxy.graduate.entity.Member;
-import cn.sjxy.graduate.entity.Scenic;
-import cn.sjxy.graduate.entity.Strategy;
+import cn.sjxy.graduate.entity.*;
+import cn.sjxy.graduate.service.ActivityService;
 import cn.sjxy.graduate.service.CommentService;
 import cn.sjxy.graduate.service.ScenicService;
 import cn.sjxy.graduate.service.StrategyService;
@@ -35,9 +33,11 @@ public class CommentContoller {
     private ScenicService scenicService;
     @Autowired
     private StrategyService strategyService;
+    @Autowired
+    private ActivityService activityService;
 
     @PostMapping("/addComment")
-    public String addComment(HttpSession session, String comment, Integer scenicId, String strategyId, @RequestHeader("referer") String referer) {
+    public String addComment(HttpSession session, String comment, Integer scenicId, String strategyId, String activityId, @RequestHeader("referer") String referer) {
         /**
          * 保存评论内容和评论的人的id到评论表，保存评论id到景点表
          */
@@ -54,6 +54,13 @@ public class CommentContoller {
             String commentId = scenic.getCommentId();
             commentId = commentId + "," + comment2Id;
             scenicService.addComment(scenic.getId(), commentId);
+        }
+        if (activityId != null) {
+            Activity activity = activityService.findById(activityId);
+            String commentId = activity.getCommentId();
+            commentId = commentId + "," + comment2Id;
+            activity.setCommentId(commentId);
+            activityService.update(activity);
         }
         if (strategyId != null) {
             Strategy strategy = strategyService.findById(strategyId);

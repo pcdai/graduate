@@ -164,19 +164,19 @@ public class ScenicController {
 
     @GetMapping("/confirm")
     @ResponseBody
-    public String confirm(Integer scenicId, String ticket, Integer num,String scenicName, HttpSession session) {
+    public String confirm(Integer scenicId, String ticket, Integer num, String scenicName, HttpSession session) {
         /**
          * 笨方法。。但是目前只能想到这个办法
          */
         session.setAttribute("scenic", scenicId);
         session.setAttribute("ticket", ticket);
         session.setAttribute("num", num);
-        session.setAttribute("scenicName",scenicName);
+        session.setAttribute("scenicName", scenicName);
         return "localhost:8080/scenicApply/confirm_order";
     }
 
     @GetMapping("search")
-    public String search(String keyWord, Model model,String type) {
+    public String search(String keyWord, Model model, String type) {
         System.out.println("keyWord = " + keyWord);
         System.out.println("type = " + type);
         Condition condition = ConditionUtil.getCondition(Scenic.class);
@@ -190,4 +190,8 @@ public class ScenicController {
         return "scenic_search";
     }
 
+    @GetMapping("activities_list.html")
+    public String activities_list() {
+        return "activities_list";
+    }
 }

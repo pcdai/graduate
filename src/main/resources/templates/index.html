@@ -85,7 +85,29 @@
 </div>
 <!------------------南京美食-------------------->
 
-
+<div id="h_note">
+    <div class="cw1200">
+        <div class="title"><img alt="" src="${ctxPath}/image/h_title5.png"/></div>
+        <div class="con">
+            <ul>
+                <%for(item in hotelList!){%>
+                <li>
+                    <div class="box">
+                        <div class="pic">
+                            <a title="" href="${ctxPath}/hotel/hotelDetails?id=${item.id}"><img alt="" class="scale-effect" src="${item.icon}"/></a>
+                        </div>
+                        <div class="cont">
+                            <a title="" href="${ctxPath}/hotel/hotelDetails?id=${item.id}"><h3>洛阳，历史长河中的一处停歇</h3></a>
+                            <p>${item.name}</p>
+                        </div>
+                    </div>
+                </li>
+                <%}%>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <!------------------首页新闻-------------------->
 <div id="h_news">

@@ -96,6 +96,10 @@ public class StrategyController {
         }
         info = new PageInfo<>(comments, 4);
         return info;
+    }
 
+    @GetMapping("write_note.html")
+    public String write_note() {
+        return "write_note";
     }
 }

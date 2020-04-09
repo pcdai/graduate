@@ -1,13 +1,7 @@
 package cn.sjxy.graduate.controller;
 
-import cn.sjxy.graduate.entity.Activity;
-import cn.sjxy.graduate.entity.News;
-import cn.sjxy.graduate.entity.Restaurant;
-import cn.sjxy.graduate.entity.Scenic;
-import cn.sjxy.graduate.service.ActivityService;
-import cn.sjxy.graduate.service.NewsService;
-import cn.sjxy.graduate.service.RestaurantService;
-import cn.sjxy.graduate.service.ScenicService;
+import cn.sjxy.graduate.entity.*;
+import cn.sjxy.graduate.service.*;
 import cn.sjxy.graduate.utils.ConditionUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +33,8 @@ public class IndexController {
     private NewsService newsService;
     @Autowired
     private ActivityService activityService;
+    @Autowired
+    private HotelService hotelService;
 
     @RequestMapping("/index")
     public String initIndex(HttpSession session, Model model) {
@@ -69,15 +65,13 @@ public class IndexController {
 
         List<Activity> activityList = activityService.findAll();
         model.addAttribute("activityList", activityList);
-
+        /**
+         * 旅馆
+         */
+        List<Hotel> hotelList = hotelService.findAll();
+        model.addAttribute("hotelList", hotelList);
         return "index";
 
     }
 
-    @GetMapping("/search")
-    @ResponseBody
-    public String search(String option) {
-        List<Scenic> list = scenicService.findByCondition("%" + option + "%");
-        return null;
-    }
 }

@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * (Hotel)实体类
@@ -54,5 +56,13 @@ public class Hotel implements Serializable {
      * 地址
      */
     private String area;
+    /**
+     * 景点id
+     */
     private Integer scenicId;
+    /**
+     *
+     */
+    @Transient
+    private List imgList;
 }
