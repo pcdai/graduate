@@ -91,6 +91,7 @@
                 </tr>
             </table>
         </div>
+        <input type="hidden" id="actId" value="${activity.id}"/>
         <!-----------------活动信息---------------->
         <div class="info_mo">
             <table>
@@ -98,12 +99,11 @@
                     <th colspan="2">活动信息</th>
                 </tr>
                 <tr>
-                    <td>活动：春节逛吃哪里去？看洛阳庙会、灯展集锦</td>
-                    <td>活动咨询：0379-63789053</td>
+                    <td>活动：${activity.name}</td>
+                    <td>活动咨询：${activity.phone}</td>
                 </tr>
                 <tr>
-                    <td>出发时间：2017/01/23</td>
-                    <td>集合地点：洛阳市关林庙会</td>
+                    <td>出发时间：${activity.time,dateFormat="yyyy-MM-dd"}</td>
                 </tr>
             </table>
         </div>
@@ -176,7 +176,8 @@
         var num = $("#inputId").val();//购买数量
         var money = $("#realMoney").text();//总金额
         var scenicId = $("#scenicId").val();
-        var scenicName=$("#scenicName").val();
+        var scenicName = $("#scenicName").val();
+        var actId = $("#actId").val();
         console.log(num)
         console.log(money)
         console.log(scenicId)
@@ -188,11 +189,12 @@
                 "scenicId": scenicId,
                 "ticket": money,
                 "num": num,
-                "scenicName":scenicName
+                "scenicName": scenicName,
+                "actId":actId
             },
             success: function (res) {
                 console.log(res)
-                window.location.href="http://"+res
+                window.location.href = "http://" + res
             }
         })
     })

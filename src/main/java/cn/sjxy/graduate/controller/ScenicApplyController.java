@@ -4,6 +4,7 @@ import cn.sjxy.graduate.config.AlipayTemplate;
 import cn.sjxy.graduate.entity.Member;
 import cn.sjxy.graduate.entity.PayVo;
 import cn.sjxy.graduate.entity.ScenicApply;
+import cn.sjxy.graduate.service.ActivityService;
 import cn.sjxy.graduate.service.MemberService;
 import cn.sjxy.graduate.service.ScenicApplyService;
 import cn.sjxy.graduate.service.ScenicService;
@@ -33,6 +34,8 @@ public class ScenicApplyController {
     private ScenicService scenicService;
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private ActivityService activityService;
 
     @RequestMapping("activities_list.html")
     public String activities_list(Model model) {
@@ -47,6 +50,7 @@ public class ScenicApplyController {
         String ticket = (String) session.getAttribute("ticket");
         Integer num = (Integer) session.getAttribute("num");
         String scenicName = (String) session.getAttribute("scenicName");
+        String actId = (String) session.getAttribute("actId");
         Member member = (Member) session.getAttribute("member");
         apply.setMemberId(member.getId());
         apply.setScenicId(scenic);
@@ -68,6 +72,7 @@ public class ScenicApplyController {
         model.addAttribute("num", num);
         model.addAttribute("name", name);
         model.addAttribute("telephone", telephone);
+        model.addAttribute("activity", activityService.findById(actId));
         String applyId = member.getScenicApplyId();
         applyId = applyId + "," + scenicApplyService.findBy("pay", uuid).getId();
         member.setScenicApplyId(applyId);

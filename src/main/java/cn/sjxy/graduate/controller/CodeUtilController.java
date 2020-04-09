@@ -1,4 +1,4 @@
-package cn.sjxy.graduate.utils;
+package cn.sjxy.graduate.controller;
 
 import cn.sjxy.graduate.component.MessageSender;
 import org.springframework.beans.factory.annotation.Autowired;

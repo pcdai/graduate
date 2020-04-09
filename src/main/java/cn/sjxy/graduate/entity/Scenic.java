@@ -89,5 +89,6 @@ public class Scenic implements Serializable {
      * 附近民宿
      */
     private String hotelId;
+    private Integer actId;
 
 }

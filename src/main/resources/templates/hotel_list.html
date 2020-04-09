@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>活动列表</title>
+    <title>景区列表</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-------------jquery库-------------->
     <script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
@@ -17,6 +17,8 @@
 <body>
 <!-------------------工具栏------------------->
 <%layout("/include/top.html"){}%>
+<!-------------------版头------------------->
+
 <!------------------子页框架-------------------->
 <div id="sub_from">
     <div class="cw1200">
@@ -36,15 +38,30 @@
                 <div id="list_sort">
                     <span>产品类型：</span>
                     <div class="list_1">
-                        <a href="${ctxPath}/scenic/hotScenicList">旅游景区</a>
-                        <a class="cur" href="activities_list.html">旅游活动</a>
+                        <a class="cur" href="javaScript:void(0)">民宿/酒店</a>
+
                         <div class="clear"></div>
                     </div>
                 </div>
-                <!------------------活动列表-------------------->
-                <div id="activities_list">
-                    <ul id="actListId">
-
+                <!------------------景区列表-------------------->
+                <div id="scenic_list">
+                    <ul>
+                        <%for(item in info.list!){%>
+                        <li>
+                            <div class="pic"><a href="${ctxPath}/hotel/hotelDetails?id=${item.id}"><img
+                                    class="scale-effect" class="scale-effect" src="${item.icon}"/></a></div>
+                            <div class="con">
+                                <h3><a href="${ctxPath}/hotel/hotelDetails?id=${item.id}">${item.name}</a></h3>
+                                <p>${item.details}</p>
+                            </div>
+                            <a href="${ctxPath}/hotel/hotelDetails?id=${item.id}">
+                                <div class="tip">
+                                    ￥${item.price}
+                                </div>
+                                <div class="clear"></div>
+                            </a>
+                        </li>
+                        <%}%>
                     </ul>
                 </div>
                 <nav aria-label="Page navigation">
@@ -54,7 +71,7 @@
                                 aria-hidden="true">&laquo;</span></a></li>
                         <%}%>
                         <%else{%>
-                        <li><a href="${ctxPath}/activity/activityList?pn=${info.pageNum-1}" aria-label="Previous"><span
+                        <li><a href="${ctxPath}/hotel/hotelList?pn=${info.pageNum-1}" aria-label="Previous"><span
                                 aria-hidden="true">&laquo;</span></a></li>
                         <%}%>
                         <%for(item in info.navigatepageNums!){%>
@@ -63,8 +80,8 @@
                                               aria-label="Previous"><span aria-hidden="true">${item}</span></a></li>
                         <%}%>
                         <%else{%>
-                        <li><a href="${ctxPath}/activity/activityList?pn=${item}"
-                               aria-label="Previous"><span aria-hidden="true">${item}</span></a></li>
+                        <li><a href="${ctxPath}/hotel/hotelList?pn=${item}"
+                                              aria-label="Previous"><span aria-hidden="true">${item}</span></a></li>
                         <%}%>
 
                         <%}%>
@@ -73,12 +90,13 @@
                                 aria-hidden="true">&raquo;</span></a></li>
                         <%}%>
                         <%else{%>
-                        <li><a href="${ctxPath}/activity/activityList?pn=${info.pageNum+1}" aria-label="Previous"><span
+                        <li><a href="${ctxPath}/hotel/hotelList?pn=${info.pageNum+1}" aria-label="Previous"><span
                                 aria-hidden="true">&raquo;</span></a></li>
                         <%}%>
                     </ul>
                 </nav>
             </div>
+
         </div>
         <%layout("/include/side.html"){}%>
         <div class="clear"></div>
@@ -98,33 +116,5 @@
         <div class="clear"></div>
     </div>
 </div>
-<script type="text/javascript">
-    $.ajax({
-        url: "${ctxPath}/activity/actList",
-        type: "GET",
-        success: function (res) {
-            initUl(res);
-        }
-    })
-
-    function initUl(res) {
-        $.each(res, function () {
-            $('<li>\n' +
-                '                            <div class="pic"><a href="${ctxPath}/activity/activities.html?id='+this.id+'"><img class="scale-effect"\n' +
-                '                                                                            src="'+this.icon+'"/></a></div>\n' +
-                '                            <div class="con">\n' +
-                '                                <h3><a href="${ctxPath}/activity/activities.html?id='+this.id+'">'+this.name+'</a></h3>\n' +
-                '                                <span>出发时间：<i class="am-icon-clock-o"></i>'+this.time+'</span>\n' +
-                '                                <p>'+this.info+'</p>\n' +
-                '                            </div>\n' +
-                '                            <div class="price">\n' +
-                '                                <label>￥'+this.ticket+'</label>\n' +
-                '                                <a href="${ctxPath}/activity/activities.html?id='+this.id+'">查看详情</a>\n' +
-                '                            </div>\n' +
-                '                            <div class="clear"></div>\n' +
-                '                        </li>').appendTo('#actListId');
-        })
-    }
-</script>
 </body>
 </html>

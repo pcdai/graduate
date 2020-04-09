@@ -38,11 +38,11 @@ public class ScenicController {
      */
     @Resource
     private ScenicService scenicService;
-    @Resource
-    private RestaurantService restaurantService;
     @Autowired
     private CommentService commentService;
     @Autowired
+    @Resource
+    private RestaurantService restaurantService;
     private MemberService memberService;
     @Autowired
     private NewsService newsService;
@@ -52,12 +52,15 @@ public class ScenicController {
     private ActivityService activityService;
 
     @GetMapping("/hotScenicList")
-    public String hotScenicList(Model model) {
+    public String hotScenicList(@RequestParam(name = "pn", defaultValue = "1", required = false) Integer pn
+            , @RequestParam(name = "ps", defaultValue = "2", required = false) Integer ps, Model model) {
         /**
          * 所有景点
          */
-        List<Scenic> list = scenicService.scenicList();
-        model.addAttribute("list", list);
+        PageHelper.startPage(pn, ps);
+        List<Scenic> list = scenicService.findAll();
+        PageInfo<Scenic> info = new PageInfo<>(list, 4);
+        model.addAttribute("info", info);
         /**
          * 美食
          */
@@ -117,6 +120,25 @@ public class ScenicController {
         return "scenic";
     }
 
+    @ResponseBody
+    @GetMapping("/getRestList")
+    public List<Restaurant> getRestList() {
+        /**
+         * 美食
+         */
+        return restaurantService.selectHotLimit();
+    }
+
+
+    /**
+     * 评论列表
+     *
+     * @param id
+     * @param pid
+     * @param pn
+     * @param ps
+     * @return
+     */
     @GetMapping("/scenicCommentDesc")
     @ResponseBody
     public PageInfo scenicCommentDesc(Integer id, String pid, @RequestParam(name = "pn", defaultValue = "1", required = false) Integer pn
@@ -149,12 +171,13 @@ public class ScenicController {
     }
 
     @GetMapping("/submit_orders.html")
-    public String submit_orders(Integer id, Model model, HttpSession session) {
+    public String submit_orders(Integer id, Model model, HttpSession session, Integer actId) {
         Scenic scenic = scenicService.queryById(id);
         Member member = (Member) session.getAttribute("member");
         String name = member.getName();
         String telephone = member.getTelephone();
         String date = DateUtil.format(new Date(), "yyyy-MM-dd");
+        model.addAttribute("activity", activityService.findById(actId));
         model.addAttribute("name", name);
         model.addAttribute("telephone", telephone);
         model.addAttribute("date", date);
@@ -164,7 +187,7 @@ public class ScenicController {
 
     @GetMapping("/confirm")
     @ResponseBody
-    public String confirm(Integer scenicId, String ticket, Integer num, String scenicName, HttpSession session) {
+    public String confirm(Integer scenicId, String ticket, Integer num, String scenicName, String actId, HttpSession session) {
         /**
          * 笨方法。。但是目前只能想到这个办法
          */
@@ -172,6 +195,7 @@ public class ScenicController {
         session.setAttribute("ticket", ticket);
         session.setAttribute("num", num);
         session.setAttribute("scenicName", scenicName);
+        session.setAttribute("actId", actId);
         return "localhost:8080/scenicApply/confirm_order";
     }
 

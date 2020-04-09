@@ -1,0 +1,114 @@
+<div class="w380 fr">
+    <!------------------公共盒子-------------------->
+    <div class="public_box bg2">
+        <div class="public_title">
+            <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
+            <div class="con">
+                <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                <div class="name"><img src="${ctxPath}/image/f_t_mobile_platform.png"/></div>
+            </div>
+            <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
+            <div class="clear"></div>
+        </div>
+        <!------------------移动平台-------------------->
+        <div id="mobile_platform">
+            <img src="${ctxPath}/image/mp_pic.jpg"/>
+            <img src="${ctxPath}/image/mp_tag.png"/>
+            <img src="${ctxPath}/image/rwm.jpg"/>
+            <p>微信订票/查询优惠政策请扫二维码</p>
+        </div>
+    </div>
+    <!------------------公共盒子-------------------->
+    <div class="public_box bg2">
+        <div class="public_title">
+            <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
+            <div class="con">
+                <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                <div class="name"><img src="${ctxPath}/image/f_t_culture.png"/></div>
+                <div class="more"><a href="#">更多>></a></div>
+            </div>
+            <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
+            <div class="clear"></div>
+        </div>
+        <!------------------公共推荐-------------------->
+        <div id="public_recom">
+            <!-- 民宿-->
+            <ul>
+                <%for(item in hotelList!){%>
+                <%if(itemLP.index<4){%>
+                <li>
+                    <a href="#">
+                        <div class="pic"><img class="scale-effect" src="${item.icon}"/></div>
+                        <p>${item.name}</p>
+                    </a>
+                </li>
+                <%}%>
+                <%}%>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+    <!------------------公共盒子-------------------->
+    <div class="public_box bg2">
+        <div class="public_title">
+            <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
+            <div class="con">
+                <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                <div class="name"><img src="${ctxPath}/image/f_t_project.png"/></div>
+                <div class="more"><a href="#">更多>></a></div>
+            </div>
+            <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
+            <div class="clear"></div>
+        </div>
+        <!------------------公共推荐-------------------->
+        <div id="public_recom">
+            <ul>
+               <!-- 新闻-->
+                <%for(item in newsList!){%>
+                <%if(itemLP.index<4){%>
+                <li>
+                    <a href="#">
+                        <div class="pic"><img class="scale-effect" src="${item.icon}"/></div>
+                        <p>${item.title}</p>
+                    </a>
+                </li>
+                <%}%>
+                <%}%>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+    <!------------------公共盒子-------------------->
+    <div class="public_box bg2">
+        <div class="public_title">
+            <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
+            <div class="con">
+                <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
+                <div class="name"><img src="${ctxPath}/image/f_t_food.png"/></div>
+                <div class="more"><a href="#">更多>></a></div>
+            </div>
+            <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
+            <div class="clear"></div>
+        </div>
+        <!------------------公共推荐-------------------->
+        <div id="public_recom">
+            <!-- 活动-->
+            <ul>
+                <%for(item in activityList!){%>
+                <%if(itemLP.index<4){%>
+                <li>
+                    <a href="#">
+                        <div class="pic"><img class="scale-effect" src="${item.icon}"/></div>
+                        <p>${item.name}</p>
+                    </a>
+                </li>
+                <%}%>
+                <%}%>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+</div>

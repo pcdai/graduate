@@ -9,6 +9,8 @@
     <!-------------Amazeui--------------->
     <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
     <link rel="stylesheet" type="text/css" href="${ctxPath}/css/amazeui.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!------------核心样式-------------->
     <link rel="stylesheet" type="text/css" href="${ctxPath}/css/style.css">
 </head>
@@ -37,14 +39,14 @@
                     <span>产品类型：</span>
                     <div class="list_1">
                         <a class="cur" href="scenic_list.html">旅游景区</a>
-                        <a href="activities_list.html">旅游活动</a>
+                        <a href="${ctxPath}/activity/activityList">旅游活动</a>
                         <div class="clear"></div>
                     </div>
                 </div>
                 <!------------------景区列表-------------------->
                 <div id="scenic_list">
                     <ul>
-                        <%for(item in list!){%>
+                        <%for(item in info.list!){%>
                         <li>
                             <div class="pic"><a href="${ctxPath}/scenic/scenicDetails?id=${item.id}"><img
                                     class="scale-effect" class="scale-effect" src="${item.icon}"/></a></div>
@@ -61,152 +63,41 @@
                         <%}%>
                     </ul>
                 </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <%if(info.isIsFirstPage!){%>
+                        <li class="disabled"><a href="javascript:void (0)" aria-label="Previous"><span
+                                aria-hidden="true">&laquo;</span></a></li>
+                        <%}%>
+                        <%else{%>
+                        <li><a href="${ctxPath}/scenic/hotScenicList?pn=${info.pageNum-1}" aria-label="Previous"><span
+                                aria-hidden="true">&laquo;</span></a></li>
+                        <%}%>
+                        <%for(item in info.navigatepageNums!){%>
+                        <%if(item==info.pageNum){%>
+                        <li class="active"><a href="javascript:void (0)"
+                                              aria-label="Previous"><span aria-hidden="true">${item}</span></a></li>
+                        <%}%>
+                        <%else{%>
+                        <li><a href="${ctxPath}/scenic/hotScenicList?pn=${item}"
+                               aria-label="Previous"><span aria-hidden="true">${item}</span></a></li>
+                        <%}%>
 
+                        <%}%>
+                        <%if(info.isIsLastPage!){%>
+                        <li class="disabled"><a href="javascript:void (0)" aria-label="Previous"><span
+                                aria-hidden="true">&raquo;</span></a></li>
+                        <%}%>
+                        <%else{%>
+                        <li><a href="${ctxPath}/scenic/hotScenicList?pn=${info.pageNum+1}" aria-label="Previous"><span
+                                aria-hidden="true">&raquo;</span></a></li>
+                        <%}%>
+                    </ul>
+                </nav>
             </div>
 
         </div>
-        <div class="w380 fr">
-            <!------------------公共盒子-------------------->
-            <div class="public_box bg2">
-                <div class="public_title">
-                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
-                    <div class="con">
-                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
-                        <div class="name"><img src="${ctxPath}/image/f_t_mobile_platform.png"/></div>
-                    </div>
-                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
-                    <div class="clear"></div>
-                </div>
-                <!------------------移动平台-------------------->
-                <div id="mobile_platform">
-                    <img src="${ctxPath}/image/mp_pic.jpg"/>
-                    <img src="${ctxPath}/image/mp_tag.png"/>
-                    <img src="${ctxPath}/image/rwm.jpg"/>
-                    <p>微信订票/查询优惠政策请扫二维码</p>
-                </div>
-            </div>
-            <!------------------公共盒子-------------------->
-            <div class="public_box bg2">
-                <div class="public_title">
-                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
-                    <div class="con">
-                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
-                        <div class="name"><img src="${ctxPath}/image/f_t_culture.png"/></div>
-                        <div class="more"><a href="#">更多>></a></div>
-                    </div>
-                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
-                    <div class="clear"></div>
-                </div>
-                <!------------------公共推荐-------------------->
-                <div id="public_recom">
-                    <ul>
-                        <!-- 美食-->
-                        <%for(item in restList!){%>
-                        <%if(itemLP.index<4){%>
-                        <li>
-                            <a href="#">
-                                <div class="pic"><img class="scale-effect" src="${item.icon}"/></div>
-                                <p>${item.name}</p>
-                            </a>
-                        </li>
-                        <%}%>
-                        <%}%>
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </div>
-            <!------------------公共盒子-------------------->
-            <div class="public_box bg2">
-                <div class="public_title">
-                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
-                    <div class="con">
-                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
-                        <div class="name"><img src="${ctxPath}/image/f_t_project.png"/></div>
-                        <div class="more"><a
-                                onclick="window.location.href='http://localhost:8080/news_list.html'">更多>></a></div>
-                    </div>
-                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
-                    <div class="clear"></div>
-                </div>
-                <!------------------公共推荐-------------------->
-                <div id="public_recom">
-                    <!--新闻-->
-                    <ul>
-                        <%for(item in newsList!){%>
-                        <%if(itemLP.index<4){%>
-                        <li>
-                            <a href="${ctxPath}/news/newsDetails?id=${item.id}">
-                                <div class="pic"><img class="scale-effect" src="${item.icon}"/></div>
-                                <p>${item.title}</p>
-                            </a>
-                        </li>
-                        <%}%>
-                        <%}%>
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </div>
-            <!------------------公共盒子-------------------->
-            <div class="public_box bg2">
-                <div class="public_title">
-                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
-                    <div class="con">
-                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
-                        <div class="name"><img src="${ctxPath}/image/f_t_food.png"/></div>
-                        <div class="more"><a href="#">更多>></a></div>
-                    </div>
-                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
-                    <div class="clear"></div>
-                </div>
-                <!------------------公共推荐-------------------->
-                <div id="public_recom">
-                    <ul>
-                        <!-- 民宿-->
-                        <%for(item in hotelList!){%>
-                        <%if(itemLP.index<4){%>
-                        <li>
-                            <a href="#">
-                                <div class="pic"><img class="scale-effect" src="${item.icon}"/></div>
-                                <p>${item.name}</p>
-                            </a>
-                        </li>
-                        <%}%>
-                        <%}%>
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </div>
-            <!------------------公共盒子-------------------->
-            <div class="public_box bg2">
-                <div class="public_title">
-                    <div class="fl"><img src="${ctxPath}/image/from_title_left.png"/></div>
-                    <div class="con">
-                        <div class="lamp_ico"><img src="${ctxPath}/image/lamp_ico.png"/></div>
-                        <div class="name"><img src="${ctxPath}/image/f_t_life.png"/></div>
-                        <div class="more"><a href="#">更多>></a></div>
-                    </div>
-                    <div class="fr"><img src="${ctxPath}/image/from_title_right.png"/></div>
-                    <div class="clear"></div>
-                </div>
-                <!------------------公共推荐-------------------->
-                <div id="public_recom">
-                    <ul>
-                        <!-- 精彩活动-->
-                        <%for(item in activityList!){%>
-                        <%if(itemLP.index<4){%>
-                        <li>
-                            <a href="#">
-                                <div class="pic"><img class="scale-effect" src="${item.icon}"/></div>
-                                <p>${item.name}</p>
-                            </a>
-                        </li>
-                        <%}%>
-                        <%}%>
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <%layout("/include/side.html"){}%>
         <div class="clear"></div>
     </div>
 </div>

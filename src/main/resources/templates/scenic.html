@@ -139,7 +139,8 @@
                         <li>详细地址：<span>${scenic.area}</span></li>
                         <li>费用：<label>￥${scenic.ticket}</label></li>
                     </ul>
-                    <a class="buy" href="${ctxPath}/scenic/submit_orders.html?id=${scenic.id}">立即预订</a>
+                    <a class="buy" href="${ctxPath}/scenic/submit_orders.html?id=${scenic.id}&actId=${scenic.actId}">立即预订</a>
+                    <a class="buy" href="${ctxPath}/activity/activities.html?id=${scenic.actId}">相关活动</a>
                 </div>
             </div>
             <!------------------公共盒子-------------------->
@@ -304,7 +305,7 @@
                     "pn": pn
                 },
                 success: function (res) {
-                  initComment(res.list)
+                    initComment(res.list)
                     initPage(res)
                 }
             })

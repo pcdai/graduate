@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>确认订单</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-------------jquery库-------------->
-  	<script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
-	<!-------------Amazeui--------------->
+    <script type="text/javascript" src="${ctxPath}/js/jquery-1.8.3.min.js"></script>
+    <!-------------Amazeui--------------->
     <script type="text/javascript" src="${ctxPath}/js/amazeui.js"></script>
     <link rel="stylesheet" type="text/css" href="${ctxPath}/css/amazeui.css">
     <!------------核心样式-------------->
@@ -17,105 +18,106 @@
 <div id="header">
     <div class="cw1000">
         <!-------------------logo------------------->
-        <div class="logo"><a title="" href="index.html"><img alt="" src="${ctxPath}/image/logo.jpg" /></a></div>
-		<!-------------------头部导航------------------->
-		<div class="head_title">
-			确认订单
-		</div>
-		<!-------------------用户------------------->
-		<%layout("/include/user.html"){}%>
+        <div class="logo"><a title="" href="${ctxPath}/index"><img alt="" src="${ctxPath}/image/logo.jpg"/></a></div>
+        <!-------------------头部导航------------------->
+        <div class="head_title">
+            确认订单
+        </div>
+        <!-------------------用户------------------->
+        <%layout("/include/user.html"){}%>
         <div class="clear"></div>
     </div>
 </div>
 
 <!-----------------确认订单---------------->
 <div id="confirm_order">
-	<div class="cw1000">	
+    <div class="cw1000">
 
-		
 
-		<!-----------------景区信息---------------->
-		<div class="info_mo">
-			<table>
-				<tr>
-					<th class="cwt">商品信息</th>
-					<th class="cwt">单价</th>
-					<th class="cwt">数量</th>
-					<th class="cwt">总价</th>
-				</tr>
-				<tr>
-					<td><a href="#"><img class="pic" width=53 height=53 src="${scenic.icon}" />${scenic.name}门票</a></td>
-					<td class="cwt">￥${scenic.ticket}</td>
-					<td class="cwt">x${num}</td>
-					<td class="cwt">￥${ticket}</td>
-				</tr>
-			</table>
-		</div>
-		<!-----------------景区信息---------------->
-		<div class="info_mo">
-			<table>
-				<tr>
-					<th colspan="2">景区信息</th>
-				</tr>
-				<tr>
-					<td>景区名称：${scenic.name}</td>
-					<td>联系方式：${scenic.contact}</td>
-				</tr>
-				<tr>
-					<td>开放时间：${scenic.openTime}</td>
-					<td>详细地址：${scenic.area}</td>
-				</tr>
-			</table>
-		</div>
-		<!-----------------活动信息---------------->
-		<div class="info_mo">
-			<table>
-				<tr>
-					<th colspan="2">活动信息</th>
-				</tr>
-				<tr>
-					<td>活动：春节逛吃哪里去？看洛阳庙会、灯展集锦</td>
-					<td>活动咨询：0379-63789053</td>
-				</tr>
-				<tr>
-					<td>出发时间：2017/01/23</td>
-					<td>集合地点：洛阳市关林庙会</td>
-				</tr>
-			</table>
-		</div>
-			
-		<!-----------------景区信息---------------->
-		<div class="info_mo">
-			<table>
-				<tr>
-					<th colspan="2">联系人信息</th>
-				</tr>
-				<tr>
-					<td>报名人：${name}</td>
-					<td>手机号：${telephone}</td>
-				</tr>
-			</table>
-		</div>
-		
-		<div class="pay_method">
-			<h2>支付方式</h2>
-			<ul>
-				<li><a class="cur" href="${ctxPath}/scenicApply/payOrder?ticket=${ticket}&scenicName=${scenic.name}">支付宝支付</a><span>选择支付宝支付商品金额</span></li>
-			</ul>
-		</div>
-		<div class="calculation">
-		
-			<input type="submit" class="" onclick="window.location='${ctxPath}/scenicApply/payOrder?ticket=${ticket}&scenicName=${scenic.name}'" value="结算"></input>
-			<span>应付金额： <b>￥${ticket}</b></span>
-			
-		</div>
-	</div>
-	<div class="clear"></div>
+        <!-----------------景区信息---------------->
+        <div class="info_mo">
+            <table>
+                <tr>
+                    <th class="cwt">商品信息</th>
+                    <th class="cwt">单价</th>
+                    <th class="cwt">数量</th>
+                    <th class="cwt">总价</th>
+                </tr>
+                <tr>
+                    <td><a href="#"><img class="pic" width=53 height=53 src="${scenic.icon}"/>${scenic.name}门票</a></td>
+                    <td class="cwt">￥${scenic.ticket}</td>
+                    <td class="cwt">x${num}</td>
+                    <td class="cwt">￥${ticket}</td>
+                </tr>
+            </table>
+        </div>
+        <!-----------------景区信息---------------->
+        <div class="info_mo">
+            <table>
+                <tr>
+                    <th colspan="2">景区信息</th>
+                </tr>
+                <tr>
+                    <td>景区名称：${scenic.name}</td>
+                    <td>联系方式：${scenic.contact}</td>
+                </tr>
+                <tr>
+                    <td>开放时间：${scenic.openTime}</td>
+                    <td>详细地址：${scenic.area}</td>
+                </tr>
+            </table>
+        </div>
+        <!-----------------活动信息---------------->
+        <div class="info_mo">
+            <table>
+                <tr>
+                    <th colspan="2">活动信息</th>
+                </tr>
+                <tr>
+                    <td>活动：${activity.name}</td>
+                    <td>活动咨询：${activity.phone}</td>
+                </tr>
+                <tr>
+                    <td>出发时间：${activity.time,dateFormat="yyyy-MM-dd"}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-----------------景区信息---------------->
+        <div class="info_mo">
+            <table>
+                <tr>
+                    <th colspan="2">联系人信息</th>
+                </tr>
+                <tr>
+                    <td>报名人：${name}</td>
+                    <td>手机号：${telephone}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pay_method">
+            <h2>支付方式</h2>
+            <ul>
+                <li><a class="cur" href="${ctxPath}/scenicApply/payOrder?ticket=${ticket}&scenicName=${scenic.name}">支付宝支付</a><span>选择支付宝支付商品金额</span>
+                </li>
+            </ul>
+        </div>
+        <div class="calculation">
+
+            <input type="submit" class=""
+                   onclick="window.location='${ctxPath}/scenicApply/payOrder?ticket=${ticket}&scenicName=${scenic.name}'"
+                   value="结算"></input>
+            <span>应付金额： <b>￥${ticket}</b></span>
+
+        </div>
+    </div>
+    <div class="clear"></div>
 </div>
 <!-----------------版底---------------->
 <div id="footer">
-	<p>Zhiqi文化旅游发展有限公司 版权所有</p>
-	<p>Copyright 2019 zhiqi All Rights Reserved | 豫ICP备00000000号　技术支持：zhiqi</p>
+    <p>Zhiqi文化旅游发展有限公司 版权所有</p>
+    <p>Copyright 2019 zhiqi All Rights Reserved | 豫ICP备00000000号　技术支持：zhiqi</p>
 </div>
 </body>
 </html>

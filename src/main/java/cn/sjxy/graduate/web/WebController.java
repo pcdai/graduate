@@ -1,12 +1,13 @@
 package cn.sjxy.graduate.web;
 
-import cn.sjxy.graduate.entity.NewsType;
-import cn.sjxy.graduate.service.NewsTypeService;
+import cn.sjxy.graduate.entity.*;
+import cn.sjxy.graduate.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
@@ -19,9 +20,20 @@ import java.util.List;
 public class WebController {
     @Autowired
     private NewsTypeService newsTypeService;
+
+    @Autowired
+    @Resource
+    private RestaurantService restaurantService;
+    private MemberService memberService;
+    @Autowired
+    private NewsService newsService;
+    @Autowired
+    private HotelService hotelService;
+    @Autowired
+    private ActivityService activityService;
+
     @GetMapping("/my_index.html")
     public String my_index(Model model) {
-        model.addAttribute("index",new Date());
         return "my_index";
     }
 
@@ -72,6 +84,29 @@ public class WebController {
     @GetMapping("/news_list.html")
     public String news_list(Model model) {
         List<NewsType> typeList = newsTypeService.findAll();
+
+        /**
+         * 美食
+         */
+        List<Restaurant> restList = restaurantService.selectHotLimit();
+        model.addAttribute("restList", restList);
+        /**
+         * 新闻
+         */
+
+        List<News> newsList = newsService.findAll();
+        model.addAttribute("newsList", newsList);
+        /**
+         * 活动
+         */
+        List<Activity> activityList = activityService.findAll();
+        model.addAttribute("activityList", activityList);
+        /**
+         * 民宿
+         */
+        List<Hotel> hotelList = hotelService.findAll();
+        model.addAttribute("hotelList", hotelList);
+
         model.addAttribute("typeList",typeList);
         return "news_list";
     }

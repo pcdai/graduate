@@ -1,7 +1,8 @@
-package cn.sjxy.graduate.utils;
+package cn.sjxy.graduate.controller;
 
 import cn.sjxy.graduate.entity.*;
 import cn.sjxy.graduate.service.*;
+import cn.sjxy.graduate.utils.FileUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ import java.util.List;
  * @Date 2020/3/26 13:02
  */
 @Controller
-public class TestUploadUtilController {
+public class FileUploadUtilController {
     @Autowired
     private RestaurantService restaurantService;
     @Autowired
