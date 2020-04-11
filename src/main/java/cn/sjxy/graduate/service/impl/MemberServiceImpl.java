@@ -23,4 +23,9 @@ public class MemberServiceImpl extends AbstractService<Member> implements Member
     public Member doLogin(String account, String password) {
         return memberDao.doLogin(account, password);
     }
+
+    @Override
+    public Member selectOne(Integer id) {
+        return memberDao.selectOneAAA(id);
+    }
 }

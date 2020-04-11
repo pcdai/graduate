@@ -25,6 +25,7 @@ public class MessageSender extends SimpleMailMessage implements Serializable {
 
     @Override
     public void setTo(String[] to) {
+
         this.to = to;
     }
 

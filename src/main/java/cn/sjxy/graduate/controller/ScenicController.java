@@ -129,7 +129,6 @@ public class ScenicController {
         return restaurantService.selectHotLimit();
     }
 
-
     /**
      * 评论列表
      *
@@ -159,14 +158,16 @@ public class ScenicController {
                 comments = commentService.findByCondition(condition);
             }
         }
-        if (!CollectionUtils.isEmpty(comments)) {
+       /* if (!CollectionUtils.isEmpty(comments)) {
             for (Comment comment : comments) {
-                comment.setMemberName(memberService.findBy("id", comment.getUserId()).getName());
-                comment.setPhone(memberService.findBy("id", comment.getUserId()).getPhoto());
-            }
+                Integer userId = comment.getUserId();
+                System.out.println("userId = " + userId);
+                Member member = memberService.selectOne(userId);
+                comment.setMemberName(member.getName());
+                comment.setPhone(member.getPhoto());
+            }*/
             info = new PageInfo<>(comments, 5);
-        }
-
+        //}
         return info;
     }
 

@@ -14,4 +14,5 @@ import cn.sjxy.graduate.core.mapper.Mapper;
 public interface MemberDao extends Mapper<Member> {
 
     Member doLogin(String account, String password);
+    Member selectOneAAA(Integer id);
 }

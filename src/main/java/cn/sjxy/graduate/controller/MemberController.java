@@ -15,10 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import tk.mybatis.mapper.entity.Condition;
 import tk.mybatis.mapper.entity.Example;
@@ -108,4 +105,45 @@ public class MemberController {
         model.addAttribute("info", info);
         return "scenic_order";
     }
+
+    /**
+     * <li><a href="my_head.html"><i class="ico2"></i>我的头像</a></li>
+     * <li><a href="my_contact.html"><i class="ico3"></i>常用联系人</a></li>
+     * <li><a href="security.html"><i class="ico4"></i>修改密码</a></li>
+     */
+    @PutMapping("editMember")
+    public String editMember(HttpSession session, String name, @RequestHeader("referer") String ref) {
+        Member member = (Member) session.getAttribute("member");
+        member.setName(name);
+        memberService.update(member);
+        session.setAttribute("member", member);
+        return "redirect" + ref;
+    }
+
+    @PostMapping("editPassword")
+    public String editPassword(String oldPassword, String newPassword1, String newPassword2, HttpSession session, Model model, @RequestHeader("referer") String ref) {
+        Member member = (Member) session.getAttribute("member");
+        if (!oldPassword.equals(member.getPassword())) {
+            model.addAttribute("errorMsg1", "旧密码输入错误");
+        } else if (!newPassword1.equals(newPassword2)) {
+            model.addAttribute("errorMsg2", "两次密码输入不一致");
+        } else {
+            member.setPassword(newPassword1);
+            memberService.update(member);
+            session.setAttribute("member", member);
+        }
+        return "redirect" + ref;
+    }
+
+    @PostMapping("editPhoto")
+    public String editPhoto(HttpSession session, Model model, @RequestHeader("referer") String ref, @RequestParam("photo") MultipartFile file) {
+        String upload = FileUtil.fileUpload(file);
+        Member member = (Member) session.getAttribute("member");
+        member.setPhoto(upload);
+        memberService.update(member);
+        session.setAttribute("member", member);
+        return "redirect" + ref;
+    }
+
+
 }

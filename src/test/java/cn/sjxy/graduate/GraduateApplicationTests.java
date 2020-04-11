@@ -2,6 +2,7 @@ package cn.sjxy.graduate;
 
 import cn.sjxy.graduate.dao.RestaurantDao;
 import cn.sjxy.graduate.entity.Comment;
+import cn.sjxy.graduate.entity.Member;
 import cn.sjxy.graduate.entity.News;
 import cn.sjxy.graduate.entity.Scenic;
 import cn.sjxy.graduate.entity.dto.ScenicDto;
@@ -39,13 +40,8 @@ class GraduateApplicationTests {
 
     @Test
     public void test1() {
-        /**
-         * 查询4 号景点的评论和评论的用户
-         */
-       /* Scenic scenic = scenicService.(4);
-        Comment scenicId = commentService.findBy("id", scenic.getCommentId());
-        Integer id = scenicId.getUserId();
-        System.out.println(id);*/
+        Member member = memberService.findById(1);
+        System.out.println("member = " + member);
     }
 
     @Test

@@ -13,4 +13,5 @@ import cn.sjxy.graduate.entity.Member;
 public interface MemberService extends Service<Member> {
 
     Member doLogin(String account, String password);
+    Member selectOne(Integer id);
 }
